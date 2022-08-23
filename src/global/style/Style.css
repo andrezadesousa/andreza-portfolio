@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600&display=swap');
 
 :root {
     --header-height: 3rem;
 
-    --hue-color: 340;
+    --hue-color: 0;
 
-    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color: hsl(var(--hue-color), 100%, 25%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
@@ -19,7 +19,7 @@
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
     --shadow-color: #3b332629;
 
-    --body-font: 'Poppins', sans-serif;
+    --body-font: 'Raleway', sans-serif;
 
     --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
@@ -120,10 +120,24 @@ h4 {
     font-weight: var(--font-semi-bold);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section {
+    padding: 2rem 0 4rem;
+}
+
 .container {
-    max-width: 968px;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    max-width: 768px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
 }
 
 .change-theme {

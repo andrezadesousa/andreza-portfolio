@@ -5,7 +5,7 @@ export const HomeData = styled.div`
     color:  var(--title-color);
 
     @media screen and (min-width: 1024px){
-        text-align: initial;
+      align-items: center;
     }
 `;
 
@@ -15,20 +15,25 @@ export const HomeTitle = styled.h1`
 
     @media screen and (min-width: 1024px){
         font-size: var(--big-font-size);
-        margin-left: -4rem;
+        /* margin-left: -4rem; */
     }
 `;
 
 export const HomeSubtitle = styled.span`
     padding: 4rem;
     color: var(--text-color);
+    font-size: var(--h3-font-size);
 `;
 
 
 export const HomeDescription = styled.p`
     color: var(--text-color);
+    padding: 1rem 0 1rem;
+    font-size: var(--normal-font-size);
+
     @media screen and (min-width: 1024px){
-        padding: 0 3rem 0;
+        align-items: center;
+        margin: 1px;
     }
 `;
 
@@ -36,7 +41,7 @@ export const HomeDescription = styled.p`
 export const ProfileData = styled.div`
     display: grid;
     text-align: center;
-    padding: 1rem 0.6rem 0rem;
+    padding: 1rem 6rem 0rem;
 `;
 
 export const ProfileSocial = styled.ul`
