@@ -15,7 +15,6 @@ export const HomeTitle = styled.h1`
 
     @media screen and (min-width: 1024px){
         font-size: var(--big-font-size);
-        /* margin-left: -4rem; */
     }
 `;
 
@@ -24,7 +23,6 @@ export const HomeSubtitle = styled.span`
     color: var(--text-color);
     font-size: var(--h3-font-size);
 `;
-
 
 export const HomeDescription = styled.p`
     color: var(--text-color);

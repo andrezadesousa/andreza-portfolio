@@ -2,8 +2,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import './Style.css'
-import { NavMenu } from '../../components/NavMenu';
-import { NavBtns } from '../../components/NavBtns';
+import { NavMenu } from '../../mock/NavItemData';
+import { NavButton } from '../../components/Buttons/NavButton/index';
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
         <nav className="nav container">
             <a href='https://www.linkedin.com/in/sousa-andreza/' target="_blank" className='nav__logo'>Andreza Sousa</a>
             <NavMenu></NavMenu>
-            <NavBtns></NavBtns>
+            <NavButton></NavButton>
         </nav>
     </header>
   )
