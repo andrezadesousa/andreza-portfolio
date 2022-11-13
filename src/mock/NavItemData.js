@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Component } from "react";
 import { UilUser, UilBook, UilFlask, UilBag, UilHouseUser } from '@iconscout/react-unicons'
-import HeaderAnimation from '../Animation/HeaderAnimation'
+import HeaderAnimation from '../animation/HeaderAnimation'
 
 const Data = [
   {
