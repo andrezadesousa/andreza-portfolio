@@ -1,4 +1,4 @@
-export const NavLinks = [
+export const homeLinks = [
     {
         id: 1,
         classNav: 'nav__link active-link',
