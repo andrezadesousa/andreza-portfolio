@@ -52,7 +52,7 @@ export default () => {
         <header onClick={Animation} className="header" id="header" >
             <nav className="nav container">
                 <a href="##" className="nav__logo">
-                    <span className="nav__logo-circle">A</span>
+                    {/*<span className="nav__logo-circle">A</span>*/}
                     <span className="nav__logo-name">Andreza</span>
                 </a>
 
@@ -78,13 +78,13 @@ export default () => {
                     </ul>
 
                     <div className="nav__close" id="nav-close">
-                        <CloseIcon />
+                        <i class="ri-eye-close-line"></i>
                     </div>
                 </div>
 
                 <div className="nav__buttons">
                     <div className="nav__toggle" id="nav-toggle">
-                        <WidgetsIcon />
+                        <i class="ri-menu-5-line"></i>
                     </div>
                 </div>
             </nav>
