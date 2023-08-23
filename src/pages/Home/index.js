@@ -41,9 +41,11 @@ export default () => {
 
                 <div className="home__info">
                     <p className="home__description">
-                        <b>Frontend Developer</b>, with knowledge in web
-                        development and design, I offer the best
-                        projects resulting in quality work.
+                        <b>Desenvolvedora Frontend</b>,
+                        com experiência em desenvolvimento web e mobile
+                        almejando o melhor para os projetos
+                        <br></br>“Good design is good business.”
+                        <cite></cite>- Thomas J. Watson
                     </p>
                 </div>
             </div>

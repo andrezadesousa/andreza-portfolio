@@ -3,7 +3,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color: var(--body-color);
+    background-color: var(--second-color);
     z-index: var(--z-fixed);
     transition: box-shadow .4s, background-color .4s;
 }
@@ -138,10 +138,9 @@
 
 /*Add shadow header*/
 .shadow-header {
-    box-shadow: 0 1px 16px hsla(0, 0%, 0%, .12);
+    box-shadow: 0 1px 16px red;
 }
 
-/*Add shadow header*/
 .active-link {
     color: var(--white-color);
 }
