@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Component } from "react";
-import DarkThemeAnimation from '../../../animation/DarkTheme'
+import DarkThemeAnimation from '../../../Animation/DarkTheme'
 
 export class NavButton extends Component {
   render() {
