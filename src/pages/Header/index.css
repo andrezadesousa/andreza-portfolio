@@ -44,11 +44,10 @@ header {
         position: fixed;
         top: -100%;
         left: 0;
-        background-color: var(--container-color);
+        background-color:  hsla(0, 10%, 94%, 0.75);
         width: 100%;
         padding-block: 1.8rem 5rem;
         text-align: center;
-        backdrop-filter: blur(1px);
         transition: top .4s;
     }
 }

@@ -1,10 +1,10 @@
 import "./components/global/index.css"
-import NavBar from "./pages/NavBar";
+import Header from "./pages/Header";
 
 function App() {
   return (
     <body>
-      <NavBar />
+      <Header />
     </body>
   );
 }
