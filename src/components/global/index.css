@@ -14,7 +14,7 @@
     --text-color: hsl(0, 0%, 35%);
     --text-color-light: hsl(0, 0%, 64%);
     --body-color: hsl(0, 0%, 87%);
-    --container-color: hsl(0, 0%, 83%);
+    --container-color: #F7F2E8;
 
     /*.5rem = 8px | 1rem = 16px ...*/
     --body-font: "Bai Jamjuree", sans-serif;

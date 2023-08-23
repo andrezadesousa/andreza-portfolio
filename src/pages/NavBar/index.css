@@ -21,21 +21,16 @@ header {
     column-gap: .5rem;
     align-items: center;
     font-weight: var(--font-semi-bold);
-    color: var(--title-color);
+    color: var(--fourth-color);
 }
 
-.nav__logo-circle,
 .nav__toggle {
     width: 32px;
     height: 32px;
-    background-color: var(--black-color);
+    background-color: var(--fourth-color);
     color: var(--white-color);
     display: grid;
     place-items: center;
-}
-
-.nav__logo-circle {
-    border-radius: 50%;
 }
 
 .nav__toggle {
@@ -49,11 +44,11 @@ header {
         position: fixed;
         top: -100%;
         left: 0;
-        background-color: hsla(0, 0%, 0%, .75);
+        background-color: var(--container-color);
         width: 100%;
         padding-block: 1.8rem 5rem;
         text-align: center;
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(1px);
         transition: top .4s;
     }
 }
@@ -61,7 +56,7 @@ header {
 .nav__title,
 .nav__name,
 .nav__close {
-    color: var(--white-color);
+    color: var(--title-color);
 }
 
 .nav__title {
@@ -83,7 +78,7 @@ header {
     content: '';
     width: 40px;
     height: 1px;
-    background-color: var(--text-color-light);
+    background-color: var(--text-color);
     position: absolute;
     top: 50%;
     left: -4rem;
@@ -102,7 +97,7 @@ header {
 
 .nav__link {
     position: relative;
-    color: var(--text-color-light);
+    color: var(--title-color);
     font-size: var(--h3-font-size);
     font-weight: var(--font-semi-bold);
     transition: color .3s;
@@ -112,7 +107,7 @@ header {
     content: '';
     width: 0;
     height: 2px;
-    background-color: var(--white-color);
+    background-color: var(--fourth-color);
     position: absolute;
     left: 0;
     bottom: -.5rem;
@@ -120,7 +115,7 @@ header {
 }
 
 .nav__link:hover {
-    color: var(--white-color);
+    color: var(--fourth-color);
 }
 
 /*Efeito da linha aparecer*/
