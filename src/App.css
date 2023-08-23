@@ -4,17 +4,19 @@
     --header-height: 3.5rem;
 
     --first-color: hsl(14, 98%, 50%);
-    --second-color: #C27D7A;
-    --third-color: #C27D7A;
-    --fourth-color: #924a46;
     --black-color: hsl(0, 0%, 0%);
     --black-color-light: hsl(0, 0%, 40%);
     --white-color: hsl(0, 0%, 95%);
-    --title-color: #310101;
+    --title-color: hsl(0, 0%, 0%);
     --text-color: hsl(0, 0%, 35%);
     --text-color-light: hsl(0, 0%, 64%);
     --body-color: hsl(0, 0%, 87%);
-    --container-color: #F7F2E8;
+    --container-color: hsl(0, 0%, 83%);
+
+    --primary-color: #310101;
+    --second-color: #F7F2E8;
+    --third-color: #C27D7A;
+    --fourth-color: #924a46;
 
     /*.5rem = 8px | 1rem = 16px ...*/
     --body-font: "Bai Jamjuree", sans-serif;
@@ -62,7 +64,8 @@ body {
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
-    transition: background-color .4s; /*for dark theme*/
+    transition: background-color .4s;
+    /*for dark theme*/
 }
 
 h1,
@@ -95,4 +98,13 @@ img {
 .grid {
     display: grid;
     gap: 1.5rem;
+}
+
+.section {
+    padding-block: 4rem 2rem;
+}
+
+.main {
+    overflow: hidden;
+    /* For animation ScrollReveal */
 }
