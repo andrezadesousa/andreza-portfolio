@@ -1,8 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import "./index.css"
-import CloseIcon from '@mui/icons-material/Close';
-import WidgetsIcon from '@mui/icons-material/Widgets';
 
 const Animation = () => {
     /*Show Menu*/
