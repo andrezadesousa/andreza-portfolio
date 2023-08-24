@@ -5,7 +5,7 @@
 
 ## 🧪 Tecnologias
 
-Para esse proejto eu utilizei as seguintes tecnologias:
+Para esse projeto eu utilizei as seguintes tecnologias:
 - [ReactJS](https://react.dev/learn)
 - [Material UI/Icons](https://mui.com)
 - [Remix Icon](https://remixicon.com)
