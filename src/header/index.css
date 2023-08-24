@@ -42,7 +42,7 @@
 @media screen and (max-width: 1150px) {
   .nav__menu {
       position: fixed;
-      bottom:35%;
+      top: 0;
       left: 0;
       background-color: hsla(0, 19%, 87%, 0.75);
       width: 100%;
