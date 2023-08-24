@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600&display=swap');
 
 :root {
     --header-height: 3.5rem;
 
     --first-color: hsl(14, 98%, 50%);
-    --black-color: hsl(0, 0%, 0%);
+    
     --black-color-light: hsl(0, 0%, 40%);
     --white-color: hsl(0, 0%, 95%);
     --title-color: hsl(0, 0%, 0%);
@@ -14,12 +14,13 @@
     --container-color: hsl(0, 0%, 83%);
 
     --primary-color: #310101;
-    --second-color: #F7F2E8;
-    --third-color: #C27D7A;
-    --fourth-color: #924a46;
+    --second-color: #fff;
+    --third-color: #ff7500;
+    --fourth-color: #e80537;
+    --black-color: hsl(0, 0%, 0%);
 
     /*.5rem = 8px | 1rem = 16px ...*/
-    --body-font: "Bai Jamjuree", sans-serif;
+    --body-font: 'Raleway', sans-serif;
     --biggest-font-size: 2.5rem;
     --h1-font-size: 1.75rem;
     --h2-font-size: 1.25rem;

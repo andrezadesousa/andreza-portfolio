@@ -27,13 +27,13 @@ export default () => {
                     </div>
 
                     <div className="home__social">
-                        <a href="https://www.linkedin.com/in/sousa-andreza/" target="_blank" class="home__social-link">
+                        <a href="https://www.linkedin.com/in/sousa-andreza/" rel="noreferrer" target="_blank" class="home__social-link">
                             <LinkedInIcon />
                         </a>
-                        <a href="https://github.com/andrezadesousa" target="_blank" class="home__social-link">
+                        <a href="https://github.com/andrezadesousa" rel="noreferrer" target="_blank" class="home__social-link">
                             <GitHubIcon />
                         </a>
-                        <a href="https://andreza-sousa.web.app/" target="_blank" class="home__social-link">
+                        <a href="https://andreza-sousa.web.app/" rel="noreferrer" target="_blank" class="home__social-link">
                             <WorkIcon />
                         </a>
                     </div>
@@ -41,9 +41,9 @@ export default () => {
 
                 <div className="home__info">
                     <p className="home__description">
-                        <b>Desenvolvedora Frontend</b>,
-                        com experiência em desenvolvimento web e mobile
-                        almejando o melhor para os projetos
+                        <b>Desenvolvedora Frontend</b> e aspirante a desenvolvedora FullStack.
+                        Com experiência em desenvolvimento web e mobile,
+                        almejando o melhor para os projetos.
                         <br></br>“Good design is good business.”
                         <cite></cite>- Thomas J. Watson
                     </p>

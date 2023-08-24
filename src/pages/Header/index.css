@@ -3,7 +3,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color: var(--second-color);
+    background-color: var(--white-color);
     z-index: var(--z-fixed);
     transition: box-shadow .4s, background-color .4s;
 }
@@ -44,7 +44,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: hsla(0, 19%, 87%, 0.75);
+        background-color: var(--second-color);
         width: 100%;
         padding-block: 1.8rem 5rem;
         text-align: center;
@@ -142,7 +142,7 @@
 }
 
 .active-link {
-    color: var(--white-color);
+    color: var(--fourth-color);
 }
 
 .active-link::after {

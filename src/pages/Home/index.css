@@ -73,7 +73,7 @@
 }
 
 .home__social-link{
-    background-color: var(--black-color-light);
+    background-color: var(--black-color);
     color: var(--white-color);
     font-size: 1.25rem;
     padding: 6px;
@@ -83,7 +83,7 @@
 } 
 
 .home__social-link:hover{
-    background-color: var(--black-color);
+    background-color: var(--third-color);
 }
 
 .home__info{
@@ -98,6 +98,6 @@
 
 .home__description b{
     background: linear-gradient(90deg,
-                hsla(14, 98%, 50%, .3),
-                hsla(14, 98%, 50%, 0));
+                var(--fourth-color),
+                var(--third-color));
 }

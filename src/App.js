@@ -9,7 +9,6 @@ function App() {
       <Header />
       <main className='main'>
         <Home />
-        <Home />
       </main>
     </body>
   );

@@ -1,10 +1,13 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
-import "./index.css"
+import "./index.css";
 
-import { ModalHeader } from "./ModalHeader"
+import { HeaderMenu } from "../../components/headerMenu"
+
 export default () => {
-    return (
-       <ModalHeader />
-    );
+  return (
+    <header className="header" id="header">
+      <HeaderMenu />
+    </header>
+  );
 };
