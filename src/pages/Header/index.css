@@ -3,9 +3,10 @@
     width: 100%;
     top: 0;
     left: 0;
-    background-color: var(--white-color);
+    background-color: var(--second-color);
     z-index: var(--z-fixed);
     transition: box-shadow .4s, background-color .4s;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .nav {
