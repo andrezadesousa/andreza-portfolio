@@ -1,11 +1,8 @@
-import './App.css'
-import { Header } from './header/header';
-
+import './index.css'
+import { Header}  from './Header/index'
 function App() {
   return (
-    <body>
-      <Header />
-    </body>
+    <Header/>
   );
 }
 
