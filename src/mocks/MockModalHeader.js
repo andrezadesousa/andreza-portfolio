@@ -25,7 +25,7 @@ export const headerLink = [
     },
     {
         id: 5,
-        classNav: 'nav__link',
+        classNav: 'nav__link nav__link-button',
         ref: '#contact',
         text: 'Contato'
     }
