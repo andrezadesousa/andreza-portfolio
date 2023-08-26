@@ -153,6 +153,9 @@ a {
         backdrop-filter: blur(8px);
         transition: top .4s;
     }
+    #nav-desktop{
+        display: none;
+    }
 }
 
 .nav__title,
@@ -252,6 +255,10 @@ a {
 @media screen and (min-width: 1150px){
     .container{
         margin-inline: auto;
+    }
+
+    #nav-mobile{
+        display: none;
     }
 
     .nav{
