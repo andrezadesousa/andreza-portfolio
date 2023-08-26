@@ -52,6 +52,10 @@
         backdrop-filter: blur(8px);
         transition: top .4s;
     }
+
+    #nav-desktop{
+        display: none;
+    }
 }
 
 .nav__title,
@@ -162,6 +166,10 @@
         margin-inline: auto;
     }
 
+    #nav-mobile{
+        display: none;
+    }
+
     .nav{
         height: calc(var(--header-height) + 2rem);
         column-gap: 4rem;
@@ -202,7 +210,7 @@
     }
 
     .nav__link-button{
-        background-color: var(--black-color);
+        background-color: var(--fourth-color);
         color: var(--white-color);
         padding: 1.1rem 1.5rem;
     }

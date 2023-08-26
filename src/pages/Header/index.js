@@ -2,12 +2,14 @@
 import React from "react";
 import "./index.css";
 
-import { HeaderMenu } from "../../components/headerMenu"
+import { HeaderDesktop } from "../../components/HeaderDesktop"
+import { HeaderMobile } from "../../components/HeaderMobile";
 
 export default () => {
   return (
     <header className="header" id="header">
-      <HeaderMenu />
+      <HeaderDesktop/>
+      <HeaderMobile/>
     </header>
   );
 };
