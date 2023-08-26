@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 
 export function Header() {
-  const [modalOpen, setModalOpen] = useState(true);
+
+  const [showLinks, setShowLinks] = useState(false);
 
   return (
     <header className="header" id="header">
@@ -11,8 +12,8 @@ export function Header() {
           <span className="nav__logo-name">Andreza</span>
         </a>
 
-        {modalOpen ? (
-          <div className="nav__menu" id="nav-menu">
+       
+          {showLinks || <div setShowLinks={setShowLinks} className="nav__menu" id="nav-menu">
             <span className="nav__title">Menu</span>
             <h3 className="nav__name">Andreza</h3>
             <ul className="nav__list">
@@ -44,20 +45,18 @@ export function Header() {
             </ul>
 
             <div
-              onClick={() => setModalOpen(!modalOpen)}
+              onClick={() => setShowLinks(!showLinks)}
               className="nav__close"
               id="nav-close"
             >
               <i class="ri-eye-close-line"></i>
             </div>
-          </div>
-        ) : (
-          ""
-        )}
+          </div>}
+       
 
         <div className="nav__buttons">
           <div
-            onClick={() => setModalOpen(!modalOpen)}
+            onClick={() => setShowLinks(!showLinks)}
             className="nav__toggle"
             id="nav-toggle"
           >
