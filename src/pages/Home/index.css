@@ -101,3 +101,7 @@
                 var(--fourth-color),
                 var(--third-color));
 }
+
+.section {
+    padding-block: 4rem 2rem;
+}
