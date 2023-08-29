@@ -52,3 +52,9 @@
 .active-link::after {
     width: 25%;
 }
+
+@media screen and (max-width: 340px){
+    .container{
+        margin-inline: 1rem;
+    }
+}
