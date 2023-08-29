@@ -109,3 +109,15 @@ img {
     overflow: hidden;
     /* For animation ScrollReveal */
 }
+
+@media screen and (max-width: 340px){
+    .container{
+        margin-inline: 1rem;
+    }
+}
+
+@media screen and (min-width: 1150px){
+    .container{
+        margin-inline: auto;
+    }
+}
