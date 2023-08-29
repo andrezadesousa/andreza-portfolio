@@ -7,15 +7,15 @@ import Line from "../../images/random-lines.svg";
 
 import Button from "../../components/Button/Button";
 import ButtonGhost from "../../components/Button/ButtonGhost";
+import FirstTitle from "../../components/Titles/FirstTitle";
 
 export default () => {
   return (
     <section className="about section" id="about">
       <div className="about__container container grid">
-        <h2 className="section__title-1">
-          <span>Sobre mim.</span>
-        </h2>
 
+        <FirstTitle title="Sobre mim." />
+        
         <div className="about__perfil">
           <div className="about__image">
             <img src={AboutPerfil} alt="About" className="about__img"></img>
