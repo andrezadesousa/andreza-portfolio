@@ -91,29 +91,7 @@ img {
     height: auto;
 }
 
-.container {
-    max-width: 1120px;
-    margin-inline: 1.5rem;
-}
-
-.grid {
-    display: grid;
-    gap: 1.5rem;
-}
-
 .main {
     overflow: hidden;
     /* For animation ScrollReveal */
-}
-
-@media screen and (max-width: 340px){
-    .container{
-        margin-inline: 1rem;
-    }
-}
-
-@media screen and (min-width: 1150px){
-    .container{
-        margin-inline: auto;
-    }
 }
