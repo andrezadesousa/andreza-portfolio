@@ -3,6 +3,7 @@ import './App.css'
 
 import Header from './pages/Header';
 import Home from "./pages/Home"
+import About from './pages/About';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <main className='main'>
         <Home />
+        <About />
       </main>
     </body>
     </React.StrictMode>
