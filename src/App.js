@@ -11,7 +11,7 @@ function App() {
       <body>
       <Header />
       <main className='main'>
-        <Home />
+        <Home /> 
         <About />
       </main>
     </body>
