@@ -2,7 +2,7 @@
 import React from "react";
 import "./index.css";
 
-export default (props) => {
+export default () => {
   return (
     <section className="section"></section>
   );
