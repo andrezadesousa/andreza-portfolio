@@ -96,6 +96,10 @@ img {
     /* For animation ScrollReveal */
 }
 
+.section {
+    padding-block: 4rem 2rem;
+}
+
 .container {
     max-width: 1120px;
     margin-inline: 1.5rem;
@@ -105,41 +109,6 @@ img {
     display: grid;
     gap: 1.5rem;
 }
-
-.section {
-    padding-block: 4rem 2rem;
-}
-/*
-.section__title-1,
-.section__title-2 {
-    position: relative;
-    font-size: var(--h1-font-size);
-    width: max-content;
-    margin: .75rem auto 2rem;
-}
-
-.section__title-1 span,
-.section__title-2 span {
-    z-index: 5;
-    position: relative;
-}
-
-.section__title-1::after,
-.section__title-2::after {
-    content: "";
-    width: 40px;
-    height: 28px;
-    background-color: hsla(14, 98%, 50%, .2);
-    position: absolute;
-    top: -4px;
-    right: -8px;
-}
-
-.section__title-2::after {
-    top: initial;
-    bottom: -4px;
-}
-*/
 
 @media screen and (max-width: 340px){
     .container{

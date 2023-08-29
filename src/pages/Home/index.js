@@ -11,7 +11,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import WorkIcon from "@mui/icons-material/Work";
 
 export default () => {
-  return (
+  return (    
     <section className="home section" id="home">
       <div className="home__container container grid">
         <h1 className="home__name">Andreza Sousa </h1>
