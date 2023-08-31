@@ -1,0 +1,8 @@
+.projects{
+    background-color: var(--container-color);
+    transition: background-color .4s;
+}
+
+.projects__container{
+    row-gap: 2rem;
+}
