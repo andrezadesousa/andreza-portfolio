@@ -12,27 +12,19 @@ export default () => {
 
       <div className="services__container container grid">
         <ArticleService
-          icon="ri-layout-4-line"
-          title="Web Design"
-          description="Beautiful and elegant designs with
-          interfaces that are intuitive, efficient
-          and pleasant to use for the user."
+          icon="ri-code-box-line"
+          title="Desenvolvimento Web"
+          description="Desenvolvimento web personalizado, 
+          adaptado as especificações, projetado para proporcionar 
+          uma experiência eficiente e agradávei de usar 
+          para o usuário."
         />
 
         <ArticleService
-          icon="ri-layout-4-line"
-          title="Web Design"
-          description="Beautiful and elegant designs with
-          interfaces that are intuitive, efficient
-          and pleasant to use for the user."
-        />
-        
-        <ArticleService
-          icon="ri-layout-4-line"
-          title="Web Design"
-          description="Beautiful and elegant designs with
-          interfaces that are intuitive, efficient
-          and pleasant to use for the user."
+          icon="ri-smartphone-line"
+          title="Desenvolvimento Mobile"
+          description="Projetar e transformar projetos de sites em 
+          aplicativos móveis para fornecer uma experiência de usuário perfeita."
         />
       </div>
     </section>
