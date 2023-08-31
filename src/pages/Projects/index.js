@@ -7,8 +7,6 @@ import ArticleProjects from "../../components/ArticleProjects"
 
 import { Projects } from "../../mocks/MockProjects";
 
-import Project1 from "../../images/project-1.png"
-
 export default () => {
   return (
     <section className="projects section" id="projects">
@@ -24,7 +22,11 @@ export default () => {
             title={projectsLinks.title}
             description={projectsLinks.description}
             link={projectsLinks.link}
-            icon="ri-github-line" 
+            iconTec1={projectsLinks.iconTec1}
+            iconTec2={projectsLinks.iconTec2}
+            iconTec3={projectsLinks.iconTec3}
+            iconTec4={projectsLinks.iconTec4}
+            iconTec5={projectsLinks.iconTec5}
           />
           )
         })}

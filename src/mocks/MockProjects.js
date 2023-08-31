@@ -7,6 +7,8 @@ export const Projects = [
     description:
       "Landing Page de uma cafeteria, responsivo e desenvolvido em mobile-first, utilizando a tecnologia: ReactJS",
     link: "https://github.com/andrezadesousa/LP-Tea-And-Bread-ReactJs",
+    iconTec1: "ri-reactjs-line",
+    iconTec2: "ri-css3-line",
   },
   {
     id: 2,
@@ -16,6 +18,9 @@ export const Projects = [
     description:
       "Netflix clone, é um projeto desenvolvido em live pela B7Web curso. Trata-se da página de catálogo da NetFlix.",
     link: "https://github.com/andrezadesousa/clone-netflix-react",
+    iconTec1: "ri-reactjs-line",
+    iconTec2: "ri-macbook-line",
+    iconTec3: "ri-remixicon-line",
   },
   {
     id: 3,
@@ -25,15 +30,21 @@ export const Projects = [
     description:
       "Landing Page de um banco digital e responsivo.",
     link: "https://github.com/andrezadesousa/Easybank-Login-Responsive-ReactJs",
+    iconTec1: "ri-html5-line",
+    iconTec2: "ri-css3-line",
+    iconTec3: "ri-javascript-line",
   },
   {
     id: 4,
     image: require("../images/project-4.jpeg"),
     subtitle: "Website",
-    title: "Website",
+    title: "Creative Design & Development Agency",
     description:
-      "Project that you carry out in the design and structure of the layout, showing the design at the client's request",
+      "Landing Page de uma agencia digital, responsiva.",
     link: "https://github.com/",
+    iconTec1: "ri-html5-line",
+    iconTec2: 'ri-css3-line',
+    iconTec3: "ri-javascript-line",
   },
   {
     id: 5,
@@ -43,6 +54,8 @@ export const Projects = [
     description:
       "Jazz School trata-se de uma landing page, simples, com uma estética mais animada e colorida. Além, de ser desenvolvida no conceito mobile first.",
     link: "https://github.com/andrezadesousa/jazz-school-lp",
+    iconTec1: "ri-html5-line",
+    iconTec2: 'ri-css3-line'
   },
   {
     id: 6,
@@ -52,6 +65,10 @@ export const Projects = [
     description:
       "Projeto de um portfólio do Rian Lot, esenvolvido com o conceito de Mobile First, depois para desktop.",
     link: "",
+    iconTec1: "ri-html5-line",
+    iconTec2: "ri-css3-line",
+    iconTec3: "ri-javascript-line",
+    iconTec4: 'bx bx-envelope'
   },
   {
     id: 7,
@@ -61,6 +78,9 @@ export const Projects = [
     description:
       "LetmeAsk é voltado para os amantes da leitura poderem criar suas salas de Q&A com seu público, assim, indicarem livros, sugestões de leitura e dúvidas sobre um livro ou seu escritor favorito. Tudo de forma organizada, democrática e interativa.",
     link: "https://github.com/andrezadesousa/let-me-ask",
+    iconTec1: "ri-reactjs-line",
+    iconTec2: "ri-database-2-line",
+    iconTec3: "bx bxl-typescript"
   },
   {
     id: 8,
@@ -70,5 +90,7 @@ export const Projects = [
     description:
       "Projeto desenvolvido durante o bootcamp Ignite Lab da RocketSeat",
     link: "https://github.com/andrezadesousa/react-design-system",
+    iconTec1: "ri-reactjs-line",
+    iconTec2: "bx bxl-typescript",
   },
 ];
