@@ -13,7 +13,10 @@ const AritcleProjects = ({
   iconTec2,
   iconTec3,
   iconTec4,
-  iconTec5
+  textIcon1,
+  textIcon2,
+  textIcon3,
+  textIcon4,
 }) => {
   return (
     <article className="projects__card">
@@ -43,19 +46,16 @@ const AritcleProjects = ({
           <i className="ri-github-line"></i>View
         </a>
         <a href="#/" className="projects__link">
-          <i className={iconTec1}></i>
+          <i className={iconTec1}></i>{textIcon1}
         </a>
         <a href="#/" className="projects__link">
-          <i className={iconTec2}></i>
+          <i className={iconTec2}></i>{textIcon2}
         </a>
         <a href="#/" className="projects__link">
-          <i className={iconTec3}></i>
+          <i className={iconTec3}></i>{textIcon3}
         </a>
         <a href="#/" className="projects__link">
-          <i className={iconTec4}></i>
-        </a>
-        <a href="#/" className="projects__link">
-          <i className={iconTec5}></i>
+          <i className={iconTec4}></i>{textIcon4}
         </a>
       </div>
     </article>

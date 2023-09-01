@@ -23,10 +23,13 @@ export default () => {
             description={projectsLinks.description}
             link={projectsLinks.link}
             iconTec1={projectsLinks.iconTec1}
+            textIcon1={projectsLinks.textIcon1}
             iconTec2={projectsLinks.iconTec2}
+            textIcon2={projectsLinks.textIcon2}
             iconTec3={projectsLinks.iconTec3}
+            textIcon3={projectsLinks.textIcon3}
             iconTec4={projectsLinks.iconTec4}
-            iconTec5={projectsLinks.iconTec5}
+            textIcon4={projectsLinks.textIcon4}
           />
           )
         })}

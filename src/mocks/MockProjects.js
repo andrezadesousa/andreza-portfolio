@@ -9,6 +9,8 @@ export const Projects = [
     link: "https://github.com/andrezadesousa/LP-Tea-And-Bread-ReactJs",
     iconTec1: "ri-reactjs-line",
     iconTec2: "ri-css3-line",
+    textIcon1: "ReactJS",
+    textIcon2: "CSS3"
   },
   {
     id: 2,
@@ -20,7 +22,8 @@ export const Projects = [
     link: "https://github.com/andrezadesousa/clone-netflix-react",
     iconTec1: "ri-reactjs-line",
     iconTec2: "ri-macbook-line",
-    iconTec3: "ri-remixicon-line",
+    textIcon1: "ReactJS",
+    textIcon2: "MaterialUI/Icons"
   },
   {
     id: 3,
@@ -33,6 +36,9 @@ export const Projects = [
     iconTec1: "ri-html5-line",
     iconTec2: "ri-css3-line",
     iconTec3: "ri-javascript-line",
+    textIcon1: "HTML5",
+    textIcon2: "CSS3",
+    textIcon3: "JavaScript"
   },
   {
     id: 4,
@@ -45,6 +51,9 @@ export const Projects = [
     iconTec1: "ri-html5-line",
     iconTec2: 'ri-css3-line',
     iconTec3: "ri-javascript-line",
+    textIcon1: "HTML5",
+    textIcon2: "CSS3",
+    textIcon3: "JavaScript"
   },
   {
     id: 5,
@@ -55,7 +64,9 @@ export const Projects = [
       "Jazz School trata-se de uma landing page, simples, com uma estética mais animada e colorida. Além, de ser desenvolvida no conceito mobile first.",
     link: "https://github.com/andrezadesousa/jazz-school-lp",
     iconTec1: "ri-html5-line",
-    iconTec2: 'ri-css3-line'
+    iconTec2: 'ri-css3-line',
+    textIcon1: "HTML5",
+    textIcon2: "CSS3"
   },
   {
     id: 6,
@@ -68,7 +79,11 @@ export const Projects = [
     iconTec1: "ri-html5-line",
     iconTec2: "ri-css3-line",
     iconTec3: "ri-javascript-line",
-    iconTec4: 'bx bx-envelope'
+    iconTec4: 'bx bx-envelope',
+    textIcon1: "HTML5",
+    textIcon2: "CSS3",
+    textIcon3: "JavaScript",
+    textIcon4: "API | EmailJS"
   },
   {
     id: 7,
@@ -80,7 +95,10 @@ export const Projects = [
     link: "https://github.com/andrezadesousa/let-me-ask",
     iconTec1: "ri-reactjs-line",
     iconTec2: "ri-database-2-line",
-    iconTec3: "bx bxl-typescript"
+    iconTec3: "bx bxl-typescript",
+    textIcon1: "ReactJS",
+    textIcon2: "Firebase",
+    textIcon3: "TypeScript"
   },
   {
     id: 8,
@@ -92,5 +110,7 @@ export const Projects = [
     link: "https://github.com/andrezadesousa/react-design-system",
     iconTec1: "ri-reactjs-line",
     iconTec2: "bx bxl-typescript",
+    textIcon1: "ReactJS",
+    textIcon2: "TypeScript"
   },
 ];
