@@ -74,6 +74,7 @@
 
 .projects__card:hover{
     background-color: var(--fourth-color);
+    color: var(--second-color);
 }
 
 .shadow-medium {

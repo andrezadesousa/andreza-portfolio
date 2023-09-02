@@ -4,7 +4,7 @@
 
 .services__content{
     height: 100%;
-    background-color: var(--body-color);
+    background-color: var(--neutral-color);
     border: 4px solid var(--black-color);
     padding: 6rem 1rem 3rem;
     z-index: 5;
