@@ -2,54 +2,39 @@
 import React from "react";
 import "./index.css";
 
-import AboutPerfil from "../../images/image-perfil.jpeg";
-import Line from "../../images/random-lines.svg";
+import AboutPerfil from "../../images/teste2.jpeg";
 
-import Button from "../../components/Button/Button";
-import ButtonGhost from "../../components/Button/ButtonGhost";
-import FirstTitle from "../../components/Titles/FirstTitle";
+import SectionTitle from "../../components/Titles/SectionTitle";
+import SectionSubtitle from "../../components/Titles/SectionSubtitle";
 
 export default () => {
   return (
-    <section className="about section" id="about">
-      <div className="about__container container grid">
+    <section className="about section bd-container" id="about">
+      <SectionSubtitle title="My history" />
+      <SectionTitle title="Sobre mim." />
 
-        <FirstTitle title="Sobre mim." />
-        
-        <div className="about__perfil">
-          <div className="about__image">
-            <img src={AboutPerfil} alt="About" className="about__img"></img>
-            <div className="about__shadow"></div>
-            <img src={Line} className="about__line" alt="Line"></img>
-            <div className="about__box"></div>
-          </div>
-        </div>
-
-        <div className="about__info">
+      <div className="about__container bd-grid">
+        <div className="about__data bd-grid">
           <p className="about__description">
-            Apaixonada por criar <b>Páginas da Web</b> com{" "}
-            <b>Interface de usuário UI/UX</b>, tenho dois anos de experiência
-            entre clientes nacionais e internaxionais.
+            Sou desenvolvedora Front-end e apaixonada por desenvolvimento web 
           </p>
 
-          <ul className="about__list">
-            <li className="about__item">
-              <b>Minhas Skills são:</b> HTML, CSS, JavaScript, ReactJS,
-              ReactNative, Angular Git, GitHub &Figma.
-            </li>
-          </ul>
+          <div>
+            <span className="about__number">05</span>
+            <span className="about__achievement">Years off Experience</span>
+          </div>
 
-          <div className="about__buttons">
-            <Button 
-              href="/contact" 
-              className="ri-send-plane-line"
-              title="Me contate" />
+          <div>
+            <span className="about__number">29+</span>
+            <span className="about__achievement">Projects completes</span>
+          </div>
 
-            <ButtonGhost
-              href="#/"
-              className="ri-linkedin-box-line" />
+          <div>
+            <span className="about__number">07</span>
+            <span className="about__achievement">Best work awards</span>
           </div>
         </div>
+        <img src={AboutPerfil} alt="Perfil" className="about__img"></img>
       </div>
     </section>
   );
