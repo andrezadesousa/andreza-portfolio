@@ -13,12 +13,14 @@
     --body-color: hsl(0, 0%, 87%);
     --container-color: hsl(0, 0%, 83%);
 
+    /*New colors*/
     --primary-color: #310101;
     --second-color: #fff;
     --third-color: #ff7500;
     --fourth-color: #e80537;
     --black-color-light: #252525;
     --black-color: hsl(0, 0%, 0%);
+    --neutral-color: #fafafa;
 
     /*.5rem = 8px | 1rem = 16px ...*/
     --body-font: 'Raleway', sans-serif;
