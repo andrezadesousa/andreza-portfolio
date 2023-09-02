@@ -1,19 +1,23 @@
-import '../src/global/Styles/Style.css';
+import React from 'react';
+import './App.css'
 
-import Header from './screen/header/Header';
-import Home from './screen/home/Home'
-import About from './screen/about/About'
+import Header from './pages/Header';
+import Home from "./pages/Home"
+import Services from './pages/Services';
+import Projects from './pages/Projects';
 
 function App() {
   return (
-    <body>
-        <Header></Header>
-      <main class="main">
-        <Home></Home>
-        <About></About>
+    <React.StrictMode>
+      <body>
+      <Header />
+      <main className='main'>
+        <Home /> 
+        <Services />
+        <Projects />
       </main>
-      
     </body>
+    </React.StrictMode>
   );
 }
 
