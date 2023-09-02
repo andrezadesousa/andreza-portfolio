@@ -20,7 +20,7 @@ export default () => {
             mobile, sendo nacionais e internacionais.
           </p>
 
-          <div className="about__description-data">
+          <div className="about__resume">
             <div>
               <span className="about__number">02</span>
               <span className="about__achievement">Anos de experiência</span>

@@ -4,7 +4,7 @@ import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
 import SectionSubtitle from "../../components/Titles/SectionSubtitle";
-
+import QualificatonTitle from "../../components/Titles/QualificationTitle"
 export default () => {
   return (
     <section className="qualification section bd-container" id="qualification">
@@ -13,10 +13,9 @@ export default () => {
 
       <div className="qualification__container bd-grid">
         <div className="qualification__content">
-          <h2 className="qualification__title">
-            <i className="bx bx-briefcase-alt qualification__title-icon"></i>
-            Experiência
-          </h2>
+          <QualificatonTitle 
+            icon="bx bx-briefcase-alt" 
+            title="Experiência" />
 
           <div className="bd-grid">
             <div className="qualification__data">
@@ -51,15 +50,13 @@ export default () => {
               </div>
             </div>
           </div>
-
         </div>
 
         <div className="qualification__content">
-          <h2 className="qualification__title">
-            <i className="bx bx-book-bookmark qualification__title-icon"></i>
-            Educação
-          </h2>
-
+        <QualificatonTitle 
+            icon="bx bx-book-bookmark" 
+            title="Educação" />
+            
           <div className="bd-grid">
             <div className="qualification__data">
               <h3 className="qualification__area">Gestão da Tecnologia da Informação</h3>
