@@ -5,13 +5,18 @@
 .about__description span {
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
-  color: var(--first-color);
+  color: var(--black-color);
 }
 
 .about__number {
   font-size: var(--h1-font-size);
-  color: var(--first-color);
+  color: var(--black-color);
   display: block;
+}
+
+.about__description span:hover,
+.about__number:hover {
+  color: var(--fourth-color);
 }
 
 .about__img {

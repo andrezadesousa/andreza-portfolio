@@ -3,8 +3,6 @@
 :root {
   --header-height: 3.5rem;
 
-  --first-color: hsl(14, 98%, 50%);
-
   --white-color: hsl(0, 0%, 95%);
   --title-color: hsl(0, 0%, 0%);
   --text-color: hsl(0, 0%, 35%);

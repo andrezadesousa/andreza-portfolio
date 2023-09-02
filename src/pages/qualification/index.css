@@ -1,13 +1,15 @@
 .qualification__container {
   row-gap: 2.5rem;
+  text-align: center;
 }
 
 .qualification__title {
   font-size: var(--h3-font-size);
-  color: var(--first-color);
+  color: var(--fourth-color);
   margin-bottom: var(--mb-2);
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .qualification__title-icon {
@@ -25,7 +27,7 @@
 .qualification__icon,
 .qualification__work {
   font-size: var(--smaller-font-size);
-  color: var(--first-color-light);
+  color: var(--black-color-light);
 }
 
 .qualification__work {
