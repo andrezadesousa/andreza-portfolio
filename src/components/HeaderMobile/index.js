@@ -6,7 +6,7 @@ import { headerLink } from "../../mocks/MockModalHeader";
 
 export function HeaderMobile() {
   const [showLinks, setShowLinks] = useState(false);
-
+  
   return (
     <nav className="nav container" id="nav-mobile">
       <a href="/" className="nav__logo">
@@ -20,10 +20,10 @@ export function HeaderMobile() {
           <ul className="nav__list">
             {headerLink.map((headerLinks) => {
               return (
-                <li key={headerLinks.id} className="nav__item">
-                  <a href={headerLinks.ref} to={headerLinks.ref} className={headerLinks.classNav}>
-                    {headerLinks.text}
-                  </a>
+                <li key={headerLinks.id} className="nav__item">               
+                  <a onClick={() => setShowLinks(!showLinks)} href={headerLinks.ref} className={headerLinks.classNav}>
+                  {headerLinks.text}
+                </a>
                 </li>
               );
             })}
