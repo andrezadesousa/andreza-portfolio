@@ -1,0 +1,21 @@
+.qualification__box {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
+}
+
+.qualification__work {
+  font-size: var(--smaller-font-size);
+  color: var(--black-color-light);
+}
+
+.qualification__work {
+  display: block;
+}
+
+#qualification__icon-local,
+.qualification__icon {
+  font-size: var(--smaller-font-size);
+  color: red;
+}

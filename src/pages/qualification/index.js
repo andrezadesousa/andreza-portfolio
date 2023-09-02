@@ -4,7 +4,9 @@ import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
 import SectionSubtitle from "../../components/Titles/SectionSubtitle";
-import QualificatonTitle from "../../components/Titles/QualificationTitle"
+import QualificatonTitle from "../../components/Titles/QualificationTitle";
+import { QualificationData } from "../../components/QualificationData";
+
 export default () => {
   return (
     <section className="qualification section bd-container" id="qualification">
@@ -13,101 +15,50 @@ export default () => {
 
       <div className="qualification__container bd-grid">
         <div className="qualification__content">
-          <QualificatonTitle 
-            icon="bx bx-briefcase-alt" 
-            title="Experiência" />
+          <QualificatonTitle icon="bx bx-briefcase-alt" title="Experiência" />
 
           <div className="bd-grid">
-            <div className="qualification__data">
-              <h3 className="qualification__area">Desenvolvedora Frontend Jr</h3>
+            <QualificationData
+              title="Desenvolvedora Frontend Jr"
+              icon="bx bx-briefcase-alt"
+              local="Certsys - São Paulo"
+              date="Dez 2021 - Jan 2023"
+            />
 
-              <div className="qualification__box">
-                <span className="qualification__work">
-                  <i className="bx bx-briefcase-alt qualification__-icon"></i>
-                  Certsys - São Paulo
-                </span>
-                 
-                <span className="qualification__work">
-                  <i className="bx bx-calendar-alt qualification__-icon"></i>
-                  Dez 2021 - Jan 2023
-                </span>
-              </div>
-            </div>
-            
-            <div className="qualification__data">
-              <h3 className="qualification__area">Trainee FullStack Jr</h3>
-
-              <div className="qualification__box">
-                <span className="qualification__work">
-                  <i className="bx bx-briefcase-alt qualification__-icon"></i>
-                  Certsys - São Paulo
-                </span>
-                 
-                <span className="qualification__work">
-                  <i className="bx bx-calendar-alt qualification__-icon"></i>
-                  Mai 2021 - Dez 2022
-                </span>
-              </div>
-            </div>
+            <QualificationData
+              title="Trainee FullStack Jr"
+              icon="bx bx-briefcase-alt"
+              local="Certsys - São Paulo"
+              date="Mai 2021 - Dez 2022"
+            />
           </div>
         </div>
 
         <div className="qualification__content">
-        <QualificatonTitle 
-            icon="bx bx-book-bookmark" 
-            title="Educação" />
-            
+          <QualificatonTitle icon="bx bx-book-bookmark" title="Educação" />
+
           <div className="bd-grid">
-            <div className="qualification__data">
-              <h3 className="qualification__area">Gestão da Tecnologia da Informação</h3>
+            <QualificationData
+              title="Gestão da Tecnologia da Informação"
+              icon="bx bx-book-alt"
+              local="Faculdade de Tecnologia (FATEC) - Barueri"
+              date="Ago 2018 - Ago 2021"
+            />
 
-              <div className="qualification__box">
-                <span className="qualification__work">
-                  <i className="bx bx-book-alt qualification__-icon"></i>
-                  Faculdade de Tecnologia (FATEC) - Barueri
-                </span>
-                 
-                <span className="qualification__work">
-                  <i className="bx bx-calendar-alt qualification__-icon"></i>
-                  Ago 2018 - Ago 2021
-                </span>
-              </div>
-            </div>
+            <QualificationData
+              title="Trilha Conectar do Discover"
+              icon="bx bx-book-alt"
+              local="Rocketseat - Brasil"
+              date="Jan 2023"
+            />
 
-            <div className="qualification__data">
-              <h3 className="qualification__area">Trilha Conectar do Discover</h3>
-
-              <div className="qualification__box">
-                <span className="qualification__work">
-                  <i className="bx bx-book-alt qualification__-icon"></i>
-                  Rocketseat - Brasil
-                </span>
-                 
-                <span className="qualification__work">
-                  <i className="bx bx-calendar-alt qualification__-icon"></i>
-                  Jan 2023
-                </span>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <h3 className="qualification__area">Ignite Lab | Bootcamp</h3>
-
-              <div className="qualification__box">
-                <span className="qualification__work">
-                  <i className="bx bx-book-alt qualification__-icon"></i>
-                  Rocketseat - Brasil
-                </span>
-                 
-                <span className="qualification__work">
-                  <i className="bx bx-calendar-alt qualification__-icon"></i>
-                  Jan 2023
-                </span>
-              </div>
-            </div>        
-
+            <QualificationData
+              title="Ignite Lab | Bootcamp"
+              icon="bx bx-book-alt"
+              local="Rocketseat - Brasil"
+              date="Jan 2023"
+            />
           </div>
-
         </div>
       </div>
     </section>
