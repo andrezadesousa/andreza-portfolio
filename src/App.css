@@ -5,7 +5,7 @@
 
     --first-color: hsl(14, 98%, 50%);
     
-    --black-color-light: hsl(0, 0%, 40%);
+    /*--black-color-light: hsl(0, 0%, 40%);*/
     --white-color: hsl(0, 0%, 95%);
     --title-color: hsl(0, 0%, 0%);
     --text-color: hsl(0, 0%, 35%);
@@ -17,6 +17,7 @@
     --second-color: #fff;
     --third-color: #ff7500;
     --fourth-color: #e80537;
+    --black-color-light: #252525;
     --black-color: hsl(0, 0%, 0%);
 
     /*.5rem = 8px | 1rem = 16px ...*/

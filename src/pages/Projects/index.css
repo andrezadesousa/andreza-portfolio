@@ -1,5 +1,5 @@
 .projects{
-    background-color: var(--container-color);
+    background-color: var(--second-color);
     transition: background-color .4s;
 }
 

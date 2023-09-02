@@ -1,8 +1,6 @@
 import React from "react";
 import "./index.css";
 
-import Button from "../Button/Button";
-
 const AritcleProjects = ({
   image,
   subtitle,
@@ -19,15 +17,9 @@ const AritcleProjects = ({
   textIcon4,
 }) => {
   return (
-    <article className="projects__card">
+    <article className="projects__card shadow-medium">
       <div className="projects__image">
         <img src={image} className="projects__img" alt="Projects" />
-
-        <Button
-          id="projects__button"
-          href="#/"
-          className="ri-arrow-right-up-line"
-        />
       </div>
 
       <div className="projects__content">
