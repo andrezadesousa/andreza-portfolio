@@ -13,11 +13,12 @@
 
 .qualification__work {
   display: block;
+  padding: .3rem;
 }
 
 .qualification__icon,
 .qualification__work {
-  font-size: var(--small-font-size);
+  font-size: .9rem;
   color: var(--black-color-light);
   text-align: center;
 }

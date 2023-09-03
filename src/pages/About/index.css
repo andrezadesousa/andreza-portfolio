@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.about__description span {
+.about__description span{
   font-size: var(--h2-font-size);
   font-weight: var(--font-semi-bold);
   color: var(--black-color);
@@ -10,17 +10,28 @@
 
 .about__number {
   font-size: var(--h1-font-size);
-  color: var(--black-color);
+  color:  var(--black-color);
   display: block;
 }
 
 .about__description span:hover,
 .about__number:hover {
-  color: var(--fourth-color);
+  color: var(--black-color);
 }
 
 .about__img {
   justify-self: center;
   width: 220px;
   border-radius: 0.5rem;
+}
+
+.about__container{
+  background-color: var(--third-color);
+  height: 20rem;
+  padding: 2rem;
+}
+
+.about__resume,
+.about__description{
+  color: var(--black-color);
 }

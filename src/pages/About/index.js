@@ -3,11 +3,12 @@ import React from "react";
 import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
+import AboutImg from "../../images/image-perfil.jpeg"
 
 export default () => {
   return (
-    <section className="about section bd-container" id="about">
-      <SecondTitle title="Sobre mim." />
+    <section className="about section" id="about">
+      <SecondTitle title="Sobre mim." id="title" />
 
       <div className="about__container bd-grid">
         <div className="about__data bd-grid">
@@ -39,7 +40,7 @@ export default () => {
             </div>
           </div>
         </div>
-        {/*<img src={AboutPerfil} alt="Perfil" className="about__img"></img>*/}
+        {/*<img src={AboutImg} alt="Perfil" className="about__img"></img>*/}
       </div>
     </section>
   );

@@ -14,14 +14,14 @@ export const headerLink = [
     {
         id: 3,
         classNav: 'nav__link',
-        ref: '#projects',
-        text: 'Projetos'
+        ref: '#qualification',
+        text: 'Experiências'
     },
     {
         id: 4,
         classNav: 'nav__link',
-        ref: '#experience',
-        text: 'Experiências'
+        ref: '#projects',
+        text: 'Projetos'
     },
     {
         id: 5,
