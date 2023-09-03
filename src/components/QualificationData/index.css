@@ -1,0 +1,23 @@
+.qualification__area {
+  font-size: var(--normal-font-size);
+  color: var(--black-color-light);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+}
+
+.qualification__box {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.qualification__work {
+  display: block;
+}
+
+.qualification__icon,
+.qualification__work {
+  font-size: var(--small-font-size);
+  color: var(--black-color-light);
+  text-align: center;
+}
