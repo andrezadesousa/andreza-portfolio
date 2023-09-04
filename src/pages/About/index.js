@@ -3,7 +3,6 @@ import React from "react";
 import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
-import AboutImg from "../../images/image-perfil.jpeg"
 
 export default () => {
   return (
