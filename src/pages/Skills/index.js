@@ -3,132 +3,74 @@ import React from "react";
 import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
+import SkillsTitle from "../../components/Titles/SkillsTitle";
+import SkillsData from "../../components/SkillsData";
 
-import AdobePhotoImage from "../../images/adobe-photoshop-2.svg"
-import AdobeXdImage from "../../images/adobe-xd-1.svg"
-import CssImage from "../../images/css-3.svg"
-import FigmaImage from "../../images/figma-1.svg"
-import GitIcon from "../../images/git-icon.svg"
-import HtmlImage from "../../images/html-1.svg"
-import InvisionImage from "../../images/invision.svg"
-import JavascriptImage from "../../images/logo-javascript.svg"
-import ReactImage from "../../images/react-2.svg"
-import SketchImage from "../../images/sketch-2.svg"
+import AndroidImage from "../../images/android.svg"
+import AngularImage from "../../images/angular-icon-1.svg"
+import AzureImage from "../../images/azure-boards.svg"
+import CssImage from "../../images/css-3.svg";
+import FigmaImage from "../../images/figma-1.svg";
+import GitImage from "../../images/git-icon.svg";
+import GithubImage from "../../images/github-icon-1.svg";
+import GitlabImage from "../../images/gitlab.svg"
+import HtmlImage from "../../images/html-1.svg";
+import JavascriptImage from "../../images/logo-javascript.svg";
+import NodeImage from "../../images/nodejs-icon.svg"
+import MaterialUiImage from "../../images/material-ui-1.svg"
+import PostmanImage from "../../images/postman.svg"
+
+
+import ReactImage from "../../images/react-2.svg";
+
 
 export default () => {
   return (
     <section className="skills section" id="skills">
-      <SecondTitle title="Skills." />
-      <span className="section__subtitle">My favorite skills</span>
+      <SecondTitle title="Minhas Skills." />
+      <span className="section__subtitle">Tecnologias que trabalhei e estudo</span>
 
       <div className="skills__container container grid section__border">
         {/*Skills 1 */}
         <div className="skills__content">
-          <h3 className="skills__title">
-            <i className="ri-braces-line"></i>Frontend Developer
-          </h3>
+          <SkillsTitle title="Desenvolvimento Frontend e Backend" icon="ri-braces-line" />
 
           <div className="skills__info">
-            <div className="skills__data">
-              <div className="skills__blob">
-                <img src={HtmlImage} alt="skills"></img>
-              </div>
+            <SkillsData image={HtmlImage} title="HTML" />
+            <SkillsData image={CssImage} title="CSS" />
+            <SkillsData image={JavascriptImage} title="JavScript" />
+            <SkillsData image={ReactImage} title="ReactJS" />
+            <SkillsData image={AngularImage} title="Angular" />
+            <SkillsData image={NodeImage} title="NodeJS" />
 
-              <h3 className="skills__name">Html</h3>
-              <span className="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div className="skills__data">
-              <div className="skills__blob">
-                <img src={CssImage} alt="skills"></img>
-              </div>
-
-              <h3 className="skills__name">CSS</h3>
-              <span className="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div className="skills__data">
-              <div className="skills__blob">
-                <img src={JavascriptImage} alt="skills"></img>
-              </div>
-
-              <h3 className="skills__name">JavaScript</h3>
-              <span className="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div className="skills__data">
-              <div className="skills__blob">
-                <img src={ReactImage} alt="skills"></img>
-              </div>
-
-              <h3 className="skills__name">React</h3>
-              <span className="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div className="skills__data">
-              <div className="skills__blob">
-                <img src={GitIcon} alt="skills"></img>
-              </div>
-
-              <h3 className="skills__name">Git</h3>
-              <span className="skills__subtitle">Intermediate</span>
-            </div>
           </div>
         </div>
 
         {/*Skills 2 */}
         <div className="skills__content">
-          <h3 className="skills__title">
-            <i className="ri-pantone-line"></i>Web Design
-          </h3>
+          <SkillsTitle title="Design e metodologias" icon="ri-braces-line" />
 
           <div className="skills__info">
-            
-            <div className="skills__data">
-              <div className="skills__blob">
-                <img src={FigmaImage} alt="skills"></img>
-              </div>
+            <SkillsData image={FigmaImage} title="Figma" />
+            <SkillsData image={MaterialUiImage} title="Material UI" />
+            <SkillsData 
+              image={"https://www.devexpress.com/Content/MainMenu/Logo.svg?w=152&h=36"} 
+              title="DevExpress"
+              className="dev__icon"/>
+            <SkillsData image={AzureImage} title="Azure Board" />
+          </div>
+        </div>
 
-              <h3 className="skills__name">Figma</h3>
-              <span className="skills__subtitle">Intermediate</span>
-            </div>
+        {/*Skills 3 */}
+        <div className="skills__content">
+          <SkillsTitle title="Versionamentos e Testes" icon="ri-braces-line" />
 
-            <div className="skills__data">
-              <div className="skills__blob">
-                <img src={SketchImage} alt="skills"></img>
-              </div>
-
-              <h3 className="skills__name">Sketch</h3>
-              <span className="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div className="skills__data">
-              <div className="skills__blob">
-                <img src={AdobeXdImage} alt="skills"></img>
-              </div>
-
-              <h3 className="skills__name">Adobe XD</h3>
-              <span className="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div className="skills__data">
-              <div className="skills__blob">
-                <img src={AdobePhotoImage} alt="skills"></img>
-              </div>
-
-              <h3 className="skills__name">Photoshop</h3>
-              <span className="skills__subtitle">Intermediate</span>
-            </div>
-
-            <div className="skills__data">
-              <div className="skills__blob">
-                <img src={InvisionImage} alt="skills"></img>
-              </div>
-
-              <h3 className="skills__name">InvisionApp</h3>
-              <span className="skills__subtitle">Intermediate</span>
-            </div>
-
+          <div className="skills__info">
+            <SkillsData image={AndroidImage} title="Android SDK" />
+            <SkillsData image={GitImage} title="GIT" />
+            <SkillsData image={GithubImage} title="GitHub" />
+            <SkillsData image={GitlabImage} title="GitLab" />
+            <SkillsData image={PostmanImage} title="Postman" />
           </div>
         </div>
       </div>
