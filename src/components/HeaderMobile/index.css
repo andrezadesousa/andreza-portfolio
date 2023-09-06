@@ -1,54 +1,66 @@
 .nav__toggle {
-    width: 32px;
-    height: 32px;
-    background-color: var(--fourth-color);
-    color: var(--white-color);
-    display: grid;
-    place-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--fourth-color);
+  color: var(--white-color);
+  display: grid;
+  place-items: center;
 }
 
 .nav__toggle {
-    font-size: 1.25rem;
-    cursor: pointer;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 /*Navigation for mobile devices*/
 @media screen and (max-width: 1150px) {
-    .nav__menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: var(--second-color);
-        width: 100%;
-        padding-block: 1.8rem 5rem;
-        text-align: center;
-        backdrop-filter: blur(8px);
-        transition: top .4s;
-    }
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--second-color);
+    width: 100%;
+    padding-block: 1.8rem 5rem;
+    text-align: center;
+  }
 
-    #nav-desktop{
-        display: none;
-    }
+  .nav__menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 500ms ease;
+  }
+
+  .nav__menu.inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: 500ms ease;
+  }
+
+  #nav-desktop {
+    display: none;
+  }
 }
 
 .nav__title,
 .nav__name,
 .nav__close {
-    color: var(--fourth-color);
+  color: var(--fourth-color);
 }
 
 .nav__close {
-    position: absolute;
-    font-size: 1.5rem;
-    top: 1rem;
-    right: 1.5rem;
-    cursor: pointer;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
 }
 
 .active-link {
-    color: var(--fourth-color);
+  color: var(--fourth-color);
 }
 
 .active-link::after {
-    width: 25%;
+  width: 25%;
 }
