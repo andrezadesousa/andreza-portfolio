@@ -14,7 +14,7 @@ export const headerLink = [
     {
         id: 3,
         classNav: 'nav__link',
-        ref: '#qualification',
+        ref: '#experience',
         text: 'Experiências'
     },
     {

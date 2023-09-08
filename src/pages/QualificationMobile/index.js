@@ -2,12 +2,14 @@
 import React from "react";
 import "./index.css";
 
+import SecondTitle from "../../components/Titles/SecondTitle";
 import AritcleExperience from "../../components/ArticleExperience";
 
 export function Teste() {
 
   return (
-    <section className="section">
+    <section className="section" id="experience">
+      <SecondTitle title="Experiência." />
       <AritcleExperience
         title="Desenvolvedora Frontend Jr"
         year="Dez 2021 - Jan 2023"
