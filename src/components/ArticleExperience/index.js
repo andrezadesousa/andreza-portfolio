@@ -6,11 +6,14 @@ const AritcleExperience = ({ title, year, subtitle, description, tech }) => {
   const [showLinks, setShowLinks] = useState(false);
   return (
     <nav
-      className="experience__nav container shadow-medium"
+      className={`experience__nav ${showLinks ? "active" : "inactive"
+        } shadow-medium container`}
       id="experience-nav-mobile"
     >
-      <a href="/" className="experience__nav-logo">
-        <span className="nav__logo-name">{title}</span>
+      <a href="/"
+        className={`experience__nav-logo ${showLinks ? "active" : "inactive"
+          }`}>
+        <span>{title}</span>
       </a>
 
       <div
@@ -37,7 +40,8 @@ const AritcleExperience = ({ title, year, subtitle, description, tech }) => {
           onClick={() => {
             setShowLinks(!showLinks);
           }}
-          className="nav__toggle"
+          className={`experience__toggle ${showLinks ? "active" : "inactive"
+            }`}
           id="nav-toggle"
         >
           {showLinks ? (
