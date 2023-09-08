@@ -1,94 +1,70 @@
-.qualification-card-item.border-radius_small {
-  width: 25rem;
-  height: auto;
-  justify-content: space-between;
-  display: flex;
+.experience__header {
+  background-color: var(--second-color);
 }
 
-.w-dropdown {
-  text-align: left;
-  z-index: 900;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
+.experience__nav {
   position: relative;
-}
-.card-banner-mobile-view-logo.border-radius_small {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.card-banner-mobile-view-logo {
-  width: 70px;
-  justify-content: center;
-  align-items: center;
+  height: var(--header-height);
   display: flex;
-}
-.primary-pure,
-.primary-pure.color {
-  background-color: #e80537;
-}
-
-.card-banner-mobile-view-text {
-  flex: 1;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  display: flex;
-  position: relative;
-  background-color: var(--neutral-color);
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.border-radius_small {
-  border-radius: 4px;
-}
-
-.card__title {
-  text-align: center;
-  display: block;
-  font-size: var(--normal-font-size);
-  color: var(--black-color);
-}
-
-.shadow-medium {
-    box-shadow: 0 4px 16px rgba(0,0,0,.2);
-}
-
-.card-banner-icon{
-  cursor: pointer;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 @media screen and (max-width: 1150px) {
-  .nav__menu-card {
-    /*position: fixed;*/
-    top: 15%;
+  .experience__nav-menu {
+    position: absolute;
+    top: 3.8em;
     left: 0;
     background-color: var(--second-color);
     width: 100%;
-    padding: 1.8rem 5rem;
+    padding-block: 1.8rem 5rem;
     text-align: center;
-
-  z-index: 900;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-block;
-  position: relative;
+    z-index: var(--z-tooltip);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
 
-  .nav__menu-card.active {
+  .experience__nav-menu.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
     transition: 500ms ease;
   }
 
-  .nav__menu-card.inactive {
+  .experience__nav-menu.inactive {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
     transition: 500ms ease;
   }
+}
+
+.experience__nav-logo {
+  display: flex;
+  column-gap: .5rem;
+  align-items: center;
+  font-weight: var(--font-semi-bold);
+  color: var(--fourth-color);
+}
+
+.experience__nav-name {
+  position: relative;
+  width: max-content;
+  margin: 0 auto 3rem;
+  font-size: var(--h2-font-size);
+}
+
+.experience__nav-title {
+  display: block;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 3.5rem;
+}
+
+.experience__nav-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
 }

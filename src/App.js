@@ -9,6 +9,8 @@ import Qualification from './pages/Qualification';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 
+import {Teste} from "./pages/QualificationMobile"
+
 function App() {
   return (
     <React.StrictMode>
@@ -17,6 +19,7 @@ function App() {
       <main className='main'>
         <Home /> 
         <About />
+        <Teste />
         <Skills />
         <Services />
         <Qualification />
