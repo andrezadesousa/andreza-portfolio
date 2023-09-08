@@ -1,64 +1,34 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, { useState } from "react";
+import React from "react";
 import "./index.css";
 
+import AritcleExperience from "../../components/ArticleExperience";
+
 export function Teste() {
-  const [showLinks, setShowLinks] = useState(false);
+
   return (
     <section className="section">
-      <nav className="experience__nav container shadow-medium" id="experience-nav-mobile">
-        <a href="/" className="experience__nav-logo">
-          <span className="nav__logo-name">Desenvolvedora Frontend Jr</span>
-        </a>
+      <AritcleExperience
+        title="Desenvolvedora Frontend Jr"
+        year="Dez 2021 - Jan 2023"
+        subtitle="Certsys Tecnologia da Informação"
+        description="Atuei em uma empresa de consultoria. Participando de diferentes projetos, internacionais e nacionais, como desenvolvedora web. Todos os projetos em que atuei foram com metodologia ágil Scrum e com as tecnologias"
+        tech="React, React Native, Angular, DevExtreme Angular Components, NodeJS, JavaScript e TypeScript." 
+        />
 
-        <div
-          className={`experience__nav-menu ${
-            showLinks ? "active" : "inactive"
-          } shadow-medium`}
-          id="experience-nav-menu"
-        >
-          <span className="experience__nav-title">Dez 2021 - Jan 2023</span>
-          <h3 className="experience__nav-name">Certsys Tecnologia da Informação</h3>
-          <ul className="experience__nav-list">
-            <p className="experience__description">
-              Atuei em uma empresa de consultoria. Participando de diferentes
-              projetos, internacionais e nacionais, como desenvolvedora web.
-              Todos os projetos em que atuei foram com metodologia ágil Scrum e
-              com as tecnologias
-            </p>
-            <p className="experience__tech">
-              React, React Native, Angular, DevExtreme Angular Components,
-              NodeJS, JavaScript e TypeScript.
-            </p>
-          </ul>
-        </div>
+      <AritcleExperience
+        title="Business Analyst"
+        year="Ago 2021 - Dez 2021"
+        subtitle="Certsys Tecnologia da Informação"
+        description="Atuei como Analista de Negócios na elaboração da documentação de um projeto americano. Realizei pesquisas, analisando as operações do serviço, através de reuniões com os colaboradores, stakeholders e cliente. Ao lado dos mesmos modelei e documentei o serviço. Elaborando também o diagrama dos processos de atendimento, sempre mantendo a comunicação transparente para cumprir os prazos" />
 
-        <div className="nav__buttons">
-          <div
-            onClick={() => {
-              setShowLinks(!showLinks);
-            }}
-            className="nav__toggle"
-            id="nav-toggle"
-          >
-            {showLinks ? (
-              <i
-                class="bx bx-chevron-up"
-                onClick={() => {
-                  setShowLinks(!showLinks);
-                }}
-              ></i>
-            ) : (
-              <i
-                onClick={() => {
-                  setShowLinks(!showLinks);
-                }}
-                class="bx bx-chevron-down"
-              ></i>
-            )}
-          </div>
-        </div>
-      </nav>
+      <AritcleExperience
+        title="Desenvolvedora FullStack Jr"
+        year="Mai 2021 - Dez 2021"
+        subtitle="Certsys Tecnologia da Informação"
+        description="Atuei como desenvolvedora backend em um projeto americano. Sendo responsável por auxiliar na manutenção de sistemas, utilizando JavaScript e Typescript como principais linguagens de programação e ferramentas como puppeteer e Git para versionamento. Além de utilizar a metodologia ágil Scrum"
+        tech="Node.js, JavaScript, NPM (Gerenciador de Pacotes do Node), Git, GitLab" 
+  />
     </section>
   );
 }
