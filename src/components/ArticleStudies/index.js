@@ -1,21 +1,24 @@
-import React  from "react";
+import React from "react";
+import "./index.css"
 
-const AritcleStudies = ({icon, title, description, date}) => {
+const AritcleStudies = ({ icon, title, subtitle, description, date }) => {
   return (
-    <article className="services__card">
-        <div className="services__border"></div>
+    <article className="studies__card">
+      <div className="studies__border"></div>
 
-        <div className="services__content">
-            <div className="services__icon">
-                <div className="services__box"></div>
-                <i className={icon}></i>
-            </div>
-
-            <h2 className="services__title">{title}</h2>
-
-            <p className="services__description">{description}</p>
-            <p className="services__description">{date}</p>
+      <div className="studies__content">
+        <div className="studies__icon">
+          <div className="studies__box"></div>
+          <i className={icon}></i>
         </div>
+        <h2 className="studies__title">{title}</h2>
+        <p className="studies__description subtitle">{subtitle}</p>
+        <p className="studies__description">{description}</p>
+        <p className="studies__description date">
+          <i class="ri-calendar-check-line"></i>
+          {date}
+        </p>
+      </div>
     </article>
   );
 };

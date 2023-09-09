@@ -7,7 +7,6 @@ import About from "./pages/About"
 import Experience from "./pages/Experience"
 import Studies from './pages/Studies';
 import Skills from './pages/Skills';
-import Qualification from './pages/Qualification';
 import Projects from './pages/Projects';
 
 
@@ -22,9 +21,7 @@ function App() {
         <Experience />
         <Studies />
         <Skills />
-        <Qualification />
         <Projects />
-        
       </main>
     </body>
     </React.StrictMode>
