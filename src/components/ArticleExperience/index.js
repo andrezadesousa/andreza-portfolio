@@ -7,9 +7,7 @@ const AritcleExperience = ({ title, year, subtitle, description, tech }) => {
   return (
     <nav
       className={`experience__nav ${showLinks ? "active" : "inactive"
-        } shadow-medium container`}
-      id="experience-nav-mobile"
-    >
+        } shadow-medium container`}>
       <a href="/"
         className={`experience__nav-logo ${showLinks ? "active" : "inactive"
           }`}>

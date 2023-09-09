@@ -1,14 +1,13 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
-import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
 import AritcleExperience from "../../components/ArticleExperience";
 
-export function Teste() {
+export function ExperienceMobile() {
 
   return (
-    <section className="section" id="experience">
+    <section className="section" id="experience-mobile">
       <SecondTitle title="Experiência." />
       <AritcleExperience
         title="Desenvolvedora Frontend Jr"
