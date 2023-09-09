@@ -1,6 +1,0 @@
-.services__container{
-    grid-template-columns: repeat(2, 185px);
-    justify-content: center;
-    column-gap: .5rem;
-    padding-block: 3rem 5rem;
-}

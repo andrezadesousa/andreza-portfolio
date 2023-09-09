@@ -5,6 +5,8 @@ import { ExperienceMobile } from "../../components/ExperienceMobile";
 
 export default () => {
   return (
-    <ExperienceMobile />
+    <div id="experience">
+      <ExperienceMobile />
+    </div>
   );
 };
