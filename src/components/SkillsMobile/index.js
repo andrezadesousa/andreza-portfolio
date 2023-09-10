@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
@@ -8,6 +8,10 @@ import { SkillsDataMobile } from "../../components/SkillsDataMobile";
 import { frontEnd, backEnd, designLib } from "../../mocks/MockSkillsMobile";
 
 export const SkillsMobile = () => {
+  const [showLinksFront, setShowLinksFront] = useState(false);
+  const [showLinksBack, setShowLinksBack] = useState(false);
+  const [showLinksDesign, setShowLinksDesign] = useState(false);
+
   return (
     <section className="skills section" id="skills">
       <SecondTitle title="Minhas skills." />
@@ -16,18 +20,17 @@ export const SkillsMobile = () => {
       <div className="skills__container container grid">
         <div>
           {/*Skills 1*/}
-          <div className="skills__content skills__open">
-            <div className="skills__header">
+          <div 
+            onClick={() => {setShowLinksFront(!showLinksFront);}}
+            className={`skills__content ${showLinksFront ? "skills__open" : "skills__close"}`}>
+            <div className="skills__header shadow-medium">
               <i class="bx bx-code-curly skills__icon"></i>
-
               <SkillsTitleMobile
                 title="Desenvolvedora Frontend"
-                subtitle="More than 4 years"
-              />
+                subtitle="More than 4 years"/>
 
               <i class="bx bx-chevron-down skills__arrow"></i>
             </div>
-
             <div className="skills__list grid">
               {frontEnd.map((frontEndLinks) => {
                 return (
@@ -43,18 +46,17 @@ export const SkillsMobile = () => {
           </div>
 
           {/*Skills 2*/}
-          <div className="skills__content skills__open">
-            <div className="skills__header">
+          <div 
+            onClick={() => {setShowLinksBack(!showLinksBack);}}
+            className={`skills__content ${showLinksBack ? "skills__open" : "skills__close"}`}>
+            <div className="skills__header shadow-medium">
               <i class="bx bx-code-curly skills__icon"></i>
-
               <SkillsTitleMobile
                 title="Desenvolvimento Backend & Versionamento"
-                subtitle="More than 4 years"
-              />
+                subtitle="More than 4 years"/>
 
               <i class="bx bx-chevron-down skills__arrow"></i>
             </div>
-
             <div className="skills__list grid">
               {backEnd.map((backEndLinks) => {
                 return (
@@ -70,18 +72,17 @@ export const SkillsMobile = () => {
           </div>
 
           {/*Skills 3*/}
-          <div className="skills__content skills__open">
-            <div className="skills__header">
+          <div 
+            onClick={() => {setShowLinksDesign(!showLinksDesign);}}
+            className={`skills__content ${showLinksDesign ? "skills__open" : "skills__close"}`}>
+            <div className="skills__header shadow-medium">
               <i class="bx bx-code-curly skills__icon"></i>
-
               <SkillsTitleMobile
-                title="Desenvolvimento Backend"
-                subtitle="More than 4 years"
-              />
+                title="Design & Componentização"
+                subtitle="More than 4 years"/>
 
               <i class="bx bx-chevron-down skills__arrow"></i>
             </div>
-
             <div className="skills__list grid">
               {designLib.map((designLibLinks) => {
                 return (
@@ -95,8 +96,6 @@ export const SkillsMobile = () => {
               })}
             </div>
           </div>
-
-          
 
         </div>
       </div>
