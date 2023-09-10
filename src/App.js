@@ -9,6 +9,7 @@ import Studies from './pages/Studies';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Footer from "./pages/Footer"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Skills />
         <Projects />
         <Contact />
+        <Footer />
       </main>
     </body>
     </React.StrictMode>
