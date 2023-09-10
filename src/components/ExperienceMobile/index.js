@@ -10,7 +10,7 @@ export function ExperienceMobile() {
   return (
     <section className="section" id="experience-mobile">
       <SecondTitle title="Experiência." />
-    
+      <Logos />
       <AritcleExperience
         title="Desenvolvedora Frontend Jr"
         year="Dez 2021 - Jan 2023"

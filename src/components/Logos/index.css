@@ -1,6 +1,7 @@
 .logos__container{
-    padding-top: 2rem;
-    grid-template-columns: repeat(2, 1fr);
+    padding-top: .5rem;
+    padding-bottom: 2rem;
+    grid-template-columns: repeat(5, 1fr);
     gap: 3rem 2rem;
     justify-items: center;
 }
