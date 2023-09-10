@@ -8,7 +8,7 @@ import Experience from "./pages/Experience"
 import Studies from './pages/Studies';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
-
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
         <Studies />
         <Skills />
         <Projects />
+        <Contact />
       </main>
     </body>
     </React.StrictMode>
