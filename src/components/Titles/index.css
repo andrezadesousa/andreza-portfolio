@@ -63,6 +63,15 @@
   justify-content: center;
 }
 
+.skills__title-mobile{
+  font-size: var(--h3-font-size);
+}
+
+.skills__subtitle-mobile{
+  font-size: var(--small-font-siz);
+  color: var(--black-color);
+}
+
 /*
 .skills__title{
   display: flex;
