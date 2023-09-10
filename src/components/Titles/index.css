@@ -39,7 +39,7 @@
 
 .section-title{
   font-size: var(--h1-font-size);
-  color: var(--first-color);
+  color: var(--black-color);
   margin-bottom: var(--mb-3);
 }
 

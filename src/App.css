@@ -4,7 +4,6 @@
   --header-height: 3.5rem;
 
   --white-color: hsl(0, 0%, 95%);
-  --title-color: hsl(0, 0%, 0%);
   --text-color: hsl(0, 0%, 35%);
   --text-color-light: hsl(0, 0%, 64%);
   --body-color: hsl(0, 0%, 87%);
@@ -73,16 +72,15 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--second-color);
-  color: var(--text-color);
+  color: var(--black-color-light);
   transition: background-color 0.4s;
-  /*for dark theme*/
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: var(--title-color);
+  color: var(--black-color);
   font-weight: var(--font-bold);
 }
 
@@ -129,6 +127,10 @@ img {
 .bd-grid {
   display: grid;
   gap: 1.5rem;
+}
+
+.shadow-medium {
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
 }
 
 @media screen and (max-width: 340px) {

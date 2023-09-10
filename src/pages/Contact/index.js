@@ -7,6 +7,8 @@ import ContactTitle from "../../components/Titles/ContactTitle";
 
 import GeometricBox from "../../components/GeometricBox"
 
+import ContacButton from "../../components/Button/ContactButton"
+
 import MediaSocialContact from "../../components/ContactSocial";
 import FirstDescription from "../../components/ContactDescription/FirstDescription";
 import SecondDescription from "../../components/ContactDescription/SecondDescription";
@@ -19,7 +21,7 @@ export default () => {
   return (
     <section className="contact section" id="contact">
       <div className="contact__container grid">
-        <div className="contact__data">
+        <div className="contact__data shadow-medium">
           <SecondTitle title="Me contate." />
           <FirstDescription 
             text="Deseja falar comigo? Envie-me uma mensagem que eu entrarei em contato com você." />
@@ -30,7 +32,7 @@ export default () => {
           <GeometricBox/>
         </div>
 
-        <div className="contact__mail">
+        <div className="contact__mail shadow-medium ">
           <ContactTitle title="Envie sua mensagem" />
 
           <form action="" className="contact__form" id="contact-form">
@@ -78,10 +80,8 @@ export default () => {
             <p className="contact__message" id="contact-message">
               {/*Message sent successfully ✅*/}
             </p>
-
-            <button type="submit" className="contact__button button">
-              <i className="ri-send-plane-line"></i> Send Message
-            </button>
+            
+            <ContacButton/>
           </form>
         </div>
 

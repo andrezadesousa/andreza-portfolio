@@ -1,0 +1,22 @@
+.contact__description-1 {
+  color: var(--black-color);
+  font-weight: var(--font-medium);
+  margin-bottom: 2rem;
+}
+
+.contact__description-2 {
+  color: var(--black-color);
+  font-size: var(--small-font-size);
+}
+
+.contact__social-description-1 {
+  color: var(--black-color);
+  font-size: var(--small-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.contact__social-description-2 {
+  color: var(--black-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+}

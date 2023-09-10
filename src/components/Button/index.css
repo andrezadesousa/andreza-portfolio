@@ -36,3 +36,13 @@
 .button__ghost:hover{
     border: 3px solid var(--first-color);
 }
+
+.contact__button {
+    background-color: var(--fourth-color);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.contact__button:hover{
+    background-color: var(--black-color);
+}

@@ -76,7 +76,3 @@
     background-color: var(--fourth-color);
     color: var(--second-color);
 }
-
-.shadow-medium {
-    box-shadow: 0 4px 16px rgba(0,0,0,.2);
-}
