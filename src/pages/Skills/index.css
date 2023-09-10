@@ -1,4 +1,4 @@
-.section__subtitle {
+/*.section__subtitle {
   text-align: center;
 }
 
@@ -55,12 +55,14 @@
 .skills__name{
   font-size: var(--small-font-size);
   margin-bottom: .25rem;
-}
+}*/
 
 /*.skills__subtitle{
   font-size: var(--tiny-font-size);
   color: red;
 }*/
+
+/*
 .skills__blob:hover{
   background-color: var(--fourth-color);
 }
@@ -85,3 +87,4 @@
     transform: translate(0);
   }
 }
+*/

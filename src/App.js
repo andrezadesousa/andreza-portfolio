@@ -10,6 +10,8 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Footer from "./pages/Footer"
 
+import { SkillsMobile } from './components/SkillsMobile';
+
 function App() {
   return (
     <React.StrictMode>
@@ -19,7 +21,7 @@ function App() {
         <Home /> 
         <AboutMe />        
         <Experience />
-        <Skills />
+        <SkillsMobile />
         <Projects />
         <Contact />
         <Footer />
