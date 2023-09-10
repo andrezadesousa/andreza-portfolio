@@ -24,7 +24,7 @@ export function ExperienceMobile() {
         description="Atuei como Analista de Negócios na elaboração da documentação de um projeto americano. Realizei pesquisas, analisando as operações do serviço, através de reuniões com os colaboradores, stakeholders e cliente. Ao lado dos mesmos modelei e documentei o serviço. Elaborando também o diagrama dos processos de atendimento, sempre mantendo a comunicação transparente para cumprir os prazos" />
 
       <AritcleExperience
-        title="Desenvolvedora FullStack Jr"
+        title="Desenvolvedora FullStack Trainee"
         year="Mai 2021 - Dez 2021"
         subtitle="Certsys Tecnologia da Informação"
         description="Atuei como desenvolvedora backend em um projeto americano. Sendo responsável por auxiliar na manutenção de sistemas, utilizando JavaScript e Typescript como principais linguagens de programação e ferramentas como puppeteer e Git para versionamento. Além de utilizar a metodologia ágil Scrum"

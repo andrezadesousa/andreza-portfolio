@@ -2,7 +2,7 @@
   width: 32px;
   height: 32px;
   background-color: var(--fourth-color);
-  color: var(--white-color);
+  color: var(--second-color);
   display: grid;
   place-items: center;
 }
