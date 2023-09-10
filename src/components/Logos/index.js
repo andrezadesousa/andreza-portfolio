@@ -3,6 +3,7 @@ import "./index.css";
 
 import AngularImage from "../../images/plugger.png";
 
+import { CertsysLogo } from "../LogosImage/Certsys"
 import { PluggerLogo } from "../LogosImage/Plugger"
 import { TraiveLogo } from "../LogosImage/Traive"
 import { LindaLogo } from "../LogosImage/Linda"
@@ -12,6 +13,7 @@ export const Logos = () => {
   return (
     <section className="logos section">
       <div className="logos__container container grid">
+        <CertsysLogo />
         <PluggerLogo />
         <TraiveLogo />
         <LindaLogo />
