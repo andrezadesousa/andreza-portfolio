@@ -3,10 +3,7 @@ import './App.css'
 
 import Header from './pages/Header';
 import Home from "./pages/Home"
-import AboutMe from './pages/AboutMe';
-
 import Experience from "./pages/Experience"
-
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
@@ -18,11 +15,8 @@ function App() {
       <body>
       <Header />
       <main className='main'>
-        <Home /> 
-        <AboutMe />
-        
+        <Home />         
         <Experience />
-     
         <Skills />
         <Projects />
         <Contact />
