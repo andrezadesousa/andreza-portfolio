@@ -1,4 +1,4 @@
-.bd-grid {
+.bd-grid-about {
   max-width: 1024px;
   display: grid;
   margin-left: var(--mb-2);
@@ -10,8 +10,13 @@
   text-align: center;
 }
 
+.about__text{
+  text-align: center;
+}
+
 .about__subtitle {
   margin-bottom: var(--mb-2);
+  text-align: center;
 }
 
 .about__img {

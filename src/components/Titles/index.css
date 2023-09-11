@@ -49,20 +49,6 @@
   font-weight: var(--font-semi-bold);
 }
 
-#qualification__title-icon {
-  font-size: 1.5rem;
-  margin-right: var(--mb-1);
-}
-
-.qualification__title {
-  font-size: var(--h3-font-size);
-  color: var(--fourth-color);
-  margin-bottom: var(--mb-2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .skills__title-mobile{
   font-size: var(--h3-font-size);
 }

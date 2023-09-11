@@ -33,7 +33,8 @@
 
 .skills__list {
   row-gap: 1.5rem;
-  padding-left: 2.75rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
 }
 
 .skills__arrow {
@@ -59,15 +60,16 @@
 }
 
 .skills__bar {
-  background-color: var(--fourth-color);
+  background-color: var(--text-color-light);
 }
 
 .skills__percentage {
   display: block;
-  background-color: green;
+  background-color: var(--fourth-color);
 }
 
-.skills__html {
+.skills__html,
+.skills__css {
   width: 90%;
 }
 
@@ -83,4 +85,46 @@
 
 .skills__open .skills__arrow {
   transform: rotate(-180deg);
+}
+
+.skills__git,
+.skills__github,
+.skills__figma{
+  width: 70%;
+}
+
+.skills__gitlab,
+.skills__azure{
+  width: 60%;
+}
+.skills__js{
+  width: 50%;
+}
+
+.skills__material{
+  width: 40%;
+}
+
+.skills__dev{
+  width: 35%;
+}
+
+.skills__react,
+.skills__android{
+  width: 30%;
+}
+
+.skills__node{
+  width: 25%;
+}
+
+.skills__angular,
+.skills__firebase{
+  width: 20%;
+}
+
+.skills__native,
+.skills__c,
+.skills__postman{
+  width: 10%;
 }

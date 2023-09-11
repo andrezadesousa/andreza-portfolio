@@ -9,7 +9,7 @@ export default () => {
   return (
     <section className="about section" id="about">
       <SecondTitle title="Sobre mim." />
-      <div class="about__container bd-grid">
+      <div class="about__container bd-grid-about">
         <AboutLogo />
 
         <div>

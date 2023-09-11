@@ -2,8 +2,8 @@
 import React from "react";
 import "./index.css";
 
-import { HeaderDesktop } from "../../components/HeaderDesktop"
-import { HeaderMobile } from "../../components/HeaderMobile";
+import { HeaderDesktop } from "../HeaderDesktop"
+import { HeaderMobile } from "../HeaderMobile";
 
 export default () => {
   return (

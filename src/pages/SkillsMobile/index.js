@@ -15,8 +15,6 @@ export const SkillsMobile = () => {
   return (
     <section className="skills section" id="skills">
       <SecondTitle title="Minhas skills." />
-      <span className="section__subtitle">My technical level</span>
-
       <div className="skills__container container grid">
         <div>
           {/*Skills 1*/}
@@ -24,10 +22,10 @@ export const SkillsMobile = () => {
             onClick={() => {setShowLinksFront(!showLinksFront);}}
             className={`skills__content ${showLinksFront ? "skills__open" : "skills__close"}`}>
             <div className="skills__header shadow-medium">
-              <i class="bx bx-code-curly skills__icon"></i>
+              <i class="ri-macbook-line skills__icon"></i>
               <SkillsTitleMobile
-                title="Desenvolvedora Frontend"
-                subtitle="More than 4 years"/>
+                title="Desenvolvimento Frontend"
+                subtitle="Mais de três anos"/>
 
               <i class="bx bx-chevron-down skills__arrow"></i>
             </div>
@@ -50,10 +48,10 @@ export const SkillsMobile = () => {
             onClick={() => {setShowLinksBack(!showLinksBack);}}
             className={`skills__content ${showLinksBack ? "skills__open" : "skills__close"}`}>
             <div className="skills__header shadow-medium">
-              <i class="bx bx-code-curly skills__icon"></i>
+              <i class="ri-code-s-slash-line skills__icon"></i>
               <SkillsTitleMobile
                 title="Desenvolvimento Backend & Versionamento"
-                subtitle="More than 4 years"/>
+                subtitle="Mais de dois anos"/>
 
               <i class="bx bx-chevron-down skills__arrow"></i>
             </div>
@@ -76,10 +74,10 @@ export const SkillsMobile = () => {
             onClick={() => {setShowLinksDesign(!showLinksDesign);}}
             className={`skills__content ${showLinksDesign ? "skills__open" : "skills__close"}`}>
             <div className="skills__header shadow-medium">
-              <i class="bx bx-code-curly skills__icon"></i>
+              <i class="ri-palette-line skills__icon"></i>
               <SkillsTitleMobile
                 title="Design & Componentização"
-                subtitle="More than 4 years"/>
+                subtitle="Mais de um ano"/>
 
               <i class="bx bx-chevron-down skills__arrow"></i>
             </div>

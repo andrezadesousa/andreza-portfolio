@@ -5,12 +5,6 @@ import Header from './pages/Header';
 import Home from "./pages/Home"
 import AboutMe from "./pages/AboutMe"
 import Experience from "./pages/Experience"
-import Skills from './pages/Skills';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
-import Footer from "./pages/Footer"
-
-import { SkillsMobile } from './components/SkillsMobile';
 
 function App() {
   return (
@@ -18,13 +12,9 @@ function App() {
       <body>
       <Header />
       <main className='main'>
-        <Home /> 
-        <AboutMe />        
-        <Experience />
-        <SkillsMobile />
-        <Projects />
-        <Contact />
-        <Footer />
+        <Home />
+        <AboutMe />
+
       </main>
     </body>
     </React.StrictMode>
