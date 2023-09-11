@@ -58,8 +58,8 @@
   color: var(--black-color);
 }
 
-/*
-.skills__title{
+
+.skills__title-desktop{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,8 +69,7 @@
   margin-bottom: 2.5rem;
 }
 
-.skills__title i{
+.skills__title-desktop i{
   font-size: 1rem;
   font-weight: initial;
 }
-*/

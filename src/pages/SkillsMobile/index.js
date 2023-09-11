@@ -13,7 +13,7 @@ export const SkillsMobile = () => {
   const [showLinksDesign, setShowLinksDesign] = useState(false);
 
   return (
-    <section className="skills section" id="skills">
+    <section className="skills section" id="skills-mobile">
       <SecondTitle title="Minhas skills." />
       <div className="skills__container container grid">
         <div>

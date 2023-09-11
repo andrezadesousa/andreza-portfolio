@@ -4,7 +4,7 @@ import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
 import SkillsTitle from "../../components/Titles/SkillsTitle";
-import SkillsData from "../../components/SkillsData";
+import SkillsData from "../../components/SkillsDataDesktop";
 
 import AndroidImage from "../../images/android.svg"
 import AngularImage from "../../images/angular-icon-1.svg"
@@ -26,16 +26,14 @@ import ReactImage from "../../images/react-2.svg";
 
 export default () => {
   return (
-    <section className="skills section" id="skills">
+    <section className="skills section" id="skills-desktop">
       <SecondTitle title="Minhas Skills." />
-      <span className="section__subtitle">Tecnologias que trabalhei e estudo</span>
-
-      <div className="skills__container container grid section__border">
+      <div className="skills__container-desktop container grid section__border-desktop">
         {/*Skills 1 */}
-        <div className="skills__content">
+        <div className="skills__content-desktop">
           <SkillsTitle title="Desenvolvimento Frontend e Backend" icon="ri-braces-line" />
 
-          <div className="skills__info">
+          <div className="skills__info-desktop">
             <SkillsData image={HtmlImage} title="HTML" />
             <SkillsData image={CssImage} title="CSS" />
             <SkillsData image={JavascriptImage} title="JavScript" />
@@ -47,10 +45,10 @@ export default () => {
         </div>
 
         {/*Skills 2 */}
-        <div className="skills__content">
+        <div className="skills__content-desktop">
           <SkillsTitle title="Design e metodologias" icon="ri-braces-line" />
 
-          <div className="skills__info">
+          <div className="skills__info-desktop">
             <SkillsData image={FigmaImage} title="Figma" />
             <SkillsData image={MaterialUiImage} title="Material UI" />
             <SkillsData 
@@ -62,10 +60,10 @@ export default () => {
         </div>
 
         {/*Skills 3 */}
-        <div className="skills__content">
+        <div className="skills__content-desktop">
           <SkillsTitle title="Versionamentos e Testes" icon="ri-braces-line" />
 
-          <div className="skills__info">
+          <div className="skills__info-desktop">
             <SkillsData image={AndroidImage} title="Android SDK" />
             <SkillsData image={GitImage} title="GIT" />
             <SkillsData image={GithubImage} title="GitHub" />
