@@ -1,8 +1,6 @@
 import React from "react";
 import "./index.css";
 
-import AngularImage from "../../images/plugger.png";
-
 import { CertsysLogo } from "../LogosImage/Certsys";
 import { PluggerLogo } from "../LogosImage/Plugger";
 import { TraiveLogo } from "../LogosImage/Traive";

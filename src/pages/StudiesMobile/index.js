@@ -4,45 +4,36 @@ import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
 
-import { StudiesIconMobile } from "../../components/StudiesIconMobile";
 import { DataRight } from "../../components/ArticleStudiesMobile/articleRight";
 import { DataLeft } from "../../components/ArticleStudiesMobile/articleLeft";
+import { RounderLine } from "../../components/RounderLine/Rounder";
+import { Line } from "../../components/RounderLine/Line";
+import { Espace } from "../../components/RounderLine/Espace";
 
 export default () => {
   return (
     <section className="qualification section" id="studies-mobile">
-      <SecondTitle title="Qualificação." />
+      <SecondTitle title="Estudos." />
 
       <div className="qualification__container container">
-        <StudiesIconMobile firstText="Cursos" secondText="Bootcamps" />
-
         <div className="qualification__section">
           {/*Qualification content 1 */}
           <div
-            className="qualification__content qualification__active"
-            data-content
+            className="qualification__content"
             id="education"
           >
-            {/*Qualification Left */}
             <div className="qualification__data left">
               <DataLeft
                 title="Gestão da Tecnologia da Informação"
                 subtitle="Faculdade de Tecnologia da Informação"
                 date="2018 - 2021"
               />
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
+              <RounderLine />
             </div>
 
-            {/*Qualification Right */}
             <div className="qualification__data right">
-              <div></div>
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
+              <Espace />
+              <RounderLine />
               <DataRight
                 title="Curso de JavaScript"
                 subtitle="B7Web Cursos"
@@ -50,61 +41,43 @@ export default () => {
               />
             </div>
 
-            {/*Qualification Left */}
             <div className="qualification__data left">
               <DataLeft
-                itle="Curso de ReactJS"
-                subtitle="B7Web Cursos"
-                date="2023 - estudando"
+                title="Trilha Conectar do Discover"
+                subtitle="Rocketseat | Curso"
+                date="2023"
               />
-              <div>
-                <span className="qualification__rounder"></span>
-              </div>
+              <RounderLine />
             </div>
 
-          </div>
-
-          {/*Qualification content 2 */}
-          <div className="qualification__content" data-content id="work">
-            {/*Qualification Left */}
-            <div className="qualification__data left">
-              <DataLeft
-                title="Gestão da Tecnologia da Informação"
-                subtitle="Faculdade de Tecnologia da Informação"
-                date="2018 - 2021"
-              />
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-            </div>
-
-            {/*Qualification Right */}
             <div className="qualification__data right">
-              <div></div>
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
+              <Espace />
+              <RounderLine />
               <DataRight
-                title="Curso de JavaScript"
+                title="Curso de ReactJS"
                 subtitle="B7Web Cursos"
                 date="2023 - estudando"
               />
             </div>
 
-            {/*Qualification Left */}
             <div className="qualification__data left">
               <DataLeft
-                itle="Curso de ReactJS"
-                subtitle="B7Web Cursos"
-                date="2023 - estudando"
+                title="Ignite Lab | ReactJs"
+                subtitle="Rocketseat | Bootcamp"
+                date="2022"
               />
-              <div>
-                <span className="qualification__rounder"></span>
-              </div>
+              <RounderLine />
             </div>
 
+            <div className="qualification__data right">
+              <Espace />
+              <Line />
+              <DataRight
+                title="Next Level Week Together 6 | ReactJs"
+                subtitle="Rocketseat | Bootcamp"
+                date="2022"
+              />
+            </div>
           </div>
         </div>
       </div>
