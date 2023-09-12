@@ -7,7 +7,7 @@ import ArticleStudies from "../../components/ArticleStudies";
 
 export default () => {
   return (
-    <section className="studies section" id="studies">
+    <section className="studies section" id="studies-desktop">
       <SecondTitle title="Educação." />
       <div className="studies__container container grid">
         <ArticleStudies
