@@ -16,3 +16,14 @@
   left: -5px;
   top: -5px;
 }
+
+@media screen and (min-width: 1150px){
+   .geometric-box {
+    transform: scale(1.2);
+  }
+
+  .geometric-box {
+    right: -4rem;
+    top: 4.5rem;
+  }
+}

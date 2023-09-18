@@ -73,3 +73,16 @@
   font-size: 1rem;
   font-weight: initial;
 }
+
+@media screen and (min-width: 1150px){
+  .section__title-1::after,
+  .section__title-2::after {
+    width: 70px;
+    height: 48px;
+  }
+
+  .section__title-1 {
+    align-self: flex-end;
+    margin-inline: 0;
+  }
+}
