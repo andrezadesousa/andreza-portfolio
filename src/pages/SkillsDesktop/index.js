@@ -46,7 +46,7 @@ export default () => {
 
         {/*Skills 2 */}
         <div className="skills__content-desktop">
-          <SkillsTitle title="Design e metodologias" icon="ri-braces-line" />
+          <SkillsTitle title="Design e metodologias" icon="ri-paint-brush-line" />
 
           <div className="skills__info-desktop">
             <SkillsData image={FigmaImage} title="Figma" />
@@ -61,7 +61,7 @@ export default () => {
 
         {/*Skills 3 */}
         <div className="skills__content-desktop">
-          <SkillsTitle title="Versionamentos e Testes" icon="ri-braces-line" />
+          <SkillsTitle title="Versionamentos e Testes" icon="ri-database-2-line" />
 
           <div className="skills__info-desktop">
             <SkillsData image={AndroidImage} title="Android SDK" />

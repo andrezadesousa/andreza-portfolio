@@ -74,6 +74,16 @@
   font-weight: initial;
 }
 
+@media screen and (min-width: 1023px){
+  .skills__title-desktop {
+    margin-bottom: 3rem;
+  }
+
+  .skills__title-desktop i{
+    font-size: 1.25rem;
+  }
+}
+
 @media screen and (min-width: 1150px){
   .section__title-1::after,
   .section__title-2::after {

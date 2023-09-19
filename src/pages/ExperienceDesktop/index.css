@@ -1,0 +1,36 @@
+.experience {
+    background-color: var(--neutral-color);
+    transition: background-color 0.4s;
+}
+
+@media screen and (min-width: 768px) {
+    .experience__container {
+        grid-template-columns: repeat(3, 250px);
+        justify-content: center;
+        margin: 2rem;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .experience__container {
+        grid-template-columns: repeat(3, 300px);
+        padding-block: 3rem 1rem;
+        justify-content: center;
+    }
+
+    .experience__card {
+        padding: 1.25rem 1.25rem 2.5rem;
+    }
+
+    .experience__image {
+        margin-bottom: 1rem;
+    }
+
+    .experience__content {
+        margin-bottom: 2rem;
+    }
+
+    .experience__button {
+        right: 1.25rem;
+    }
+}

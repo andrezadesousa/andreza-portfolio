@@ -9,7 +9,7 @@
 
 @media screen and (min-width: 576px) {
   .projects__container {
-    grid-template-columns: 350px;
+    grid-template-columns: 450px;
     justify-content: center;
   }
 
@@ -17,13 +17,13 @@
 
 @media screen and (min-width: 768px) {
   .projects__container {
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(2, 450px);
   }
 }
 
 @media screen and (min-width: 1150px) {
   .projects__container {
-    grid-template-columns: repeat(3, 352px);
+    grid-template-columns: repeat(3, 450px);
     padding-block: 3rem 1rem;
   }
 

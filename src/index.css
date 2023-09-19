@@ -4,9 +4,35 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  #skills-desktop {
+    display: none;
+  }
+
+  #experience-desktop{
+    display: none;
+  }
+
+  #studies-desktop {
+      display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .studies__container {
     grid-template-columns: repeat(2, 250px);
+  }
+
+  #skills-mobile {
+    display: none;
+  }
+
+  #experience-mobile{
+    display: none;
+  }
+
+   #studies-mobile {
+      display: none;
   }
 }
 
