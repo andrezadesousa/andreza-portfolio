@@ -34,7 +34,7 @@
 
 @media screen and (min-width: 767px){
   .logos__container{
-    grid-template-columns: repeat(5, max-content);
+    grid-template-columns: repeat(5, 150px);
     justify-content: center;
     column-gap: 3rem;
   }  
@@ -45,7 +45,7 @@
   }
 
   .logo__certsys{
-    width: 30px
+    width: 100%
   }
 }
 

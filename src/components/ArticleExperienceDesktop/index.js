@@ -14,8 +14,8 @@ export const ArticleExperienceDesktop = ({
         </div>
 
         <div className="experience__content">
-          <h3 className="experience__subtitle">{subtitle}</h3>
           <h2 className="experience__title">{title}</h2>
+          <h3 className="experience__subtitle">{subtitle}</h3>
           <p className="experience__description">{description}</p>
         </div>
     </article>
