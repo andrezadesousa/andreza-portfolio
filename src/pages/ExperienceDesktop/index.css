@@ -1,5 +1,5 @@
 .experience {
-    background-color: var(--neutral-color);
+    /*background-color: var(--neutral-color);*/
     transition: background-color 0.4s;
 }
 

@@ -10,7 +10,7 @@
     height: auto;
     transition: background-color .4s;
     color: var(--black-color-light);
-    border-radius: 1rem;
+    border-radius: .5rem;
     background-image: linear-gradient(0deg, var(--neutral-color) 75%, var(--fourth-color) 70%);
 }
 
@@ -43,6 +43,12 @@
 
 .experience__description{
     font-size: var(--small-font-size);
+    text-align: center;
+}
+
+.experience__tech-desktop{
+    font-size: var(--smaller-font-size);
+    margin-top: 1rem;
     text-align: center;
 }
 

@@ -3,9 +3,10 @@ import "./index.css";
 
 export const ArticleExperienceDesktop = ({
   image,
-  subtitle,
+  date,
   title,
   description,
+  tech
 }) => {
   return (
     <article className="experience__card shadow-medium">
@@ -15,8 +16,9 @@ export const ArticleExperienceDesktop = ({
 
         <div className="experience__content">
           <h2 className="experience__title">{title}</h2>
-          <h3 className="experience__subtitle">{subtitle}</h3>
+          <h3 className="experience__subtitle">{date}</h3>
           <p className="experience__description">{description}</p>
+          <h3 className="experience__tech-desktop">{tech}</h3>
         </div>
     </article>
   );
