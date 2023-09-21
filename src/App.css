@@ -4,12 +4,13 @@
   --header-height: 3.5rem;
 
   --white-color: hsl(0, 0%, 95%);
-  --text-color: hsl(0, 0%, 35%);
+  
   --text-color-light: hsl(0, 0%, 64%);
   --body-color: hsl(0, 0%, 87%);
   --container-color: hsl(0, 0%, 83%);
 
   /*New colors*/
+  --text-color: hsl(0, 0%, 35%);
   --primary-color: #310101;
   --second-color: #fff;
   --third-color: #ff7500;
@@ -98,6 +99,12 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .main {
