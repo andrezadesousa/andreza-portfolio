@@ -11,7 +11,7 @@ import { Experience } from "../../mocks/MockExperienceDesktop";
 export const ExperienceDesktop = () => {
   return (
     <section className="experience section" id="experience-desktop">
-      {/*<SecondTitle title="Experiência." />*/}
+      <SecondTitle title="Experiência." />
       <Logos />
 
       <div className="experience__container container grid">
