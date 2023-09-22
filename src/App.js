@@ -11,6 +11,8 @@ import Projects from "./pages/Projects"
 import Contact from "./pages/Contact"
 import Footer from "./pages/Footer"
 
+import Teste from './pages/Teste';
+
 function App() {
   return (
     <React.StrictMode>
@@ -18,6 +20,7 @@ function App() {
       <Header />
       <main className='main'>
         <Home />
+<Teste />
         <Experience />
         <Testimonial />
         <Skills/>
