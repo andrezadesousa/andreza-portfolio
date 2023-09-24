@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
+import { TitleModal } from "../../components/Titles/TitleModal";
+import { SubtitleModal } from "../../components/Titles/SubtitleModal";
 
 export default () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -14,12 +16,11 @@ export default () => {
       <div className="services__container-desk container grid">
         {/* Services 1 */}
         <div className="services__content-desk">
-          <div>
-            <i className="ri-graduation-cap-line services__icon-desk"></i>
-            <h3 className="services__title-desk">
-              Ui/Ux <br></br> Designer
-            </h3>
-          </div>
+          <TitleModal
+            icon="ri-braces-line"
+            subtitle="Desenvolvedora"
+            secondSubtitle="Frontend Jr"
+          />
 
           <span
             onClick={() => {
@@ -28,7 +29,7 @@ export default () => {
             className="buttons button--flex button-small button--link services__button-desk"
           >
             View more
-            <i className="ri-graduation-cap-line buttons__icon"></i>
+            <i className="ri-arrow-right-line buttons__icon"></i>
           </span>
 
           <div
@@ -37,9 +38,10 @@ export default () => {
             }`}
           >
             <div className="services__modal-content">
-              <h4 className="services__modal-title">
-                ui/ux <br></br> design
-              </h4>
+              <SubtitleModal
+                firstTitle="Desenvolvedora"
+                secondTitle="Frontend Jr"
+              />
               <i
                 onClick={() => {
                   setShowLinks(!showLinks);
