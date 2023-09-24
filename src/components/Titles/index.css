@@ -52,6 +52,25 @@
   font-weight: initial;
 }
 
+.card__icon{
+  display: block;
+  font-size: 1.5rem;
+  color: var(--fourth-color);
+  margin-bottom: var(--mb-2);
+}
+
+.card__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-2);
+  font-weight: var(--font-medium);
+}
+
+.card__modal-title{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-3);
+}
+
 @media screen and (min-width: 1023px){
   .skills__title-desktop {
     margin-bottom: 3rem;

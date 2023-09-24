@@ -3,58 +3,58 @@ import React, { useState } from "react";
 import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
-import { TitleModal } from "../../components/Titles/TitleModal";
-import { SubtitleModal } from "../../components/Titles/SubtitleModal";
+import { TitleCard } from "../../components/Titles/TitleCard";
+import { SubtitleCard } from "../../components/Titles/SubtitleCard";
+
+import { ButtonCard } from "../../components/Button/ButtonCard";
+import { ButtonCloseCard } from "../../components/Button/ButtonCloseCard";
 
 export default () => {
   const [showLinks, setShowLinks] = useState(false);
 
   return (
-    <section className="services section container">
+    <section className="card section container">
       <SecondTitle title="Experiência." />
 
-      <div className="services__container-desk container grid">
-        {/* Services 1 */}
-        <div className="services__content-desk">
-          <TitleModal
+      <div className="card__container container grid">
+        {/* card 1 */}
+        <div
+          className="card__content"
+          onClick={() => {
+            setShowLinks(!showLinks);
+          }}
+        >
+          <TitleCard
             icon="ri-braces-line"
-            subtitle="Desenvolvedora"
-            secondSubtitle="Frontend Jr"
+            firstTitle="Desenvolvedora"
+            secondTitle="Frontend Jr"
           />
 
-          <span
-            onClick={() => {
-              setShowLinks(!showLinks);
-            }}
-            className="buttons button--flex button-small button--link services__button-desk"
-          >
-            View more
-            <i className="ri-arrow-right-line buttons__icon"></i>
-          </span>
+          <ButtonCard />
 
           <div
-            className={`services__modal ${
+            className={`card__modal ${
               showLinks ? "active__modal" : "inactive__modal"
             }`}
           >
-            <div className="services__modal-content">
-              <SubtitleModal
+            <div
+              onClick={() => {
+                setShowLinks(!showLinks);
+              }}
+              className="card__modal-content"
+            >
+              <SubtitleCard
                 firstTitle="Desenvolvedora"
                 secondTitle="Frontend Jr"
               />
-              <i
-                onClick={() => {
-                  setShowLinks(!showLinks);
-                }}
-                className="ri-graduation-cap-line services__modal-close"
-              ></i>
-              <ul className="services__modal-services grid">
-                <li className="services__modal-service">
-                  <i className="ri-graduation-cap-line services__modal-icon"></i>
+              <ButtonCloseCard />
+              <ul className="card__modal-card grid">
+                <li className="card__modal-cards">
+                  <i className="ri-graduation-cap-line card__modal-icon"></i>
                   <p>I develop the user interface</p>
                 </li>
-                <li className="services__modal-service">
-                  <i className="ri-graduation-cap-line services__modal-icon"></i>
+                <li className="card__modal-cards">
+                  <i className="ri-graduation-cap-line card__modal-icon"></i>
                   <p>I develop the user in terface</p>
                 </li>
               </ul>

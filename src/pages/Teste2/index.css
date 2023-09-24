@@ -1,44 +1,9 @@
-.buttons{
-    display: inline-block;
-    background-color: var(--fourth-color);
-    color: #FFF;
-    padding: 1rem;
-    border-radius: .5rem;
-    font-weight: var(--font-medium);
-}
-
-.button--flex{
-    display: inline-flex;
-    align-items: center;
-}
-
-.button--small{
-    padding: .75rem 1rem;
-}
-
-.button--link{
-    padding: 0;
-    background-color: transparent;
-    color: var(--fourth-color);
-}
-
-.buttons__icon{
-    font-size: 1.25rem;
-    margin-left: var(--mb-1);
-    transition: .3s;
-}
-
-.button--link:hover{
-    background-color: transparent;
-    color: var(--fourth-color);
-}
-
-.services__container-desk{
+.card__container{
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.services__content-desk{
+.card__content{
     position: relative;
     background-color: var(--neutral-color);
     padding: 3.5rem .5rem 1.25rem 1.5rem;
@@ -47,33 +12,11 @@
     transition: .3s;
 }
 
-.services__content-desk:hover{
+.card__content:hover{
     box-shadow: 0 4px 8px rgba(0,0,0,.15);
 }
 
-.services__icon-desk{
-    display: block;
-    font-size: 1.5rem;
-    color: var(--fourth-color);
-    margin-bottom: var(--mb-2);
-}
-
-.services__title-desk{
-    font-size: var(--h3-font-size);
-    margin-bottom: var(--mb-2);
-    font-weight: var(--font-medium);
-}
-
-.services__button-desk{
-    cursor: pointer;
-    font-size: var(--small-font-size);
-}
-
-.services__button-desk:hover .buttons__icon{
-    transform: translateX(.25rem);
-}
-
-.services__modal{
+.card__modal{
     position: fixed;
     top: 0;
     left: 0;
@@ -100,37 +43,22 @@
     visibility: hidden;
 }
 
-.services__modal-content{
+.card__modal-content{
     position: relative;
     background-color: var(--neutral-color);
     padding: 1.5rem;
     border-radius: .5rem;
 }
 
-.services__modal-services{
+.card__modal-card{
     row-gap: 1rem;
 }
 
-.services__modal-service{
+.card__modal-cards{
     display: flex;
 }
 
-.services__modal-title{
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
-    margin-bottom: var(--mb-3);
-}
-
-.services__modal-close{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    color: var(--fourth-color);
-    cursor: pointer;
-}
-
-.services__modal-icon{
+.card__modal-icon{
     color: var(--fourth-color);
     margin-right: var(--mb-0-25);
 }
