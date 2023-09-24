@@ -28,28 +28,6 @@
   bottom: -4px;
 }
 
-.services__title {
-  font-size: var(--normal-font-siz);
-  margin-bottom: 1.25rem;
-}
-
-.section-title,
-.section-subtitle {
-  text-align: center;
-}
-
-.section-title {
-  font-size: var(--h1-font-size);
-  color: var(--black-color);
-  margin-bottom: var(--mb-3);
-}
-
-.section-subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  font-weight: var(--font-semi-bold);
-}
-
 .skills__title-mobile {
   font-size: var(--h3-font-size);
 }

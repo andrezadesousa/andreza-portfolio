@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;600&display=swap");
 
 :root {
+  --hue-color: 250;
+
   --header-height: 3.5rem;
 
   --white-color: hsl(0, 0%, 95%);
@@ -47,6 +49,7 @@
 
   --z-tooltip: 10;
   --z-fixed: 100;
+  --z-modal: 1000;
 }
 
 @media screen and (min-width: 1150px) {
