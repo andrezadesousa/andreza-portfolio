@@ -9,6 +9,8 @@ import { SubtitleCard } from "../../components/Titles/SubtitleCard";
 import { ButtonCard } from "../../components/Button/ButtonCard";
 import { ButtonCloseCard } from "../../components/Button/ButtonCloseCard";
 
+import { CardModal } from "../../components/CardModal"
+
 export default () => {
   const [showLinks, setShowLinks] = useState(false);
 
@@ -48,16 +50,7 @@ export default () => {
                 secondTitle="Frontend Jr"
               />
               <ButtonCloseCard />
-              <ul className="card__modal-card grid">
-                <li className="card__modal-cards">
-                  <i className="ri-graduation-cap-line card__modal-icon"></i>
-                  <p>I develop the user interface</p>
-                </li>
-                <li className="card__modal-cards">
-                  <i className="ri-graduation-cap-line card__modal-icon"></i>
-                  <p>I develop the user in terface</p>
-                </li>
-              </ul>
+              <CardModal />
             </div>
           </div>
         </div>

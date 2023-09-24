@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.css"
 
 export const TitleCard = ({icon, firstTitle, secondTitle}) => {
   return (

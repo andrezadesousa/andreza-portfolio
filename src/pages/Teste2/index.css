@@ -49,16 +49,3 @@
     padding: 1.5rem;
     border-radius: .5rem;
 }
-
-.card__modal-card{
-    row-gap: 1rem;
-}
-
-.card__modal-cards{
-    display: flex;
-}
-
-.card__modal-icon{
-    color: var(--fourth-color);
-    margin-right: var(--mb-0-25);
-}
