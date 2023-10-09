@@ -66,11 +66,14 @@
 .skills__close .skills__list {
   height: 0;
   overflow: hidden;
+  transition: 500ms ease;
 }
 
-.skills__open {
+.skills__open .skills__list{
   height: max-content;
   margin-bottom: var(--mb-5);
+  transform: translateY(-10px);
+  transition: 500ms ease;
 }
 
 .skills__open .skills__arrow {

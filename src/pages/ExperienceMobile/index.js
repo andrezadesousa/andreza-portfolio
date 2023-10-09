@@ -1,37 +1,111 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React from "react";
+import React, { useState } from "react";
+import "./index.css";
 
 import SecondTitle from "../../components/Titles/SecondTitle";
-import AritcleExperience from "../../components/ArticleExperience";
+import { TitleCard } from "../../components/Titles/TitleCard";
+import { SubtitleCard } from "../../components/Titles/SubtitleCard";
+
+import { ButtonCard } from "../../components/Button/ButtonCard";
+import { ButtonCloseCard } from "../../components/Button/ButtonCloseCard";
+
+import { FrontEnd, Trainee } from "../../mocks/MockExperience";
+
 import { Logos } from "../../components/Logos"
 
-export function ExperienceMobile() {
+export default () => {
+  const [showFront, setShowFront] = useState(false);
+  const [showTrainee, setShowTrainee] = useState(false);
+  const [showBusiness, setShowBusiness] = useState(false);
 
   return (
-    <section className="section" id="experience-mobile">
+    <section className="card section container">
       <SecondTitle title="Experiência." />
       <Logos />
-      <AritcleExperience
-        title="Desenvolvedora Frontend Jr"
-        year="Dez 2021 - Jan 2023"
-        subtitle="Certsys Tecnologia da Informação"
-        description="Atuei em uma empresa de consultoria. Participando de diferentes projetos, internacionais e nacionais, como desenvolvedora web. Todos os projetos em que atuei foram com metodologia ágil Scrum e com as tecnologias"
-        tech="React, React Native, Angular, DevExtreme Angular Components, NodeJS, JavaScript e TypeScript." 
-        />
 
-      <AritcleExperience
-        title="Business Analyst"
-        year="Ago 2021 - Dez 2021"
-        subtitle="Certsys Tecnologia da Informação"
-        description="Atuei como Analista de Negócios na elaboração da documentação de um projeto americano. Realizei pesquisas, analisando as operações do serviço, através de reuniões com os colaboradores, stakeholders e cliente. Ao lado dos mesmos modelei e documentei o serviço. Elaborando também o diagrama dos processos de atendimento, sempre mantendo a comunicação transparente para cumprir os prazos" />
+      <div className="card__container container grid">
+        {/* card 1 */}
+        <div className="card__content" onClick={() => { setShowFront(!showFront);}}>
+          <TitleCard
+            icon="ri-braces-line"
+            firstTitle="Desenvolvedora"
+            secondTitle="Frontend Jr"
+          />
+          <ButtonCard />
+          <div className={`card__modal ${showFront ? "active__modal" : "inactive__modal"}`}>
+            <div onClick={() => {setShowFront(!showFront);}} className="card__modal-content">
+              <SubtitleCard firstTitle="Desenvolvedora" secondTitle="Frontend Jr"/>
+              <ButtonCloseCard />
+              <ul className="card__modal-card grid">
+                {FrontEnd.map((frontEndLinks) => {
+                  return (
+                    <li className="card__modal-cards">
+                      <i className="ri-checkbox-circle-line card__modal-icon"></i>
+                      <p>{frontEndLinks.description}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </div>
 
-      <AritcleExperience
-        title="Desenvolvedora FullStack Trainee"
-        year="Mai 2021 - Dez 2021"
-        subtitle="Certsys Tecnologia da Informação"
-        description="Atuei como desenvolvedora backend em um projeto americano. Sendo responsável por auxiliar na manutenção de sistemas, utilizando JavaScript e Typescript como principais linguagens de programação e ferramentas como puppeteer e Git para versionamento. Além de utilizar a metodologia ágil Scrum"
-        tech="Node.js, JavaScript, NPM (Gerenciador de Pacotes do Node), Git, GitLab" 
-  />
+        {/* card 2 */}
+        <div className="card__content" onClick={() => {setShowTrainee(!showTrainee);}}>
+          <TitleCard
+            icon="ri-braces-line"
+            firstTitle="Desenvolvedora"
+            secondTitle="FullStack Trainee"
+          />
+          <ButtonCard />
+          <div className={`card__modal ${showTrainee ? "active__modal" : "inactive__modal"}`}>
+            <div onClick={() => {setShowTrainee(!showTrainee);}}className="card__modal-content">
+              <SubtitleCard firstTitle="Desenvolvedora" secondTitle="FullStack Trainee"/>
+              <ButtonCloseCard />
+              <ul className="card__modal-card grid">
+                {Trainee.map((traineeLinks) => {
+                  return (
+                    <li className="card__modal-cards">
+                      <i className="ri-checkbox-circle-line card__modal-icon"></i>
+                      <p>{traineeLinks.description}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* card 3 */}
+        <div className="card__content" onClick={() => {setShowBusiness(!showBusiness);}}>
+          <TitleCard
+            icon="ri-braces-line"
+            firstTitle="Business"
+            secondTitle="Analyst Jr"
+          />
+          <ButtonCard />
+          <div className={`card__modal ${showBusiness ? "active__modal" : "inactive__modal"}`}>
+            <div onClick={() => {setShowBusiness(!showBusiness);}} className="card__modal-content">
+              <SubtitleCard firstTitle="Business" secondTitle="Analyst Jr" />
+              <ButtonCloseCard />
+              <ul className="card__modal-card grid">
+                <li className="card__modal-cards">
+                  <i className="ri-checkbox-circle-line card__modal-icon"></i>
+                  <p>
+                    Atuei como Analista de Negócios na elaboração da
+                    documentação de um projeto americano. Realizei pesquisas,
+                    analisando as operações do serviço, através de reuniões com
+                    os colaboradores, stakeholders e cliente. Ao lado dos mesmos
+                    modelei e documentei o serviço. Elaborando também o diagrama
+                    dos processos de atendimento, sempre mantendo a comunicação
+                    transparente para cumprir os prazos
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
-}
+};

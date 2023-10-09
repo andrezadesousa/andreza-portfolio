@@ -11,7 +11,6 @@ import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 
 import Teste from "./pages/Teste";
-import Teste2 from "./pages/Teste2";
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
         <Header />
         <main className="main">
           <Home />
-          <Teste2 />
           <Experience />
           <Skills />
           <Studies />
