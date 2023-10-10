@@ -38,10 +38,6 @@
         background-color: var(--fourth-color);
     }
 
-    .active-link{
-        color: var(--fourth-color);
-    }
-
     .nav__link-button{
         background-color: var(--fourth-color);
         color: var(--white-color);
@@ -54,5 +50,13 @@
 
     .nav__link-button::after{
         background-color: transparent;
+    }
+
+    .active-link{
+        color: var(--fourth-color);
+    }
+    
+    .active-link::after{
+        width: 25%;
     }
 }

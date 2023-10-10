@@ -1,10 +1,11 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
-import './index.css'
+import "./index.css";
 
 import { headerLink } from "../../mocks/MockModalHeader";
 
 export function HeaderDesktop() {
+
   return (
     <nav className="nav container" id="nav-desktop">
       <a href="##" className="nav__logo">

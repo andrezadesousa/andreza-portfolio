@@ -57,10 +57,10 @@
   cursor: pointer;
 }
 
-.active-link {
+.active-link{
   color: var(--fourth-color);
 }
 
-.active-link::after {
+.active-link::after{
   width: 25%;
 }

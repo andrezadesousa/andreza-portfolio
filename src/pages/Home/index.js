@@ -48,13 +48,13 @@ export default () => {
             projetos, web e mobile, sendo nacionais e internacionais. Tendo a
             oportunidade de trabalhar e conhecer diferentes tecnologias.
           </p>
-          <span className="home__phrase">“Good design is good business.”</span>
+          <span className="home__subphrase">“Good design is good business.”</span>
           <cite></cite>- Thomas J. Watson
-          <div className="home__btns">
+          {/*<div className="home__btns">
             <a href="/" className="buttons button--gray button--small">
               Contato
             </a>
-          </div>
+  </div>*/}
         </div>
       </div>
     </section>

@@ -33,19 +33,6 @@ export const Projects = [
   },
   {
     id: 3,
-    image: require("../images/project-1.png"),
-    subtitle: "Website",
-    title: "Coffe & Tea",
-    description:
-      "Landing Page de uma cafeteria, responsivo e desenvolvido em mobile-first, utilizando a tecnologia: ReactJS",
-    link: "https://github.com/andrezadesousa/LP-Tea-And-Bread-ReactJs",
-    iconTec1: "ri-reactjs-line",
-    iconTec2: "ri-css3-line",
-    textIcon1: "ReactJS",
-    textIcon2: "CSS3"
-  },
-  {
-    id: 4,
     image: require("../images/project-2.png"),
     subtitle: "Website",
     title: "Netflix Clone",
@@ -56,6 +43,19 @@ export const Projects = [
     iconTec2: "ri-macbook-line",
     textIcon1: "ReactJS",
     textIcon2: "MaterialUI/Icons"
+  },
+  {
+    id: 4,
+    image: require("../images/project-1.png"),
+    subtitle: "Website",
+    title: "Coffe & Tea",
+    description:
+      "Landing Page de uma cafeteria, responsivo e desenvolvido em mobile-first, utilizando a tecnologia: ReactJS",
+    link: "https://github.com/andrezadesousa/LP-Tea-And-Bread-ReactJs",
+    iconTec1: "ri-reactjs-line",
+    iconTec2: "ri-css3-line",
+    textIcon1: "ReactJS",
+    textIcon2: "CSS3"
   },
   {
     id: 5,

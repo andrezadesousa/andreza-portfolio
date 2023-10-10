@@ -50,12 +50,13 @@
   margin-bottom: var(--mb-3);
 }
 
-.home__phrase {
+.home__phrase,
+.home__subphrase{
   display: inline-block;
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   color: var(--fourth-color);
-  /*margin-bottom: var(--mb-6);*/
+  margin-bottom: var(--mb-6);
 }
 
 .home__btns {
@@ -116,6 +117,10 @@
   .home__social {
     top: 47%;
     column-gap: 2rem;
+  }
+
+  .home__phrase{
+    margin-bottom: var(--mb-0-25);
   }
 
   .home__btns{
