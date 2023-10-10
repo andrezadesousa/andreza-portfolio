@@ -5,8 +5,7 @@ import Header from "./pages/Header";
 import Home from "./pages/Home";
 import Experience from "./pages/Experience";
 import { Skills } from "./pages/Skills";
-import { Studies } from "./pages/Studies";
-import StudiesMobile from "./pages/StudiesMobile";
+import Studies from "./pages/Studies";
 import Projects from "./pages/Projects";
 import Footer from "./pages/Footer";
 
@@ -21,7 +20,7 @@ function App() {
           <Home />
           <Experience />
           <Skills />
-          <StudiesMobile />
+          <Studies />
           <Projects />
           <Footer />
         </main>
