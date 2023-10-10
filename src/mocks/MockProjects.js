@@ -1,6 +1,38 @@
 export const Projects = [
   {
-    id: 1,
+    id:1,
+    image: require("../images/my-site.png"),
+    subtitle: "Website",
+    title: "Meu Portfólio",
+    description:
+      "Projeto do meu potfólio, que esta em desenvolvimento em ReactJS. É um projeto em que demonstro projetos pessoais e minha carreira profissional",
+    link: "https://github.com/andrezadesousa/andreza-portfolio",
+    iconTec1: "ri-reactjs-line",
+    iconTec2: "ri-css3-line",
+    iconTec3: "ri-macbook-line",
+    iconTec4: "ri-database-2-line",
+    textIcon1: "ReactJS",
+    textIcon2: "CSS3",
+    textIcon3: "MaterialUI/Icons",
+    textIcon4: "Firebase",
+  },
+  {
+    id:2,
+    image: require("../images/my-cv.png"),
+    subtitle: "Website",
+    title: "Meu Portfólio",
+    description:
+      "Projeto do meu currículo, sendo desenvolvido em ReactJS. É um projeto com informações acadêmicas e minha carreira profissional",
+    link: "https://github.com/andrezadesousa/my-cv",
+    iconTec1: "ri-reactjs-line",
+    iconTec2: "ri-css3-line",
+    iconTec3: "ri-database-2-line",
+    textIcon1: "ReactJS",
+    textIcon2: "CSS3",
+    textIcon3: "Firebase",
+  },
+  {
+    id: 3,
     image: require("../images/project-1.png"),
     subtitle: "Website",
     title: "Coffe & Tea",
@@ -13,7 +45,7 @@ export const Projects = [
     textIcon2: "CSS3"
   },
   {
-    id: 2,
+    id: 4,
     image: require("../images/project-2.png"),
     subtitle: "Website",
     title: "Netflix Clone",
@@ -26,7 +58,7 @@ export const Projects = [
     textIcon2: "MaterialUI/Icons"
   },
   {
-    id: 3,
+    id: 5,
     image: require("../images/project-3.png"),
     subtitle: "Website",
     title: "Easybank",
@@ -41,7 +73,7 @@ export const Projects = [
     textIcon3: "JavaScript"
   },
   {
-    id: 4,
+    id: 6,
     image: require("../images/project-4.jpeg"),
     subtitle: "Website",
     title: "Creative Design & Development Agency",
@@ -56,7 +88,7 @@ export const Projects = [
     textIcon3: "JavaScript"
   },
   {
-    id: 5,
+    id: 7,
     image: require("../images/project-5.png"),
     subtitle: "Website",
     title: "Jazz School",
@@ -69,7 +101,7 @@ export const Projects = [
     textIcon2: "CSS3"
   },
   {
-    id: 6,
+    id: 8,
     image: require("../images/project-6.png"),
     subtitle: "Website",
     title: "Portfólio Rian Lot",
@@ -86,7 +118,7 @@ export const Projects = [
     textIcon4: "API | EmailJS"
   },
   {
-    id: 7,
+    id: 9,
     image: require("../images/project-7.png"),
     subtitle: "Website",
     title: "LetMeAsk | Sala virtual Q&A",
@@ -101,7 +133,7 @@ export const Projects = [
     textIcon3: "TypeScript"
   },
   {
-    id: 8,
+    id: 10,
     image: require("../images/project-8.png"),
     subtitle: "Website",
     title: "React Design System",
