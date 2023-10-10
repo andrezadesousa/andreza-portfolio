@@ -68,9 +68,11 @@ export const SkillsMobile = () => {
               })}
             </div>
           </div>
+        </div>
 
-          {/*Skills 3*/}
-          <div 
+        <div>
+           {/*Skills 3*/}
+           <div 
             onClick={() => {setShowLinksDesign(!showLinksDesign);}}
             className={`skills__content ${showLinksDesign ? "skills__open" : "skills__close"}`}>
             <div className="skills__header shadow-medium">
@@ -94,7 +96,6 @@ export const SkillsMobile = () => {
               })}
             </div>
           </div>
-
         </div>
       </div>
     </section>

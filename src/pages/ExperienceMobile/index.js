@@ -13,13 +13,15 @@ import { FrontEnd, Trainee } from "../../mocks/MockExperience";
 
 import { Logos } from "../../components/Logos"
 
+import  { Testimonial } from "../Testimonial"
+
 export default () => {
   const [showFront, setShowFront] = useState(false);
   const [showTrainee, setShowTrainee] = useState(false);
   const [showBusiness, setShowBusiness] = useState(false);
 
   return (
-    <section className="card section container">
+    <section className="card section container" id="experience-mobile">
       <SecondTitle title="Experiência." />
       <Logos />
 
@@ -53,7 +55,7 @@ export default () => {
         {/* card 2 */}
         <div className="card__content" onClick={() => {setShowTrainee(!showTrainee);}}>
           <TitleCard
-            icon="ri-braces-line"
+            icon="bx bx-code-alt"
             firstTitle="Desenvolvedora"
             secondTitle="FullStack Trainee"
           />
@@ -79,7 +81,7 @@ export default () => {
         {/* card 3 */}
         <div className="card__content" onClick={() => {setShowBusiness(!showBusiness);}}>
           <TitleCard
-            icon="ri-braces-line"
+            icon="bx bx-line-chart"
             firstTitle="Business"
             secondTitle="Analyst Jr"
           />
@@ -90,7 +92,6 @@ export default () => {
               <ButtonCloseCard />
               <ul className="card__modal-card grid">
                 <li className="card__modal-cards">
-                  <i className="ri-checkbox-circle-line card__modal-icon"></i>
                   <p>
                     Atuei como Analista de Negócios na elaboração da
                     documentação de um projeto americano. Realizei pesquisas,
@@ -106,6 +107,7 @@ export default () => {
           </div>
         </div>
       </div>
+      <Testimonial />
     </section>
   );
 };

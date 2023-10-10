@@ -7,7 +7,6 @@
     .experience__container {
         grid-template-columns: repeat(3, 250px);
         justify-content: center;
-        margin: 2rem;
     }
 }
 

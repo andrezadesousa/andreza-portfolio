@@ -7,7 +7,6 @@ import Experience from "./pages/Experience";
 import { Skills } from "./pages/Skills";
 import { Studies } from "./pages/Studies";
 import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 
 import Teste from "./pages/Teste";
@@ -23,7 +22,6 @@ function App() {
           <Skills />
           <Studies />
           <Projects />
-          <Contact />
           <Footer />
         </main>
       </body>

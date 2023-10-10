@@ -148,6 +148,8 @@ button {
 @media screen and (max-width: 340px) {
   .container {
     margin-inline: 1rem;
+    /*margin-left: var(--mb-2);
+    margin-right: var(--mb-2);*/
   }
 }
 
