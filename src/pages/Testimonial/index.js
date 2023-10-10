@@ -1,11 +1,8 @@
 import React from "react";
 import "./index.css";
 
-import SecondTitle from "../../components/Titles/SecondTitle";
-
 export const Testimonial = () => {
   return (
-    <section className="testimonial section">
       <div className="testimonial__container container">
         <div>
           {/*Testimonial 1*/}
@@ -28,7 +25,7 @@ export const Testimonial = () => {
             </div>
 
             <p className="testimonial__description">
-              Andreza é uma profissional em plena ascensão e que se mostrou
+              "Andreza é uma profissional em plena ascensão e que se mostrou
               muito valiosa logo que começamos a trabalhar em conjunto. Recheada
               de soft skills apresenta uma constante sede de conhecimento e
               busca por aprendizado que a destacam como uma pessoa cheia de
@@ -37,11 +34,10 @@ export const Testimonial = () => {
               responsabilidade e dedicação que me foi apresentado durante todas
               as nossas interações, levam-me a crer que em pouco tempo ela será
               uma profissional referência no que tange desenvolvimento de
-              software. Foi uma imensa honra trabalhar junto de você!
+              software. Foi uma imensa honra trabalhar junto de você!"
             </p>
           </div>
         </div>
       </div>
-    </section>
   );
 };

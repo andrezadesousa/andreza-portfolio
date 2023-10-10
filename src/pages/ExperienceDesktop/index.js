@@ -8,11 +8,14 @@ import { Logos } from "../../components/Logos"
 
 import { Experience } from "../../mocks/MockExperienceDesktop";
 
+import { Testimonial } from "../Testimonial/index"
+
 export const ExperienceDesktop = () => {
   return (
     <section className="experience section" id="experience-desktop">
       <SecondTitle title="Experiência." />
       <Logos />
+      <Testimonial />
 
       <div className="experience__container container grid">
         {Experience.map((experienceLinks) => {

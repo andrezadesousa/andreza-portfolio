@@ -5,6 +5,13 @@
 
 .projects__container {
   row-gap: 2rem;
+  grid-auto-columns: 370px;
+}
+
+.projects__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 @media screen and (min-width: 576px) {
@@ -12,7 +19,6 @@
     grid-template-columns: repeat(2, 320px);
     justify-content: center;
   }
-
 }
 
 @media screen and (min-width: 768px) {

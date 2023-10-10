@@ -76,11 +76,3 @@
   background-color: var(--fourth-color);
   color: var(--second-color);
 }
-
-@media screen and (min-width: 576px) {
-  .projects__buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-}
