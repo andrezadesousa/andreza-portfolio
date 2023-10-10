@@ -161,3 +161,81 @@ button {
     display: none;
   }
 }
+
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #skills-desktop {
+    display: none;
+  }
+
+  #experience-desktop{
+    display: none;
+  }
+
+  #studies-desktop {
+      display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .studies__container {
+    grid-template-columns: repeat(2, 250px);
+  }
+
+  #skills-mobile {
+    display: none;
+  }
+
+  #experience-mobile{
+    display: none;
+  }
+
+   /*#studies-mobile {
+      display: none;
+  }*/
+}
+
+/*For large devices*/
+@media screen and (min-width: 1150px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .section {
+    padding-block: 7rem 2rem;
+  }
+
+  .studies__container {
+    grid-template-columns: repeat(3, 282px);
+    column-gap: 5rem;
+    padding-block: 3rem 5rem;
+  }
+
+  .studies__content {
+    padding: 6.5rem 1.5rem 3.5rem;
+    border: 6px solid var(--black-color);
+  }
+
+  .studies__icon i {
+    font-size: 3rem;
+  }
+
+  .studies__box {
+    width: 32px;
+    height: 32px;
+  }
+
+  .studies__title {
+    margin-bottom: 1.5rem;
+  }
+
+  .studies__card:hover .studies__border {
+    transform: translate(1.25rem 1.25rem);
+  }
+}
+
