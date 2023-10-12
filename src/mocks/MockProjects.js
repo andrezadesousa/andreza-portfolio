@@ -20,7 +20,7 @@ export const Projects = [
     id:2,
     image: require("../images/my-cv.png"),
     subtitle: "Website",
-    title: "Meu Portfólio",
+    title: "Meu Currículo",
     description:
       "Projeto do meu currículo, sendo desenvolvido em ReactJS. É um projeto com informações acadêmicas e minha carreira profissional",
     link: "https://github.com/andrezadesousa/my-cv",
@@ -41,8 +41,10 @@ export const Projects = [
     link: "https://github.com/andrezadesousa/clone-netflix-react",
     iconTec1: "ri-reactjs-line",
     iconTec2: "ri-macbook-line",
+    iconTec3: "ri-macbook-line",
     textIcon1: "ReactJS",
-    textIcon2: "MaterialUI/Icons"
+    textIcon2: "MaterialUI/Icons",
+    textIcon3: "API TheMovieDB"
   },
   {
     id: 4,

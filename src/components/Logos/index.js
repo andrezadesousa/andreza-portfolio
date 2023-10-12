@@ -11,7 +11,6 @@ export const Logos = () => {
   return (
     <div className="logos__container container grid">
       <CertsysLogo />
-      <PluggerLogo />
       <TraiveLogo />
       <LindaLogo />
       <MarinhaLogo />

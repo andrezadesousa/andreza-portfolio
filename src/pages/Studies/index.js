@@ -12,7 +12,7 @@ import { Espace } from "../../components/RounderLine/Espace";
 
 export default () => {
   return (
-    <section className="qualification section shadow-medium" id="studies-mobile">
+    <section className="qualification section shadow-medium" id="studies">
       <SecondTitle title="Estudos." />
 
       <div className="qualification__container container">

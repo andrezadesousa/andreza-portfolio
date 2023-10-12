@@ -2,13 +2,20 @@
 import React from "react";
 import "./index.css";
 
+import { ArticleExperienceDesktop } from "../../components/ArticleExperienceDesktop"
+
+import { Logos } from "../../components/Logos";
+import { Testimonial } from "../Testimonial/index";
+
 export default () => {
   return (
     <section className="steps section container">
       <div className="steps__bg">
-        <h2 className="section__title-center steps__title">
+        <Logos />
+        <Testimonial />
+        {/*<h2 className="section__title-center steps__title">
           Steps to start your <br></br>plants off right
-        </h2>
+        </h2>*/}
         <div className="steps__container grid">
           <div className="steps__card">
             <div className="steps__card-number">01</div>
@@ -19,22 +26,13 @@ export default () => {
           </div>
 
           <div className="steps__card">
-            <div className="steps__card-number">02</div>
-            <h3 className="steps__card-title">Place an order</h3>
+            <div className="steps__card-number">01</div>
+            <h3 className="steps__card-title">Choose Plant</h3>
             <p className="steps__card-description">
-              Once your order is set, we move to the next step which is the
-              shipping.
+              We have several varieties plants you can choose from.
             </p>
           </div>
-
-          <div className="steps__card">
-            <div className="steps__card-number">03</div>
-            <h3 className="steps__card-title">Get plants delivered</h3>
-            <p className="steps__card-description">
-              Our delivery process is easy, you receive the plant direct to your
-              door.
-            </p>
-          </div>
+          
         </div>
       </div>
     </section>

@@ -18,9 +18,10 @@ export const Pages = () => {
         <Header />
         <main className="main">
           <Home />
+          <Studies />
+          
           <Experience />
           <Skills />
-          <Studies />
           <Projects />
           <Footer />
         </main>

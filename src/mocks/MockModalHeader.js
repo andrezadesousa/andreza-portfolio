@@ -8,17 +8,23 @@ export const headerLink = [
     {
         id: 2,
         classNav: 'nav__link',
+        ref: '#studies',
+        text: 'Sobre mim'
+    },
+    {
+        id: 3,
+        classNav: 'nav__link',
         ref: '#experience',
         text: 'Experiência'
     },
     {
-        id: 3,
+        id: 4,
         classNav: 'nav__link',
         ref: '#skills',
         text: 'Skills'
     },
     {
-        id: 4,
+        id: 5,
         classNav: 'nav__link',
         ref: '#projects',
         text: 'Projetos'
