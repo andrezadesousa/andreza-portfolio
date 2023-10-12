@@ -1,17 +1,15 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 
-import SecondTitle from "../../components/Titles/SecondTitle";
-import AritcleExperience from "../../components/ArticleExperience";
-import { Logos } from "../../components/Logos"
+import { SecondTitle } from "../../components/Titles/SecondTitle";
+import { ArticleModal } from "../../components/ArticleModal";
 
-export function ExperienceMobile() {
+export function ModalMobile() {
 
   return (
     <section className="section" id="experience-mobile">
-      <SecondTitle title="Experiência." />
-      <Logos />
-      <AritcleExperience
+      <SecondTitle title="Title." />
+      <ArticleModal
         title="Desenvolvedora Frontend Jr"
         year="Dez 2021 - Jan 2023"
         subtitle="Certsys Tecnologia da Informação"
@@ -19,13 +17,13 @@ export function ExperienceMobile() {
         tech="React, React Native, Angular, DevExtreme Angular Components, NodeJS, JavaScript e TypeScript." 
         />
 
-      <AritcleExperience
+      <ArticleModal
         title="Business Analyst"
         year="Ago 2021 - Dez 2021"
         subtitle="Certsys Tecnologia da Informação"
         description="Atuei como Analista de Negócios na elaboração da documentação de um projeto americano. Realizei pesquisas, analisando as operações do serviço, através de reuniões com os colaboradores, stakeholders e cliente. Ao lado dos mesmos modelei e documentei o serviço. Elaborando também o diagrama dos processos de atendimento, sempre mantendo a comunicação transparente para cumprir os prazos" />
 
-      <AritcleExperience
+      <ArticleModal
         title="Desenvolvedora FullStack Trainee"
         year="Mai 2021 - Dez 2021"
         subtitle="Certsys Tecnologia da Informação"

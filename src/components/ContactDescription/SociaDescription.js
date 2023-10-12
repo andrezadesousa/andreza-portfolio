@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css"
 
-const SociaDescription = ({ FirstText, SecondText }) => {
+export const SociaDescription = ({ FirstText, SecondText }) => {
   return (
     <div>
       <p className="contact__social-description-1">
@@ -14,5 +14,3 @@ const SociaDescription = ({ FirstText, SecondText }) => {
     </div>
   );
 };
-
-export default SociaDescription;

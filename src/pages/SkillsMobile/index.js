@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
 
-import SecondTitle from "../../components/Titles/SecondTitle";
+import { SecondTitle } from "../../components/Titles/SecondTitle";
 import { SkillsTitleMobile } from "../../components/Titles/SkillsTitleMobile";
 import { SkillsDataMobile } from "../../components/SkillsDataMobile";
 

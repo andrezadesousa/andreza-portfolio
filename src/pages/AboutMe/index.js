@@ -2,7 +2,7 @@
 import React from "react";
 import "./index.css";
 
-import SecondTitle from "../../components/Titles/SecondTitle";
+import { SecondTitle } from "../../components/Titles/SecondTitle";
 import { AboutLogo } from "../../components/LogosImage/AboutLogo";
 
 export default () => {

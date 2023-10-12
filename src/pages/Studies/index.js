@@ -2,7 +2,7 @@
 import React from "react";
 import "./index.css";
 
-import SecondTitle from "../../components/Titles/SecondTitle";
+import { SecondTitle } from "../../components/Titles/SecondTitle";
 
 import { DataRight } from "../../components/ArticleStudies/articleRight";
 import { DataLeft } from "../../components/ArticleStudies/articleLeft";

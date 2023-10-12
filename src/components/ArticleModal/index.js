@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 
 
-const AritcleExperience = ({ title, year, subtitle, description, tech }) => {
+export const ArticleModal = ({ title, year, subtitle, description, tech }) => {
   const [showLinks, setShowLinks] = useState(false);
   return (
     <nav
@@ -62,5 +62,3 @@ const AritcleExperience = ({ title, year, subtitle, description, tech }) => {
     </nav>
   );
 };
-
-export default AritcleExperience;

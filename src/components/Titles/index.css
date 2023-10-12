@@ -71,6 +71,26 @@
   margin-bottom: var(--mb-3);
 }
 
+.banner__title-center {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+  line-height: 140%;
+}
+
+.banner__title-center {
+  text-align: center;
+}
+
+.banner__title {
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .banner__title-center {
+    font-size: var(--h1-font-size);
+  }
+}
+
 @media screen and (min-width: 1023px){
   .skills__title-desktop {
     margin-bottom: 3rem;

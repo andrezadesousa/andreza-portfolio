@@ -1,0 +1,32 @@
+.banner__bg {
+  background-color: var(--fourth-color);
+  padding: 3rem 2rem 2rem;
+  border-radius: 1rem;
+}
+
+.banner__container {
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+@media screen and (max-width: 320px) {
+  .banner__bg {
+    padding: 2rem 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .banner__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .banner__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .banner__bg {
+    padding: 3.5rem 2.5rem;
+  }
+}

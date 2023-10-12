@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-const AritcleProjects = ({
+export const ArticleProjects = ({
   image,
   subtitle,
   title,
@@ -38,20 +38,22 @@ const AritcleProjects = ({
           <i className="ri-github-line"></i>View
         </a>
         <a href="#/" className="projects__link">
-          <i className={iconTec1}></i>{textIcon1}
+          <i className={iconTec1}></i>
+          {textIcon1}
         </a>
         <a href="#/" className="projects__link">
-          <i className={iconTec2}></i>{textIcon2}
+          <i className={iconTec2}></i>
+          {textIcon2}
         </a>
         <a href="#/" className="projects__link">
-          <i className={iconTec3}></i>{textIcon3}
+          <i className={iconTec3}></i>
+          {textIcon3}
         </a>
         <a href="#/" className="projects__link">
-          <i className={iconTec4}></i>{textIcon4}
+          <i className={iconTec4}></i>
+          {textIcon4}
         </a>
       </div>
     </article>
   );
 };
-
-export default AritcleProjects;

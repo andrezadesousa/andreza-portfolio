@@ -1,6 +1,6 @@
 import React from "react";
 
-const MediaSocialContact = ({link, icon}) => {
+export const MediaSocialContact = ({link, icon}) => {
   return (
     <a
       href={link}
@@ -12,5 +12,3 @@ const MediaSocialContact = ({link, icon}) => {
     </a>
   );
 };
-
-export default MediaSocialContact;

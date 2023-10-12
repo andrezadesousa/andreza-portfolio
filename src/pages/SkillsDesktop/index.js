@@ -2,9 +2,9 @@
 import React from "react";
 import "./index.css";
 
-import SecondTitle from "../../components/Titles/SecondTitle";
+import { SecondTitle } from "../../components/Titles/SecondTitle";
 import SkillsTitle from "../../components/Titles/SkillsTitle";
-import SkillsData from "../../components/SkillsDataDesktop";
+import { SkillsData } from "../../components/SkillsDataDesktop";
 
 import AndroidImage from "../../images/android.svg"
 import AngularImage from "../../images/angular-icon-1.svg"

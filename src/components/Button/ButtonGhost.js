@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-const ButtonGhost = ({ href, className, title }) => {
+export const ButtonGhost = ({ href, className, title }) => {
   return (
     <a 
       href={href} 
@@ -12,5 +12,3 @@ const ButtonGhost = ({ href, className, title }) => {
     </a>
   );
 };
-
-export default ButtonGhost;

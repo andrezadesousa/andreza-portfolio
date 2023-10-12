@@ -1,6 +1,6 @@
 import React from "react";
 
-const ContactBox = ({ type, name, id, placeholder, to, text }) => {
+export const ContactBox = ({ type, name, id, placeholder, to, text }) => {
   return (
     <div className="contact__box">
       <input
@@ -17,5 +17,3 @@ const ContactBox = ({ type, name, id, placeholder, to, text }) => {
     </div>
   );
 };
-
-export default ContactBox;
