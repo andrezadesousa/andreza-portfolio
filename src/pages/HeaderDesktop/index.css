@@ -45,7 +45,7 @@
     }
 
     .nav__link-button:hover{
-        color: var(--fourth-color);
+        color: var(--white-color);
     }
 
     .nav__link-button::after{
