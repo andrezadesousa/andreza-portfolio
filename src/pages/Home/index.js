@@ -49,12 +49,12 @@ export default () => {
             oportunidade de trabalhar e conhecer diferentes tecnologias.
           </p>
           <span className="home__subphrase">“Good design is good business.”</span>
-          <cite></cite>- Thomas J. Watson
-          {/*<div className="home__btns">
-            <a href="/" className="buttons button--gray button--small">
-              Contato
+          <cite className="home__cite"></cite>- Thomas J. Watson
+          <div className="home__btn">
+            <a rel="noreferrer" target="_blank" href="https://andreza-sousa.web.app" className="home__button buttons button--gray button--small">
+              Currículo
             </a>
-  </div>*/}
+          </div>
         </div>
       </div>
     </section>

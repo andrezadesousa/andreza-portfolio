@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./index.css";
 
-import SecondTitle from "../../components/Titles/SecondTitle";
+import { SecondTitle } from "../../components/Titles/SecondTitle";
 import { TitleCard } from "../../components/Titles/TitleCard";
 import { SubtitleCard } from "../../components/Titles/SubtitleCard";
 

@@ -9,7 +9,7 @@ export default () => {
       <div className="footer__container container grid">
         <ul className="footer__links">
           <FooterLinks link="#home" title="Home" />
-          <FooterLinks link="#about" title="Sobre mim" />
+          <FooterLinks link="#experience" title="Sobre mim" />
           <FooterLinks link="#projects" title="Projetos" />
 
           <span class="footer__copy">

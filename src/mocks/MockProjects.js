@@ -20,7 +20,7 @@ export const Projects = [
     id:2,
     image: require("../images/my-cv.png"),
     subtitle: "Website",
-    title: "Meu Portfólio",
+    title: "Meu Currículo",
     description:
       "Projeto do meu currículo, sendo desenvolvido em ReactJS. É um projeto com informações acadêmicas e minha carreira profissional",
     link: "https://github.com/andrezadesousa/my-cv",
@@ -41,8 +41,10 @@ export const Projects = [
     link: "https://github.com/andrezadesousa/clone-netflix-react",
     iconTec1: "ri-reactjs-line",
     iconTec2: "ri-macbook-line",
+    iconTec3: "ri-macbook-line",
     textIcon1: "ReactJS",
-    textIcon2: "MaterialUI/Icons"
+    textIcon2: "MaterialUI/Icons",
+    textIcon3: "API TheMovieDB"
   },
   {
     id: 4,
@@ -59,49 +61,6 @@ export const Projects = [
   },
   {
     id: 5,
-    image: require("../images/project-3.png"),
-    subtitle: "Website",
-    title: "Easybank",
-    description:
-      "Landing Page de um banco digital e responsivo.",
-    link: "https://github.com/andrezadesousa/Easybank-Login-Responsive-ReactJs",
-    iconTec1: "ri-html5-line",
-    iconTec2: "ri-css3-line",
-    iconTec3: "ri-javascript-line",
-    textIcon1: "HTML5",
-    textIcon2: "CSS3",
-    textIcon3: "JavaScript"
-  },
-  {
-    id: 6,
-    image: require("../images/project-4.jpeg"),
-    subtitle: "Website",
-    title: "Creative Design & Development Agency",
-    description:
-      "Landing Page de uma agencia digital, responsiva.",
-    link: "https://github.com/",
-    iconTec1: "ri-html5-line",
-    iconTec2: 'ri-css3-line',
-    iconTec3: "ri-javascript-line",
-    textIcon1: "HTML5",
-    textIcon2: "CSS3",
-    textIcon3: "JavaScript"
-  },
-  {
-    id: 7,
-    image: require("../images/project-5.png"),
-    subtitle: "Website",
-    title: "Jazz School",
-    description:
-      "Jazz School trata-se de uma landing page, simples, com uma estética mais animada e colorida. Além, de ser desenvolvida no conceito mobile first.",
-    link: "https://github.com/andrezadesousa/jazz-school-lp",
-    iconTec1: "ri-html5-line",
-    iconTec2: 'ri-css3-line',
-    textIcon1: "HTML5",
-    textIcon2: "CSS3"
-  },
-  {
-    id: 8,
     image: require("../images/project-6.png"),
     subtitle: "Website",
     title: "Portfólio Rian Lot",
@@ -116,6 +75,49 @@ export const Projects = [
     textIcon2: "CSS3",
     textIcon3: "JavaScript",
     textIcon4: "API | EmailJS"
+  },
+  {
+    id: 6,
+    image: require("../images/project-3.png"),
+    subtitle: "Website",
+    title: "Easybank",
+    description:
+      "Landing Page de um banco digital e responsivo.",
+    link: "https://github.com/andrezadesousa/Easybank-Login-Responsive-ReactJs",
+    iconTec1: "ri-html5-line",
+    iconTec2: "ri-css3-line",
+    iconTec3: "ri-javascript-line",
+    textIcon1: "HTML5",
+    textIcon2: "CSS3",
+    textIcon3: "JavaScript"
+  },
+  {
+    id: 7,
+    image: require("../images/project-4.jpeg"),
+    subtitle: "Website",
+    title: "Creative Design & Development Agency",
+    description:
+      "Landing Page de uma agencia digital, responsiva.",
+    link: "https://github.com/",
+    iconTec1: "ri-html5-line",
+    iconTec2: 'ri-css3-line',
+    iconTec3: "ri-javascript-line",
+    textIcon1: "HTML5",
+    textIcon2: "CSS3",
+    textIcon3: "JavaScript"
+  },
+  {
+    id: 8,
+    image: require("../images/project-5.png"),
+    subtitle: "Website",
+    title: "Jazz School",
+    description:
+      "Jazz School trata-se de uma landing page, simples, com uma estética mais animada e colorida. Além, de ser desenvolvida no conceito mobile first.",
+    link: "https://github.com/andrezadesousa/jazz-school-lp",
+    iconTec1: "ri-html5-line",
+    iconTec2: 'ri-css3-line',
+    textIcon1: "HTML5",
+    textIcon2: "CSS3"
   },
   {
     id: 9,

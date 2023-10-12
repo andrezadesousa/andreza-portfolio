@@ -8,7 +8,6 @@ import Experience from "./Experience";
 import Studies from "./Studies";
 import Projects from "./Projects";
 import Footer from "./Footer";
-
 import { Skills } from "./Skills";
 
 export const Pages = () => {
@@ -18,9 +17,9 @@ export const Pages = () => {
         <Header />
         <main className="main">
           <Home />
+          <Studies />
           <Experience />
           <Skills />
-          <Studies />
           <Projects />
           <Footer />
         </main>

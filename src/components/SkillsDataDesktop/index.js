@@ -1,6 +1,6 @@
 import React from "react";
 
-const SkillsData = ({ image, className, title }) => {
+export const SkillsData = ({ image, className, title }) => {
   return (
     <div className="skills__data-desktop">
       <div className="skills__blob-desktop">
@@ -12,5 +12,3 @@ const SkillsData = ({ image, className, title }) => {
     </div>
   );
 };
-
-export default SkillsData;

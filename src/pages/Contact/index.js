@@ -2,7 +2,7 @@
 import React from "react";
 import "./index.css";
 
-import SecondTitle from "../../components/Titles/SecondTitle";
+import { SecondTitle } from "../../components/Titles/SecondTitle";
 import ContactTitle from "../../components/Titles/ContactTitle";
 
 import GeometricBox from "../../components/GeometricBox"

@@ -1,8 +1,6 @@
 import React from "react";
 import "./index.css";
 
-const GeometricBox = () => {
+export const GeometricBox = () => {
   return <div class="geometric-box"></div>;
 }
-
-export default GeometricBox

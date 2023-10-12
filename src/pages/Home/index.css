@@ -50,18 +50,24 @@
   margin-bottom: var(--mb-3);
 }
 
-.home__phrase,
+.home__phrase{
+  display: inline-block;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  color: var(--fourth-color);
+}
+
 .home__subphrase{
   display: inline-block;
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   color: var(--fourth-color);
-  margin-bottom: var(--mb-6);
 }
 
-.home__btns {
+.home__btn {
   display: flex;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .home__button {
@@ -119,12 +125,9 @@
     column-gap: 2rem;
   }
 
-  .home__phrase{
+  .home__phrase,
+  .home__subphrase{
     margin-bottom: var(--mb-0-25);
-  }
-
-  .home__btns{
-    display: none;
   }
 
 }

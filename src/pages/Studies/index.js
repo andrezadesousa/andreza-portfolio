@@ -2,7 +2,7 @@
 import React from "react";
 import "./index.css";
 
-import SecondTitle from "../../components/Titles/SecondTitle";
+import { SecondTitle } from "../../components/Titles/SecondTitle";
 
 import { DataRight } from "../../components/ArticleStudies/articleRight";
 import { DataLeft } from "../../components/ArticleStudies/articleLeft";
@@ -12,7 +12,7 @@ import { Espace } from "../../components/RounderLine/Espace";
 
 export default () => {
   return (
-    <section className="qualification section shadow-medium" id="studies-mobile">
+    <section className="qualification section shadow-medium" id="studies">
       <SecondTitle title="Estudos." />
 
       <div className="qualification__container container">
