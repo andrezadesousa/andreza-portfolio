@@ -91,12 +91,9 @@
 
 @media screen and (min-width: 767px){
   .skills__container-desktop{
-    /*grid-template-columns: repeat(2, max-content);*/
-    padding-top: 2rem;
+    /*grid-template-columns: repeat(2, max-content);
+    padding-top: 2rem;*/
     grid-template-columns: repeat(3, 300px);
-  }
-
-  .skills__container-desktop{
     column-gap: 5rem;
   }
 }

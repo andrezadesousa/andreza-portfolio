@@ -58,34 +58,22 @@ export const backEnd = [
     },
     {
         id: 4,
-        name: "Git",
-        number: "70%",
-        skillsClass: "skills__git"
+        name: "PHP",
+        number: "25%",
+        skillsClass: "skills__node"
     },
     {
         id: 5,
-        name: "GitLab",
-        number: "60%",
-        skillsClass: "skills__gitlab"
+        name: "Docker",
+        number: "20%",
+        skillsClass: "skills__firebase"
     },
     {
         id: 6,
-        name: "GitHub",
-        number: "72%",
-        skillsClass: "skills__github"
-    },
-    {
-        id: 7,
-        name: "Postman",
+        name: "Docker Composer",
         number: "10%",
-        skillsClass: "skills__postman"
+        skillsClass: "skills__c"
     },
-    {
-        id: 8,
-        name: "Android SDK",
-        number: "33%",
-        skillsClass: "skills__android"
-    }
 ] 
 
 export const designLib = [
@@ -114,3 +102,66 @@ export const designLib = [
         skillsClass: "skills__azure"
     }
 ] 
+
+export const dataBase = [
+    {
+        id: 1,
+        name: "MySQL",
+        number: "30%",
+        skillsClass: "skills__material"
+    },
+    {
+        id: 2,
+        name: "PostgreeSQL",
+        number: "25%",
+        skillsClass: "skills__figma"
+    },
+    {
+        id: 3,
+        name: "MongoDB",
+        number: "20%",
+        skillsClass: "skills__dev"
+    },
+    {
+        id: 3,
+        name: "AWS",
+        number: "15%",
+        skillsClass: "skills__dev"
+    },
+]
+
+export const versioning = [
+    {
+        id: 1,
+        name: "Git",
+        number: "70%",
+        skillsClass: "skills__git"
+    },
+    {
+        id: 2,
+        name: "GitLab",
+        number: "60%",
+        skillsClass: "skills__gitlab"
+    },
+    {
+        id: 3,
+        name: "GitHub",
+        number: "72%",
+        skillsClass: "skills__github"
+    },
+]
+
+export const test = [
+    {
+        id: 1,
+        name: "Postman",
+        number: "10%",
+        skillsClass: "skills__postman"
+    },
+    {
+        id: 2,
+        name: "Android SDK",
+        number: "33%",
+        skillsClass: "skills__android"
+    },
+]

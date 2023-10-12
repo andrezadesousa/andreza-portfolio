@@ -43,9 +43,9 @@ export default () => {
 
             <div className="qualification__data left">
               <DataLeft
-                title="Trilha Conectar do Discover"
-                subtitle="Rocketseat | Curso"
-                date="2023"
+                title="Curso PHP"
+                subtitle="B7Web Cursos | Curso"
+                date="2023 - estudando"
               />
               <RounderLine />
             </div>
@@ -62,25 +62,36 @@ export default () => {
 
             <div className="qualification__data left">
               <DataLeft
-                title="Ignite Lab | ReactJs"
-                subtitle="Rocketseat | Bootcamp"
-                date="2022"
+                title="Trilha Conectar do Discover"
+                subtitle="Rocketseat | Curso"
+                date="2023 - 2023"
               />
               <RounderLine />
             </div>
 
             <div className="qualification__data right">
               <Espace />
-              <Line />
+              <RounderLine />
               <DataRight
-                title="Next Level Week Together 6 | ReactJs"
+                title="Ignite Lab | ReactJs"
                 subtitle="Rocketseat | Bootcamp"
-                date="2022"
+                date="2022 - 2022"
               />
             </div>
+
+            <div className="qualification__data left">
+              <DataLeft
+                title="Next Level Week Together 6 | ReactJs"
+                subtitle="Rocketseat | Bootcamp"
+                date="2022 - 2022"
+              />
+              <RounderLine />
+            </div>
+                    
           </div>
         </div>
       </div>
     </section>
   );
 };
+
