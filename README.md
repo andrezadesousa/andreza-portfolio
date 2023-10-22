@@ -11,4 +11,4 @@ Para esse projeto eu estou utilizando as seguintes tecnologias:
 - [Remix Icon](https://remixicon.com)
 - [Firebase](https://firebase.google.com/?hl=pt-br)
   
-  <img src="https://github.com/andrezadesousa/andreza-portfolio/blob/master/src/assets/image/bg.png" />
+  <img src="https://github.com/andrezadesousa/andreza-portfolio/blob/master/src/images/portfolio.png?raw=true" />
