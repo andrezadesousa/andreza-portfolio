@@ -48,9 +48,9 @@ export default () => {
             <SkillsData image={ReactImage} title="ReactJS" />
             <SkillsData image={AngularImage} title="Angular" />
             <SkillsData image={NodeImage} title="NodeJS" />
-            <SkillsData image={PhpImage} title="PHP" />
+            {/* <SkillsData image={PhpImage} title="PHP" />
             <SkillsData image={DockerImage} title="Docker" />
-            <SkillsData image={ComposerImage} title="Composer" />
+            <SkillsData image={ComposerImage} title="Composer" /> */}
 
           </div>
         </div>
@@ -66,9 +66,9 @@ export default () => {
             <SkillsData image={GitlabImage} title="GitLab" />
             <SkillsData image={PostmanImage} title="Postman" />
             <SkillsData image={PostgreeImage} title="PostgreeSQL" />
-            <SkillsData image={AwsImage} title="AWS" />
+            {/* <SkillsData image={AwsImage} title="AWS" />
             <SkillsData image={MongoImage} title="MongoDB" />
-            <SkillsData image={MySqlImage} title="MySQL" />
+            <SkillsData image={MySqlImage} title="MySQL" /> */}
           </div>
         </div>
 

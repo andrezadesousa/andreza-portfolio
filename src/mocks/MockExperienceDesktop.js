@@ -20,7 +20,7 @@ export const Experience = [
     id: 3,
     image: ("https://certsys.com.br/wp-content/uploads/2023/06/logo.png"),
     date: "Mai 2021 - Dez 2021",
-    title: "Desenvolvedora FullStack Trainee",
+    title: "Desenvolvedora Frontend Trainee",
     description:
       "Atuei como desenvolvedora backend em um projeto americano. Sendo responsável por auxiliar na manutenção de sistemas, utilizando JavaScript e Typescript como principais linguagens de programação e ferramentas como puppeteer e Git para versionamento. Além de utilizar a metodologia ágil Scrum",
     tech: "Node.js, JavaScript, NPM (Gerenciador de Pacotes do Node), Git, GitLab"

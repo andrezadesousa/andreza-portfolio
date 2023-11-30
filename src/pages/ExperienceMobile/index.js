@@ -57,12 +57,12 @@ export default () => {
           <TitleCard
             icon="bx bx-code-alt"
             firstTitle="Desenvolvedora"
-            secondTitle="FullStack Trainee"
+            secondTitle="Frontend Trainee"
           />
           <ButtonCard />
           <div className={`card__modal ${showTrainee ? "active__modal" : "inactive__modal"}`}>
             <div onClick={() => {setShowTrainee(!showTrainee);}}className="card__modal-content">
-              <SubtitleCard firstTitle="Desenvolvedora" secondTitle="FullStack Trainee"/>
+              <SubtitleCard firstTitle="Desenvolvedora" secondTitle="Frontend Trainee"/>
               <ButtonCloseCard />
               <ul className="card__modal-card grid">
                 {Trainee.map((traineeLinks) => {

@@ -50,30 +50,30 @@ export const backEnd = [
         number: "20%",
         skillsClass: "skills__firebase"
     },
-    {
-        id: 3,
-        name: "C#",
-        number: "10%",
-        skillsClass: "skills__c"
-    },
-    {
-        id: 4,
-        name: "PHP",
-        number: "25%",
-        skillsClass: "skills__node"
-    },
-    {
-        id: 5,
-        name: "Docker",
-        number: "20%",
-        skillsClass: "skills__firebase"
-    },
-    {
-        id: 6,
-        name: "Docker Composer",
-        number: "10%",
-        skillsClass: "skills__c"
-    },
+    // {
+    //     id: 3,
+    //     name: "C#",
+    //     number: "10%",
+    //     skillsClass: "skills__c"
+    // },
+    // {
+    //     id: 4,
+    //     name: "PHP",
+    //     number: "25%",
+    //     skillsClass: "skills__node"
+    // },
+    // {
+    //     id: 5,
+    //     name: "Docker",
+    //     number: "20%",
+    //     skillsClass: "skills__firebase"
+    // },
+    // {
+    //     id: 6,
+    //     name: "Docker Composer",
+    //     number: "10%",
+    //     skillsClass: "skills__c"
+    // },
 ] 
 
 export const designLib = [
@@ -122,12 +122,12 @@ export const dataBase = [
         number: "20%",
         skillsClass: "skills__dev"
     },
-    {
-        id: 3,
-        name: "AWS",
-        number: "15%",
-        skillsClass: "skills__dev"
-    },
+    // {
+    //     id: 3,
+    //     name: "AWS",
+    //     number: "15%",
+    //     skillsClass: "skills__dev"
+    // },
 ]
 
 export const versioning = [
