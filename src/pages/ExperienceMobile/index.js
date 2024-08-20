@@ -9,16 +9,17 @@ import { SubtitleCard } from "../../components/Titles/SubtitleCard";
 import { ButtonCard } from "../../components/Button/ButtonCard";
 import { ButtonCloseCard } from "../../components/Button/ButtonCloseCard";
 
-import { FrontEnd, Trainee } from "../../mocks/MockExperience";
+import { FrontEnd, Trainee, Avantsoft } from "../../mocks/MockExperience";
 
-import { Logos } from "../../components/Logos"
+import { Logos } from "../../components/Logos";
 
-import  { Testimonial } from "../Testimonial"
+import { Testimonial } from "../Testimonial";
 
 export default () => {
   const [showFront, setShowFront] = useState(false);
   const [showTrainee, setShowTrainee] = useState(false);
   const [showBusiness, setShowBusiness] = useState(false);
+  const [showAvantSoft, setShowAvantSoft] = useState(false);
 
   return (
     <section className="card section container" id="experience-mobile">
@@ -26,17 +27,75 @@ export default () => {
       <Logos />
 
       <div className="card__container container grid">
-        {/* card 1 */}
-        <div className="card__content" onClick={() => { setShowFront(!showFront);}}>
+        <div
+          className="card__content"
+          onClick={() => {
+            setShowAvantSoft(!showAvantSoft);
+          }}
+        >
+          <TitleCard
+            icon="bx bx-code-alt"
+            firstTitle="Desenvolvedora"
+            secondTitle="Frontend Trainee"
+          />
+          <ButtonCard />
+          <div
+            className={`card__modal ${
+              showAvantSoft ? "active__modal" : "inactive__modal"
+            }`}
+          >
+            <div
+              onClick={() => {
+                setShowAvantSoft(!showAvantSoft);
+              }}
+              className="card__modal-content"
+            >
+              <SubtitleCard
+                firstTitle="Desenvolvedora"
+                secondTitle="Frontend Trainee"
+              />
+              <ButtonCloseCard />
+              <ul className="card__modal-card grid">
+                {Avantsoft.map((traineeLinks) => {
+                  return (
+                    <li className="card__modal-cards">
+                      <i className="ri-checkbox-circle-line card__modal-icon"></i>
+                      <p>{traineeLinks.description}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* card 2 */}
+        <div
+          className="card__content"
+          onClick={() => {
+            setShowFront(!showFront);
+          }}
+        >
           <TitleCard
             icon="ri-braces-line"
             firstTitle="Desenvolvedora"
             secondTitle="Frontend Jr"
           />
           <ButtonCard />
-          <div className={`card__modal ${showFront ? "active__modal" : "inactive__modal"}`}>
-            <div onClick={() => {setShowFront(!showFront);}} className="card__modal-content">
-              <SubtitleCard firstTitle="Desenvolvedora" secondTitle="Frontend Jr"/>
+          <div
+            className={`card__modal ${
+              showFront ? "active__modal" : "inactive__modal"
+            }`}
+          >
+            <div
+              onClick={() => {
+                setShowFront(!showFront);
+              }}
+              className="card__modal-content"
+            >
+              <SubtitleCard
+                firstTitle="Desenvolvedora"
+                secondTitle="Frontend Jr"
+              />
               <ButtonCloseCard />
               <ul className="card__modal-card grid">
                 {FrontEnd.map((frontEndLinks) => {
@@ -52,17 +111,34 @@ export default () => {
           </div>
         </div>
 
-        {/* card 2 */}
-        <div className="card__content" onClick={() => {setShowTrainee(!showTrainee);}}>
+        {/* card 3 */}
+        <div
+          className="card__content"
+          onClick={() => {
+            setShowTrainee(!showTrainee);
+          }}
+        >
           <TitleCard
             icon="bx bx-code-alt"
             firstTitle="Desenvolvedora"
             secondTitle="Frontend Trainee"
           />
           <ButtonCard />
-          <div className={`card__modal ${showTrainee ? "active__modal" : "inactive__modal"}`}>
-            <div onClick={() => {setShowTrainee(!showTrainee);}}className="card__modal-content">
-              <SubtitleCard firstTitle="Desenvolvedora" secondTitle="Frontend Trainee"/>
+          <div
+            className={`card__modal ${
+              showTrainee ? "active__modal" : "inactive__modal"
+            }`}
+          >
+            <div
+              onClick={() => {
+                setShowTrainee(!showTrainee);
+              }}
+              className="card__modal-content"
+            >
+              <SubtitleCard
+                firstTitle="Desenvolvedora"
+                secondTitle="Frontend Trainee"
+              />
               <ButtonCloseCard />
               <ul className="card__modal-card grid">
                 {Trainee.map((traineeLinks) => {
@@ -78,16 +154,30 @@ export default () => {
           </div>
         </div>
 
-        {/* card 3 */}
-        <div className="card__content" onClick={() => {setShowBusiness(!showBusiness);}}>
+        {/* card 4 */}
+        <div
+          className="card__content"
+          onClick={() => {
+            setShowBusiness(!showBusiness);
+          }}
+        >
           <TitleCard
             icon="bx bx-line-chart"
             firstTitle="Business"
             secondTitle="Analyst Jr"
           />
           <ButtonCard />
-          <div className={`card__modal ${showBusiness ? "active__modal" : "inactive__modal"}`}>
-            <div onClick={() => {setShowBusiness(!showBusiness);}} className="card__modal-content">
+          <div
+            className={`card__modal ${
+              showBusiness ? "active__modal" : "inactive__modal"
+            }`}
+          >
+            <div
+              onClick={() => {
+                setShowBusiness(!showBusiness);
+              }}
+              className="card__modal-content"
+            >
               <SubtitleCard firstTitle="Business" secondTitle="Analyst Jr" />
               <ButtonCloseCard />
               <ul className="card__modal-card grid">

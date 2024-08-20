@@ -17,7 +17,7 @@ export const Pages = () => {
         <Header />
         <main className="main">
           <Home />
-          <Studies />
+          {/* <Studies /> */}
           <Experience />
           <Skills />
           <Projects />

@@ -1,6 +1,29 @@
 export const Projects = [
   {
-    id:1,
+    image: require("../images/avantsoft.gif"),
+    subtitle: "Website",
+    title: "Site Oficial Avantsoft",
+    description:
+      "Projeto do website oficial da empresa Avantsoft, responsivo  tanto para web quanto mobile e com a opção da escolha dos idiomas português e inglês ",
+    link: "https://avantsoft.com.br/pt-br/",
+    iconTec1: "ri-javascript-line",
+    iconTec2: "ri-macbook-line",
+    textIcon1: "JavaScript",
+    textIcon2: "Ruby On Rails",
+  },
+  {
+    image: require("../images/aguas.gif"),
+    subtitle: "Website",
+    title: "Site Oficial Aguas do Futuro",
+    description:
+      "Projeto do website oficial Aguas Para o Futuro do MPMT, tendo como objetivo de catalogar as nascentes, informar as nitícias recentes e interagir com os usuários. É um projeto responsivo, tanto web quanto mobile",
+    link: "",
+    iconTec1: "ri-angularjs-line",
+    iconTec2: "ri-css3-line",
+    textIcon1: "Angular",
+    textIcon2: "SASS",
+  },
+  {
     image: require("../images/my-site.png"),
     subtitle: "Website",
     title: "Meu Portfólio",
@@ -17,7 +40,6 @@ export const Projects = [
     textIcon4: "Firebase",
   },
   {
-    id:2,
     image: require("../images/my-cv.png"),
     subtitle: "Website",
     title: "Meu Currículo",
@@ -32,7 +54,6 @@ export const Projects = [
     textIcon3: "Firebase",
   },
   {
-    id: 3,
     image: require("../images/project-2.png"),
     subtitle: "Website",
     title: "Netflix Clone",
@@ -44,10 +65,9 @@ export const Projects = [
     iconTec3: "ri-macbook-line",
     textIcon1: "ReactJS",
     textIcon2: "MaterialUI/Icons",
-    textIcon3: "API TheMovieDB"
+    textIcon3: "API TheMovieDB",
   },
   {
-    id: 4,
     image: require("../images/project-1.png"),
     subtitle: "Website",
     title: "Coffe & Tea",
@@ -57,10 +77,9 @@ export const Projects = [
     iconTec1: "ri-reactjs-line",
     iconTec2: "ri-css3-line",
     textIcon1: "ReactJS",
-    textIcon2: "CSS3"
+    textIcon2: "CSS3",
   },
   {
-    id: 5,
     image: require("../images/project-6.png"),
     subtitle: "Website",
     title: "Portfólio Rian Lot",
@@ -70,44 +89,39 @@ export const Projects = [
     iconTec1: "ri-html5-line",
     iconTec2: "ri-css3-line",
     iconTec3: "ri-javascript-line",
-    iconTec4: 'bx bx-envelope',
+    iconTec4: "bx bx-envelope",
     textIcon1: "HTML5",
     textIcon2: "CSS3",
     textIcon3: "JavaScript",
-    textIcon4: "API | EmailJS"
+    textIcon4: "API | EmailJS",
   },
   {
-    id: 6,
     image: require("../images/project-3.png"),
     subtitle: "Website",
     title: "Easybank",
-    description:
-      "Landing Page de um banco digital e responsivo.",
+    description: "Landing Page de um banco digital e responsivo.",
     link: "https://github.com/andrezadesousa/Easybank-Login-Responsive-ReactJs",
     iconTec1: "ri-html5-line",
     iconTec2: "ri-css3-line",
     iconTec3: "ri-javascript-line",
     textIcon1: "HTML5",
     textIcon2: "CSS3",
-    textIcon3: "JavaScript"
+    textIcon3: "JavaScript",
   },
   {
-    id: 7,
     image: require("../images/project-4.jpeg"),
     subtitle: "Website",
     title: "Creative Design & Development Agency",
-    description:
-      "Landing Page de uma agencia digital, responsiva.",
+    description: "Landing Page de uma agencia digital, responsiva.",
     link: "https://github.com/",
     iconTec1: "ri-html5-line",
-    iconTec2: 'ri-css3-line',
+    iconTec2: "ri-css3-line",
     iconTec3: "ri-javascript-line",
     textIcon1: "HTML5",
     textIcon2: "CSS3",
-    textIcon3: "JavaScript"
+    textIcon3: "JavaScript",
   },
   {
-    id: 8,
     image: require("../images/project-5.png"),
     subtitle: "Website",
     title: "Jazz School",
@@ -115,12 +129,11 @@ export const Projects = [
       "Jazz School trata-se de uma landing page, simples, com uma estética mais animada e colorida. Além, de ser desenvolvida no conceito mobile first.",
     link: "https://github.com/andrezadesousa/jazz-school-lp",
     iconTec1: "ri-html5-line",
-    iconTec2: 'ri-css3-line',
+    iconTec2: "ri-css3-line",
     textIcon1: "HTML5",
-    textIcon2: "CSS3"
+    textIcon2: "CSS3",
   },
   {
-    id: 9,
     image: require("../images/project-7.png"),
     subtitle: "Website",
     title: "LetMeAsk | Sala virtual Q&A",
@@ -132,10 +145,9 @@ export const Projects = [
     iconTec3: "bx bxl-typescript",
     textIcon1: "ReactJS",
     textIcon2: "Firebase",
-    textIcon3: "TypeScript"
+    textIcon3: "TypeScript",
   },
   {
-    id: 10,
     image: require("../images/project-8.png"),
     subtitle: "Website",
     title: "React Design System",
@@ -145,6 +157,6 @@ export const Projects = [
     iconTec1: "ri-reactjs-line",
     iconTec2: "bx bxl-typescript",
     textIcon1: "ReactJS",
-    textIcon2: "TypeScript"
+    textIcon2: "TypeScript",
   },
 ];
