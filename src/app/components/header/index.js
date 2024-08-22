@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 export const Header = () => {
   return (
@@ -17,6 +18,11 @@ export const Header = () => {
             <li className="nav__item">
               <a href="#about" className="nav__link">
                 Sobre mim
+              </a>
+            </li>
+            <li className="nav__item">
+              <a href="#experience" className="nav__link">
+                Experiência Profissional
               </a>
             </li>
             <li className="nav__item">
