@@ -46,7 +46,7 @@
 @media screen and (max-width: 1150px) {
   .nav__menu {
     position: fixed;
-    top: -100%;
+    top: 0;
     left: 0;
     background-color: hsla(0, 0%, 0%, 0.75);
     width: 100%;
@@ -54,6 +54,20 @@
     text-align: center;
     backdrop-filter: blur(8px);
     transition: top 0.4s;
+  }
+
+  .nav__menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 500ms ease;
+  }
+
+  .nav__menu.inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: 500ms ease;
   }
 }
 

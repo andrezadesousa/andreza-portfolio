@@ -4,6 +4,7 @@
 
 .home__container {
   grid-template-columns: repeat(2, 1fr);
+  padding: 0 4rem;
 }
 
 .home__image {
@@ -67,5 +68,12 @@
 
   .home__phrase {
     margin-top: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .home__container {
+    justify-content: center;
+    grid-template-columns: repeat(2, 800px);
   }
 }
