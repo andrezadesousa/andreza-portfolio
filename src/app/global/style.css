@@ -100,12 +100,6 @@ video {
   padding-block: 4rem 2rem;
 }
 
-.title__section {
-  font-size: var(--biggest-font-size);
-  color: var(--text-color);
-  font-weight: var(--font-bold);
-}
-
 @media screen and (max-width: 340px) {
   .container {
     margin-inline: 1rem;

@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import HomeVideo from "../../assets/videos/header.mp4";
+import { TitleSection } from "../../components/titleSection";
 
 export const Home = () => {
   return (
@@ -8,10 +8,10 @@ export const Home = () => {
       <div className="home__container grid">
         <img
           className="home__image"
-          src="https://media.licdn.com/dms/image/v2/D4D03AQEkU8F8nM5Oqw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724523020517?e=1729728000&v=beta&t=3tzZlW6ALvxCyX1cVnujwnrHi0f7OgVgyFWxAPuwIBM"
+          src="https://media.licdn.com/dms/image/v2/D4D03AQE3rLLjfQ4YBw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724525257776?e=1729728000&v=beta&t=kniZ3j3Y_2c9OSa8RVGFzvAdoOopJ3r5P9csz_Sc3EQ"
         />
         <div className="home__content">
-          <h1 className="title__section">Sobre mim</h1>
+          <TitleSection title="Sobre mim" />
           <p className="home__text">
             Olá, me chamo <strong>Andreza Sousa</strong> e atuo como
             desenvolvedora Front-end há dois anos.
