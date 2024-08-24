@@ -10,6 +10,7 @@
   --body-color: rgba(255, 255, 255, 1);
   --text-color: rgba(0, 0, 0, 0.9);
   --text-color-light: hsl(0, 0%, 64%);
+  --focus-color: #006400;
 
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.75rem;
@@ -30,7 +31,7 @@
 
 @media screen and (min-width: 1150px) {
   :root {
-    --biggest-font-size: 4.5rem;
+    --biggest-font-size: 4rem;
     --h1-font-size: 3rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -90,8 +91,19 @@ video {
   margin-inline: 1.5rem;
 }
 
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
 .section {
   padding-block: 4rem 2rem;
+}
+
+.title__section {
+  font-size: var(--biggest-font-size);
+  color: var(--text-color);
+  font-weight: var(--font-bold);
 }
 
 @media screen and (max-width: 340px) {
@@ -103,5 +115,9 @@ video {
 @media screen and (min-width: 1150px) {
   .container {
     margin-inline: auto;
+  }
+
+  .section {
+    padding-block: 7rem 2rem;
   }
 }
