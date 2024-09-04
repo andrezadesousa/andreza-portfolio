@@ -7,7 +7,6 @@ import Astronaut from "../../assets/images/astronaut.png";
 import Ufo from "../../assets/images/ufo.png";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
-import { useGSAP } from "@gsap/react";
 
 export const Home = () => {
   const tl = gsap.timeline();
@@ -47,16 +46,16 @@ export const Home = () => {
         x: -50,
         y: -50,
         rotation: 30,
-      })
-      .from(".home__img-4", {
-        duration: 5,
-        y: -100,
-        scale: 1.3,
-      })
-      .from(".home__img-5", {
-        duration: 3,
-        y: 100,
       });
+    tl.from(".home__img-4", {
+      duration: 5,
+      y: -100,
+      scale: 1.3,
+    });
+    tl.from(".home__img-5", {
+      duration: 3,
+      y: 100,
+    });
   }, []);
 
   return (
