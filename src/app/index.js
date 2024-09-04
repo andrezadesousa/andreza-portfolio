@@ -1,14 +1,16 @@
 import React from "react";
 import { Header } from "./components/header";
 import "./global/style.css";
-import { About } from "./pages/about";
+import { Home } from "./pages/home";
+// import { About } from "./pages/about";
 
 export const Pages = () => {
   return (
     <body>
       <Header />
       <main className="main">
-        <About />
+        <Home />
+        {/* <About /> */}
       </main>
     </body>
   );
