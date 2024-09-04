@@ -2,15 +2,14 @@ import React from "react";
 import { Header } from "./components/header";
 import "./global/style.css";
 import { Home } from "./pages/home";
-// import { About } from "./pages/about";
+import RoutesApp from "./routes/routes";
 
 export const Pages = () => {
   return (
     <body>
       <Header />
       <main className="main">
-        <Home />
-        {/* <About /> */}
+        <RoutesApp />
       </main>
     </body>
   );
