@@ -1,4 +1,4 @@
-.title__container {
+.back__title-container {
   width: 100%;
   height: 72px;
   display: inline-flex;
@@ -7,18 +7,19 @@
   margin-bottom: 5rem;
 }
 
-.title__text {
+.back__title-text {
   font-size: 28px;
   line-height: 32px;
+  color: var(--text-color);
 }
 
-.title__text b {
+.back__title-text b {
   font-weight: var(--font-bold);
   font-family: var(--special-font);
 }
 
 @media screen and (min-width: 1150px) {
-  .title__text {
+  .back__title-text {
     font-size: 48px;
   }
 }

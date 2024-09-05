@@ -1,20 +1,38 @@
 import React from "react";
 import "./style.css";
-import { TitleSection } from "../../components/titleSection";
-import { testimonyData } from "../../constants/testimony.constants.ts";
-import { Testimony } from "../../components/testimony";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import { SectionLayout } from "../../components/sectionLayout";
+import { TitleSectionWhite } from "../../components/title-section-white";
+import { experienceData } from "../../constants/experience.constants.ts";
+
 export const Experience = () => {
   return (
-    <section className="section experience" id="experiencia-profissional">
-      <TitleSection title="Experiência Profissional" />
-      <div className="testimony__container"></div>
-    </section>
+    <SectionLayout id="experience">
+      <TitleSectionWhite title="Experiência " subtitle="Profissional" />
+      <div className="experience__container">
+        {experienceData.map((experience) => (
+          <div className="experience__box">
+            <div className="experience__header">
+              <div className="experience__titles">
+                <img
+                  src={experience.image}
+                  className="experience__img"
+                  alt="Image experience"
+                />
+                <div className="experience__wrapper">
+                  <h1 className="experience__title">{experience.title}</h1>
+                  <h2 className="experience__subtitle">
+                    {experience.subtitle}
+                  </h2>
+                </div>
+              </div>
+              <p className="experience__date">{experience.date}</p>
+            </div>
+
+            <p className="experience__description">{experience.description}</p>
+          </div>
+        ))}
+      </div>
+    </SectionLayout>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-export const TitleSection = ({ title, subtitle }) => {
+export const TitleSectionWhite = ({ title, subtitle }) => {
   return (
     <div className="title__container">
       <h1 className="title__text">

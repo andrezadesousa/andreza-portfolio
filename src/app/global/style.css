@@ -13,6 +13,7 @@
   --text-color: rgba(0, 0, 0, 0.9);
   --text-color-light: hsl(0, 0%, 64%);
   --gray-color: rgba(113, 113, 122, 1);
+  --gray-light-color: rgba(212, 212, 216, 1);
 
   --big-font-size: 3rem;
   --biggest-font-size: 2.5rem;

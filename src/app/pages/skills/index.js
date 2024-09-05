@@ -4,12 +4,12 @@ import "./style.css";
 import { CardSkills } from "../../components/cardSkills";
 import { SectionLayout } from "../../components/sectionLayout";
 import { skillsData } from "../../constants/skills.constants.ts";
-import { TitleSection } from "../../components/titleSection";
+import { TitleSectionBlack } from "../../components/title-section-black";
 export const Skills = () => {
   return (
     <SectionLayout>
       <div className="skills__container">
-        <TitleSection title="Minhas" subtitle="skills" />
+        <TitleSectionBlack title="Minhas" subtitle="skills" />
         <div className="skills__content">
           {skillsData.map((skill) => (
             <CardSkills

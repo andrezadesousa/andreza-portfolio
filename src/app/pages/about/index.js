@@ -7,6 +7,7 @@ import { socialMediaData } from "../../constants/social-media.constants.ts";
 import { Skills } from "../skills";
 
 import Girl from "../../assets/images/girl.png";
+import { Experience } from "../experience";
 
 export const About = () => {
   return (
@@ -38,6 +39,7 @@ export const About = () => {
         </div>
       </SectionLayout>
       <Skills />
+      <Experience />
     </>
   );
 };

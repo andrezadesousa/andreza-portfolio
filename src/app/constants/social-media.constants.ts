@@ -1,14 +1,14 @@
 export const socialMediaData = [
   {
-    url: "https://github.com/andreza-sousa",
+    url: "https://github.com/andrezadesousa",
     icon: "ri-github-fill",
   },
   {
-    url: "https://www.linkedin.com/in/andreza-sousa/",
+    url: "https://www.linkedin.com/in/sousa-andreza/",
     icon: "ri-linkedin-box-line",
   },
   {
-    url: "https://www.instagram.com/andreza_sousa/",
+    url: "https://www.instagram.com/andrezavitoriano/",
     icon: "ri-instagram-line",
   },
 ];
