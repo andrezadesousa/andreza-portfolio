@@ -2,44 +2,32 @@ import React from "react";
 import "./style.css";
 
 import { SectionLayout } from "../../components/sectionLayout";
-import { CardSocialMedia } from "../../components/cardSocialMedia";
-import { socialMediaData } from "../../constants/social-media.constants.ts";
-import { Skills } from "../skills";
-
-import Girl from "../../assets/images/girl.png";
-import { Experience } from "../experience";
+import { TitleSectionWhite } from "../../components/title-section-white";
 
 export const About = () => {
   return (
-    <>
-      <SectionLayout>
-        <div className="about__container">
-          <div className="about__content">
-            <p className="about__title">
-              Olá, eu sou <b>Andreza.</b> Desenvolvedora <b>Frontend</b>,
-              morando no <b>Brasil</b>.
-            </p>
-            <p className="about__text">
-              Sou graduada em Gestão da Tecnologia da Informação e apaixonada
-              por desenvolver e criar páginas web. Atuei em diferentes projetos,
-              web e mobile, sendo eles nacionais e internacionais. Tendo a
-              oportunidade de trabalhar e conhecer diferentes tecnologias.
-            </p>
-            <div className="about__social-media">
-              {socialMediaData.map((socialMedia) => (
-                <CardSocialMedia
-                  key={socialMedia.url}
-                  url={socialMedia.url}
-                  icon={socialMedia.icon}
-                />
-              ))}
-            </div>
-          </div>
-          <img src={Girl} alt="girl" className="about__img" />
+    <SectionLayout id="about">
+      <div className="about__container">
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQE3rLLjfQ4YBw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724525257776?e=1730937600&v=beta&t=hPMx0hJzMyy_610ypErHrJEjy6n1HJGdnxOey9m_jjo" />
+        <div className="about__content">
+          <TitleSectionWhite title="Sobre" subtitle="Mim" />
+          <p className="about__text">
+            Sou desenvolvedora Frontend apaixonada por dar vida aos aspectos
+            técnicos e visuais de produtos digitais. Possuindo experiência em
+            figma e tecnologias para desenvolvimento web e mobile, sempre com
+            código claro, legível e de alto desempenho que são importantes para
+            mim.
+          </p>
+          <p className="about__text">
+            Comecei minha jornada como desenvolvedora trainee em 2021 e, desde
+            então, continuei a crescer e evoluir como na área, assumindo novos
+            desafios e aprendendo as últimas tecnologias ao longo do caminho.
+            Agora, após começar minha jornada de desenvolvimento web, estou
+            construindo aplicativos web usando tecnologias modernas como
+            TypeScript, ReactJs, React Native, Angular e muito mais.
+          </p>
         </div>
-      </SectionLayout>
-      <Skills />
-      <Experience />
-    </>
+      </div>
+    </SectionLayout>
   );
 };

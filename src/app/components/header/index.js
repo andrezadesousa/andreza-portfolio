@@ -37,7 +37,7 @@ export const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="/sobre-mim"
+                href="#about"
                 className="nav__link"
                 onClick={() => {
                   setShowMenu(!showMenu);
@@ -48,7 +48,7 @@ export const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="#experiencia-profissional"
+                href="/experiencia-profissional"
                 className="nav__link"
                 onClick={() => {
                   setShowMenu(!showMenu);
