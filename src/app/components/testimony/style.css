@@ -1,0 +1,45 @@
+.testimony__box {
+  font-family: var(--text-font);
+  font-size: var(--normal-font-size);
+  margin: 2rem 0;
+  cursor: grab;
+  padding: 0.2rem 1rem;
+}
+
+.testimony__text {
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.testimony__image {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.testimony__infos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.testimony__infos-name {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.testimony__infos-name p {
+  font-family: var(--body-font);
+}
+
+@media screen and (min-width: 900px) {
+  .testimony__box {
+    display: grid;
+    grid-template: "image infos" "image text" / 1fr 1fr;
+    align-items: center;
+  }
+}
