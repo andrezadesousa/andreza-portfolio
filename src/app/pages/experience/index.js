@@ -7,7 +7,7 @@ import { experienceData } from "../../constants/experience.constants.ts";
 
 export const Experience = () => {
   return (
-    <SectionLayout id="experience">
+    <SectionLayout id="experiencia-profissional">
       <TitleSectionWhite title="Experiência " subtitle="Profissional" />
       <div className="experience__container">
         {experienceData.map((experience) => (

@@ -7,7 +7,7 @@ import { skillsData } from "../../constants/skills.constants.ts";
 import { TitleSectionBlack } from "../../components/title-section-black";
 export const Skills = () => {
   return (
-    <SectionLayout>
+    <SectionLayout id="skills">
       <div className="skills__container">
         <TitleSectionBlack title="Minhas" subtitle="skills" />
         <div className="skills__content">

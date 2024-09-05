@@ -1,4 +1,4 @@
-#about {
+#sobre-mim {
   background-color: var(--text-color);
   color: var(--body-color);
   padding: 40px 16px;
@@ -21,7 +21,7 @@
 }
 
 @media screen and (min-width: 1150px) {
-  #about {
+  #sobre-mim {
     padding: 60px 80px;
   }
 

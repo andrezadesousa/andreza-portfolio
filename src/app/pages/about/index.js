@@ -6,7 +6,7 @@ import { TitleSectionWhite } from "../../components/title-section-white";
 
 export const About = () => {
   return (
-    <SectionLayout id="about">
+    <SectionLayout id="sobre-mim">
       <div className="about__container">
         <img src="https://media.licdn.com/dms/image/v2/D4D03AQE3rLLjfQ4YBw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724525257776?e=1730937600&v=beta&t=hPMx0hJzMyy_610ypErHrJEjy6n1HJGdnxOey9m_jjo" />
         <div className="about__content">

@@ -2,16 +2,11 @@ import React, { useState } from "react";
 import "./style.css";
 
 export const Header = () => {
-  // const navToggle = () => {
-  //   const navMenu = document.getElementById("nav-menu");
-  //   navMenu.classList.toggle("show-menu");
-  // };
-
   const [showMenu, setShowMenu] = useState(false);
   return (
     <header className="header" id="header">
       <nav className="nav container">
-        <a href="#" className="nav__logo">
+        <a href="/" className="nav__logo">
           <span className="nav__logo-name">Andreza</span>
         </a>
 
@@ -26,18 +21,7 @@ export const Header = () => {
           <ul className="nav__list">
             <li className="nav__item">
               <a
-                href="/"
-                className="nav__link"
-                onClick={() => {
-                  setShowMenu(!showMenu);
-                }}
-              >
-                Home
-              </a>
-            </li>
-            <li className="nav__item">
-              <a
-                href="#about"
+                href="#sobre-mim"
                 className="nav__link"
                 onClick={() => {
                   setShowMenu(!showMenu);
@@ -48,7 +32,18 @@ export const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="/experiencia-profissional"
+                href="#skills"
+                className="nav__link"
+                onClick={() => {
+                  setShowMenu(!showMenu);
+                }}
+              >
+                Skills
+              </a>
+            </li>
+            <li className="nav__item">
+              <a
+                href="#experiencia-profissional"
                 className="nav__link"
                 onClick={() => {
                   setShowMenu(!showMenu);

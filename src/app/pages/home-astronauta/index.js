@@ -6,7 +6,6 @@ import Planet2 from "../../assets/images/planet-2.png";
 import Astronaut from "../../assets/images/astronaut.png";
 import Ufo from "../../assets/images/ufo.png";
 import { gsap } from "gsap";
-import { Link } from "react-router-dom";
 
 export const Home = () => {
   const tl = gsap.timeline();
@@ -68,10 +67,6 @@ export const Home = () => {
             Olá, essa página existe sim! hahaha para conhecer mais sobre minha
             experiência em programação, veja abaixo.
           </p>
-
-          <Link to="/sobre-mim" className="home__button">
-            Sobre mim
-          </Link>
         </div>
         <div className="home__images">
           <div className="home__blob-1">
