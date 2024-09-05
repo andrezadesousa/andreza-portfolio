@@ -1,0 +1,36 @@
+.card__skills {
+  display: grid;
+  gap: 32px;
+  padding: 24px;
+  width: 162px;
+  height: 160px;
+  border: 2px solid var(--text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  justify-items: center;
+  color: var(--text-color);
+  font-family: var(--text-font);
+  font-weight: var(--font-bold);
+  font-size: 20px;
+  text-align: center;
+}
+
+.card__skills:hover {
+  background-color: var(--text-color);
+  color: var(--body-color);
+}
+
+.card__skills i {
+  font-size: 3rem;
+}
+
+.card__skills:hover {
+  color: var(--body-color);
+}
+
+@media screen and (min-width: 1024px) {
+  .card__skills {
+    width: 200px;
+    height: 200px;
+  }
+}
