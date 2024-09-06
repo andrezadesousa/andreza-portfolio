@@ -25,7 +25,7 @@ export const Home = () => {
           <div className="home__social-media">
             {socialMediaData.map((socialMedia) => (
               <CardSocialMedia
-                key={socialMedia.url}
+                key={socialMedia.icon}
                 url={socialMedia.url}
                 icon={socialMedia.icon}
               />
