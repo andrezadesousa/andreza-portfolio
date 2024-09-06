@@ -3,7 +3,7 @@ import "./style.css";
 
 import { SectionLayout } from "../../components/sectionLayout";
 import { TitleSectionWhite } from "../../components/title-section-white";
-import { experienceData } from "../../constants/experience.constants.ts";
+import { experienceData } from "../../constants/experience.constants";
 
 export const Experience = () => {
   return (

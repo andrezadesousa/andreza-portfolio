@@ -3,7 +3,7 @@ import "./style.css";
 
 import { SectionLayout } from "../../components/sectionLayout";
 import { CardSocialMedia } from "../../components/cardSocialMedia";
-import { socialMediaData } from "../../constants/social-media.constants.ts";
+import { socialMediaData } from "../../constants/social-media.constants";
 
 import Girl from "../../assets/images/girl.png";
 

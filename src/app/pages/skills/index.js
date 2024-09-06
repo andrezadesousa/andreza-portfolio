@@ -3,7 +3,7 @@ import "./style.css";
 
 import { CardSkills } from "../../components/cardSkills";
 import { SectionLayout } from "../../components/sectionLayout";
-import { skillsData } from "../../constants/skills.constants.ts";
+import { skillsData } from "../../constants/skills.constants";
 import { TitleSectionBlack } from "../../components/title-section-black";
 export const Skills = () => {
   return (
