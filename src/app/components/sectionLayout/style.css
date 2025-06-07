@@ -1,9 +1,0 @@
-.section {
-  padding-block: 4rem 2rem;
-}
-
-@media screen and (min-width: 1150px) {
-  .section {
-    padding-block: 7rem 2rem;
-  }
-}
