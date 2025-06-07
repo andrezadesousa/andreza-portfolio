@@ -1,244 +1,242 @@
 "use client";
 
+import type React from "react";
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowDown } from "lucide-react";
-import { StyledButton } from "./StyledButton";
+import { Instagram, Github, Linkedin } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const HeroSection = styled.section`
+const HeroSection = styled.section<{ $isDark: boolean }>`
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  background: ${(props) =>
+    props.$isDark ? "var(--color-black)" : "var(--color-white)"};
+  color: ${(props) =>
+    props.$isDark ? "var(--color-white)" : "var(--color-black)"};
   position: relative;
   overflow: hidden;
-  padding-top: 80px;
-  background: linear-gradient(
-    135deg,
-    ${({ theme }) => theme.background} 0%,
-    #f0f9ff 100%
-  );
-`;
-
-const ParallaxContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  z-index: 1;
-`;
-
-const ParallaxLayer = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  &.layer-1 {
-    background-image: url("/images/mountain-1.png");
-    z-index: 1;
-  }
-
-  &.layer-2 {
-    background-image: url("/images/mountain-2.png");
-    z-index: 2;
-    opacity: 0.8;
-  }
-
-  &.layer-3 {
-    background-image: url("/images/mountain-3.png");
-    z-index: 3;
-    opacity: 0.6;
-  }
-
-  &.layer-4 {
-    background-image: url("/images/mountain-4.png");
-    z-index: 4;
-    opacity: 0.4;
-  }
-
-  &.layer-5 {
-    background-image: url("/images/mountain-5.png");
-    z-index: 5;
-    opacity: 0.2;
-  }
 `;
 
 const HeroContent = styled.div`
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 4rem;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+`;
+
+const ImageContainer = styled(motion.div)`
+  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ProfileImage = styled.img`
+  width: 350px;
+  height: 450px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 3px solid var(--color-brown);
+
+  @media (max-width: 768px) {
+    width: 280px;
+    height: 360px;
+  }
+`;
+
+const TextContent = styled.div`
+  z-index: 2;
+`;
+
+const AboutTitle = styled(motion.h3)`
+  font-size: 1.2rem;
+  color: var(--color-brown);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+`;
+
+const Title = styled(motion.h1)`
+  font-family: var(--font-primary);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+`;
+
+const Subtitle = styled(motion.h2)`
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--color-brown);
+  margin-bottom: 2rem;
+  font-weight: 300;
+`;
+
+const Description = styled(motion.p)`
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  max-width: 500px;
+`;
+
+const SocialLinks = styled(motion.div)`
+  display: flex;
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+const SocialLink = styled.a<{ $isDark: boolean }>`
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  z-index: 10;
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 1rem;
-  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: ${(props) =>
+    props.$isDark ? "var(--color-white)" : "var(--color-black)"};
+  color: ${(props) =>
+    props.$isDark ? "var(--color-black)" : "var(--color-white)"};
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--color-brown);
+    color: var(--color-white);
+    transform: translateY(-3px);
+  }
 `;
 
-const HeroTitle = styled(motion.h1)`
-  margin-bottom: 1.5rem;
-  background: linear-gradient(
-    90deg,
-    ${({ theme }) => theme.primary},
-    ${({ theme }) => theme.secondary}
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`;
-
-const HeroSubtitle = styled(motion.p)`
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  margin-bottom: 2rem;
-  max-width: 600px;
-  font-weight: 300;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-`;
-
-const ScrollDownButton = styled(motion.a)`
+const FloatingElement = styled(motion.div)<{ $isDark: boolean }>`
   position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: ${({ theme }) => theme.text};
-  font-size: 0.9rem;
-  z-index: 10;
-
-  svg {
-    margin-top: 0.5rem;
-    animation: bounce 2s infinite;
-  }
-
-  @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-10px);
-    }
-    60% {
-      transform: translateY(-5px);
-    }
-  }
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: ${(props) =>
+    props.$isDark ? "var(--color-cream)" : "var(--color-light-gray)"};
+  opacity: 0.3;
 `;
 
-const Hero = () => {
-  const sectionRef = useRef(null);
-  const parallaxRef = useRef(null);
+const Hero: React.FC = () => {
+  const { isDark } = useTheme();
+  const floatingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const parallaxLayers = document.querySelectorAll(".parallax-layer");
-
-    if (section && parallaxLayers.length) {
-      // Criar efeito parallax para cada camada
-      parallaxLayers.forEach((layer, index) => {
-        const speed = (index + 1) * 0.2; // Velocidades diferentes para cada camada
-
-        gsap.fromTo(
-          layer,
-          { y: 0 },
-          {
-            y: () => -100 * speed,
-            ease: "none",
-            scrollTrigger: {
-              trigger: section,
-              start: "top bottom",
-              end: "bottom top",
-              scrub: true,
-            },
-          }
-        );
+    if (floatingRef.current) {
+      gsap.to(floatingRef.current, {
+        y: -20,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "power2.inOut",
       });
-
-      // Efeito de fade para o conteúdo
-      gsap.fromTo(
-        ".hero-content",
-        { opacity: 1, y: 0 },
-        {
-          opacity: 0.3,
-          y: -50,
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-          },
-        }
-      );
     }
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
   }, []);
 
   return (
-    <HeroSection id="home" ref={sectionRef}>
-      <ParallaxContainer ref={parallaxRef}>
-        <ParallaxLayer className="parallax-layer layer-1" />
-        <ParallaxLayer className="parallax-layer layer-2" />
-        <ParallaxLayer className="parallax-layer layer-3" />
-        <ParallaxLayer className="parallax-layer layer-4" />
-        <ParallaxLayer className="parallax-layer layer-5" />
-      </ParallaxContainer>
+    <HeroSection id="home" $isDark={isDark}>
+      <div className="container">
+        <HeroContent>
+          <ImageContainer
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <ProfileImage src="/images/andreza.jpeg" alt="Andreza" />
+            <FloatingElement
+              ref={floatingRef}
+              $isDark={isDark}
+              style={{ top: "10%", right: "10%" }}
+            />
+            <FloatingElement
+              $isDark={isDark}
+              style={{ bottom: "20%", left: "5%" }}
+              animate={{
+                x: [0, 15, 0],
+                rotate: [0, 180, 360],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "linear",
+              }}
+            />
+          </ImageContainer>
 
-      <HeroContent className="hero-content">
-        <HeroTitle
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Olá, eu sou Andreza
-        </HeroTitle>
-        <HeroSubtitle
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          Desenvolvedora Front-end apaixonada por criar experiências web
-          incríveis e interfaces intuitivas
-        </HeroSubtitle>
+          <TextContent>
+            <AboutTitle
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              About Me
+            </AboutTitle>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <StyledButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            Ver Projetos
-          </StyledButton>
-        </motion.div>
-      </HeroContent>
+            <Title
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              Olá, eu sou a Andreza
+            </Title>
 
-      <ScrollDownButton
-        href="#about"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-      >
-        Rolar para baixo
-        <ArrowDown size={20} />
-      </ScrollDownButton>
+            <Subtitle
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Desenvolvedora Front-end
+            </Subtitle>
+
+            <Description
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Apaixonada por criar experiências digitais incríveis e interfaces
+              que conectam pessoas. Especializada em React, TypeScript e design
+              responsivo, sempre buscando inovação e excelência em cada projeto.
+            </Description>
+
+            <SocialLinks
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <SocialLink
+                href="https://instagram.com"
+                target="_blank"
+                $isDark={isDark}
+              >
+                <Instagram size={24} />
+              </SocialLink>
+              <SocialLink
+                href="https://github.com"
+                target="_blank"
+                $isDark={isDark}
+              >
+                <Github size={24} />
+              </SocialLink>
+              <SocialLink
+                href="https://linkedin.com"
+                target="_blank"
+                $isDark={isDark}
+              >
+                <Linkedin size={24} />
+              </SocialLink>
+            </SocialLinks>
+          </TextContent>
+        </HeroContent>
+      </div>
     </HeroSection>
   );
 };

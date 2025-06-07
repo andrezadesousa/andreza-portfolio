@@ -1,9 +1,18 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
-  @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+DE+Grund:wght@100..400&display=swap");
-  @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+  :root {
+    --color-black: #000000;
+    --color-brown: #6F3D24;
+    --color-white: #FFFFFF;
+    --color-cream: #E1CDA6;
+    --color-light-gray: #F3F3F3;
+    
+    --font-primary: 'Playwrite DE Grund', cursive;
+    --font-secondary: 'Merriweather Sans', sans-serif;
+  }
 
   * {
     margin: 0;
@@ -11,88 +20,45 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: ${({ theme }) => theme.background};
-    color: ${({ theme }) => theme.text};
-    transition: all 0.3s ease;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather Sans', sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
-
-  h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-family: 'Playwrite DE Grund', cursive;
-    font-weight: 400;
-  }
-
-  h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-  }
-
-  h3 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-  }
-
-  p {
+    font-family: var(--font-secondary);
     line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
-  a {
-    color: ${({ theme }) => theme.primary};
-    text-decoration: none;
-    transition: color 0.2s ease;
-    
-    &:hover {
-      color: ${({ theme }) => theme.secondary};
-    }
-  }
-
-  section {
-    padding: 5rem 1rem;
-    
-    @media (min-width: 768px) {
-      padding: 8rem 2rem;
-    }
+    overflow-x: hidden;
   }
 
   .container {
-    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 20px;
   }
 
   .section-title {
+    font-family: var(--font-primary);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 2rem;
     text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -0.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, ${({ theme }) => theme.primary}, ${({
-  theme,
-}) => theme.secondary});
-      border-radius: 2px;
-    }
   }
 
-  button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 15px;
+    }
   }
 `;
+
+export default GlobalStyles;

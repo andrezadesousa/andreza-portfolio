@@ -1,125 +1,120 @@
 "use client";
 
-import { useState, useEffect, useContext } from "react";
+import type React from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Moon, Sun } from "lucide-react";
-import { ThemeContext } from "../context/ThemeContext";
+import { motion } from "framer-motion";
+import { Moon, Sun, Menu, X } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
 
-const HeaderContainer = styled(motion.header)`
+const HeaderContainer = styled(motion.header)<{
+  $isDark: boolean;
+  $isScrolled: boolean;
+}>`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
-  backdrop-filter: blur(10px);
-  background-color: ${({ theme }) => theme.navBg};
+  z-index: 1000;
+  padding: 1rem 0;
+  background: ${(props) =>
+    props.$isScrolled
+      ? props.$isDark
+        ? "rgba(0, 0, 0, 0.95)"
+        : "rgba(255, 255, 255, 0.95)"
+      : "transparent"};
+  backdrop-filter: ${(props) => (props.$isScrolled ? "blur(10px)" : "none")};
   transition: all 0.3s ease;
 `;
 
-const NavContainer = styled.div`
+const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 `;
 
-const Logo = styled.div`
+const Logo = styled.h1<{ $isDark: boolean }>`
+  font-family: var(--font-primary);
   font-size: 1.5rem;
-  font-weight: 700;
-  color: ${({ theme }) => theme.primary};
-
-  span {
-    color: ${({ theme }) => theme.secondary};
-  }
+  color: ${(props) =>
+    props.$isDark ? "var(--color-white)" : "var(--color-black)"};
 `;
 
-const NavLinks = styled.nav`
-  display: none;
-
-  @media (min-width: 768px) {
-    display: flex;
-    gap: 2rem;
-  }
-`;
-
-const NavLink = styled.a`
-  color: ${({ theme }) => theme.text};
-  font-weight: 500;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      ${({ theme }) => theme.primary},
-      ${({ theme }) => theme.secondary}
-    );
-    transition: width 0.3s ease;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
-`;
-
-const MobileMenuButton = styled.button`
+const NavLinks = styled.ul<{ $isOpen: boolean; $isDark: boolean }>`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => theme.text};
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
-
-const ThemeToggleButton = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => theme.text};
-  margin-left: 1rem;
-`;
-
-const MobileMenu = styled(motion.div)`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: ${({ theme }) => theme.background};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 99;
-`;
-
-const MobileNavLinks = styled.nav`
-  display: flex;
-  flex-direction: column;
+  list-style: none;
   gap: 2rem;
-  text-align: center;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    right: ${(props) => (props.$isOpen ? "0" : "-100%")};
+    width: 70%;
+    height: 100vh;
+    background: ${(props) =>
+      props.$isDark ? "var(--color-black)" : "var(--color-white)"};
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+  }
 `;
 
-const MobileNavLink = styled.a`
-  color: ${({ theme }) => theme.text};
-  font-size: 1.5rem;
+const NavLink = styled.a<{ $isDark: boolean }>`
+  color: ${(props) =>
+    props.$isDark ? "var(--color-white)" : "var(--color-black)"};
+  text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--color-brown);
+  }
 `;
 
-const Header = () => {
+const Controls = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
+const ThemeToggle = styled.button<{ $isDark: boolean }>`
+  background: none;
+  border: none;
+  color: ${(props) =>
+    props.$isDark ? "var(--color-white)" : "var(--color-black)"};
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: ${(props) =>
+      props.$isDark ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)"};
+  }
+`;
+
+const MenuButton = styled.button<{ $isDark: boolean }>`
+  display: none;
+  background: none;
+  border: none;
+  color: ${(props) =>
+    props.$isDark ? "var(--color-white)" : "var(--color-black)"};
+  cursor: pointer;
+  padding: 0.5rem;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const Header: React.FC = () => {
+  const { isDark, toggleTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -130,81 +125,54 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
+  const navItems = [
+    { href: "#home", label: "Home" },
+    { href: "#journey", label: "Trajetória" },
+    { href: "#skills", label: "Skills" },
+    { href: "#education", label: "Educação" },
+    { href: "#testimonials", label: "Testemunhos" },
+    { href: "#projects", label: "Projetos" },
+  ];
 
   return (
-    <>
-      <HeaderContainer
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
-        style={{
-          boxShadow: isScrolled ? "0 4px 6px rgba(0, 0, 0, 0.1)" : "none",
-        }}
-      >
-        <NavContainer>
-          <Logo>
-            Dev<span>Andreza</span>
-          </Logo>
-          <NavLinks>
-            <NavLink href="#home">Home</NavLink>
-            <NavLink href="#about">Sobre</NavLink>
-            <NavLink href="#career">Trajetória</NavLink>
-            <NavLink href="#skills">Habilidades</NavLink>
-            <NavLink href="#projects">Projetos</NavLink>
-            <NavLink href="#contact">Contato</NavLink>
-          </NavLinks>
-          <div style={{ display: "flex" }}>
-            <ThemeToggleButton onClick={toggleTheme}>
-              {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-            </ThemeToggleButton>
-            <MobileMenuButton onClick={toggleMobileMenu}>
-              <Menu size={24} />
-            </MobileMenuButton>
-          </div>
-        </NavContainer>
-      </HeaderContainer>
+    <HeaderContainer
+      $isDark={isDark}
+      $isScrolled={isScrolled}
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Nav>
+        <Logo $isDark={isDark}>Andreza</Logo>
 
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <MobileMenu
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+        <NavLinks $isOpen={isMenuOpen} $isDark={isDark}>
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <NavLink
+                href={item.href}
+                $isDark={isDark}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
+        </NavLinks>
+
+        <Controls>
+          <ThemeToggle onClick={toggleTheme} $isDark={isDark}>
+            {isDark ? <Sun size={20} /> : <Moon size={20} />}
+          </ThemeToggle>
+
+          <MenuButton
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            $isDark={isDark}
           >
-            <MobileMenuButton
-              onClick={toggleMobileMenu}
-              style={{ position: "absolute", top: "1rem", right: "1rem" }}
-            >
-              <X size={24} />
-            </MobileMenuButton>
-            <MobileNavLinks>
-              <MobileNavLink href="#home" onClick={toggleMobileMenu}>
-                Home
-              </MobileNavLink>
-              <MobileNavLink href="#about" onClick={toggleMobileMenu}>
-                Sobre
-              </MobileNavLink>
-              <MobileNavLink href="#career" onClick={toggleMobileMenu}>
-                Trajetória
-              </MobileNavLink>
-              <MobileNavLink href="#skills" onClick={toggleMobileMenu}>
-                Habilidades
-              </MobileNavLink>
-              <MobileNavLink href="#projects" onClick={toggleMobileMenu}>
-                Projetos
-              </MobileNavLink>
-              <MobileNavLink href="#contact" onClick={toggleMobileMenu}>
-                Contato
-              </MobileNavLink>
-            </MobileNavLinks>
-          </MobileMenu>
-        )}
-      </AnimatePresence>
-    </>
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </MenuButton>
+        </Controls>
+      </Nav>
+    </HeaderContainer>
   );
 };
 
