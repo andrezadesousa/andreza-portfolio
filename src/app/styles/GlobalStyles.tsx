@@ -1,17 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Chillax:wght@200;300;400;500;600;700&display=swap');
 
   :root {
-    --color-black: #000000;
-    --color-brown: #6F3D24;
+    --color-default: #0E0E0E;
+    --color-primary: #DAC5A7;
+    --color-secondary: #1A1A1A;
     --color-white: #FFFFFF;
-    --color-cream: #E1CDA6;
-    --color-light-gray: #F3F3F3;
+    --color-gray: #808080;
     
-    --font-primary: 'Playwrite DE Grund', cursive;
-    --font-secondary: 'Merriweather Sans', sans-serif;
+    --font-primary: 'Chillax', sans-serif;
   }
 
   * {
@@ -25,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: var(--font-secondary);
+    font-family: var(--font-primary);
     line-height: 1.6;
     overflow-x: hidden;
   }
@@ -41,17 +40,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 2rem;
     text-align: center;
-  }
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-  }
-
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+    font-weight: 600;
   }
 
   @media (max-width: 768px) {

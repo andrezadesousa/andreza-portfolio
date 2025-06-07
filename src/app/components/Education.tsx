@@ -1,166 +1,246 @@
 "use client";
 
 import type React from "react";
+import { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { GraduationCap, Calendar, Award, BookOpen } from "lucide-react";
+import { gsap } from "gsap";
+import { Draggable } from "gsap/Draggable";
+import {
+  GraduationCap,
+  Award,
+  Code,
+  Palette,
+  Database,
+  Settings,
+} from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 
-const EducationSection = styled.section<{ $isDark: boolean }>`
+gsap.registerPlugin(Draggable);
+
+const EducationSkillsSection = styled.section<{ $isDark: boolean }>`
   padding: 100px 0;
   background: ${(props) =>
-    props.$isDark ? "var(--color-black)" : "var(--color-cream)"};
+    props.$isDark ? "var(--color-default)" : "var(--color-white)"};
   color: ${(props) =>
-    props.$isDark ? "var(--color-white)" : "var(--color-black)"};
+    props.$isDark ? "var(--color-white)" : "var(--color-default)"};
 `;
 
-const BentoGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 200px);
-  gap: 1.5rem;
-  margin-top: 3rem;
-
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 200px);
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 200px);
-  }
+const TimelineContainer = styled.div`
+  margin-bottom: 4rem;
 `;
 
-const BentoCard = styled(motion.div)<{
-  $gridArea: string;
-  $isDark: boolean;
-  $isLarge?: boolean;
-}>`
-  grid-area: ${(props) => props.$gridArea};
-  background: ${(props) =>
-    props.$isDark ? "rgba(255, 255, 255, 0.1)" : "var(--color-white)"};
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+const TimelineTitle = styled.h3`
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  font-weight: 600;
+`;
+
+const TimelineWrapper = styled.div`
   position: relative;
   overflow: hidden;
+  padding: 2rem 0;
+`;
+
+const TimelineTrack = styled.div`
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+`;
+
+const TimelineItem = styled(motion.div)<{ $isDark: boolean }>`
+  min-width: 300px;
+  background: ${(props) =>
+    props.$isDark ? "var(--color-secondary)" : "var(--color-secondary)"};
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid
+    ${(props) =>
+      props.$isDark ? "rgba(218, 197, 167, 0.2)" : "rgba(218, 197, 167, 0.3)"};
+  transition: all 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  }
-
-  @media (max-width: 1024px) {
-    grid-area: unset;
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px rgba(218, 197, 167, 0.2);
   }
 `;
 
-const CardIcon = styled.div`
+const ItemIcon = styled.div`
   width: 50px;
   height: 50px;
-  background: var(--color-brown);
-  border-radius: 50%;
+  background: var(--color-primary);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-white);
+  color: var(--color-default);
   margin-bottom: 1rem;
 `;
 
-const CardTitle = styled.h3`
+const ItemTitle = styled.h4`
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: var(--color-brown);
+  color: var(--color-primary);
+  font-weight: 600;
 `;
 
-const CardSubtitle = styled.h4`
+const ItemSubtitle = styled.p`
   font-size: 1rem;
-  margin-bottom: 1rem;
-  opacity: 0.8;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  color: var(--color-white);
 `;
 
-const CardPeriod = styled.p`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+const ItemDate = styled.p`
   font-size: 0.9rem;
   opacity: 0.7;
   margin-bottom: 1rem;
+  color: var(--color-white);
 `;
 
-const CardDescription = styled.p`
+const ItemDescription = styled.p`
   font-size: 0.9rem;
   line-height: 1.5;
+  color: var(--color-white);
 `;
 
-const Education: React.FC = () => {
+const SkillLevel = styled.div<{ $level: number }>`
+  width: 100%;
+  height: 6px;
+  background: rgba(218, 197, 167, 0.2);
+  border-radius: 3px;
+  margin-top: 1rem;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    display: block;
+    width: ${(props) => props.$level}%;
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: 3px;
+    transition: width 1s ease;
+  }
+`;
+
+const EducationSkills: React.FC = () => {
   const { isDark } = useTheme();
+  const educationTrackRef = useRef<HTMLDivElement>(null);
+  const skillsTrackRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (educationTrackRef.current) {
+      Draggable.create(educationTrackRef.current, {
+        type: "x",
+        bounds: { minX: -800, maxX: 0 },
+        inertia: true,
+      });
+    }
+
+    if (skillsTrackRef.current) {
+      Draggable.create(skillsTrackRef.current, {
+        type: "x",
+        bounds: { minX: -1000, maxX: 0 },
+        inertia: true,
+      });
+    }
+  }, []);
 
   const educationData = [
     {
       title: "Bacharelado em Ciência da Computação",
       institution: "Universidade de São Paulo",
-      period: "2016 - 2020",
+      date: "2016 - 2020",
       description:
         "Formação sólida em algoritmos, estruturas de dados e engenharia de software.",
       icon: <GraduationCap size={24} />,
-      gridArea: "1 / 1 / 3 / 3",
-      isLarge: true,
     },
     {
       title: "Especialização em React",
       institution: "Rocketseat",
-      period: "2021",
-      description: "Curso intensivo focado em React e boas práticas.",
+      date: "2021",
+      description:
+        "Curso intensivo focado em React e boas práticas de desenvolvimento.",
       icon: <Award size={24} />,
-      gridArea: "1 / 3 / 2 / 5",
     },
     {
       title: "Certificação TypeScript",
       institution: "Microsoft Learn",
-      period: "2022",
-      description: "Certificação oficial em TypeScript.",
+      date: "2022",
+      description: "Certificação oficial em TypeScript e tipagem avançada.",
       icon: <Award size={24} />,
-      gridArea: "2 / 3 / 3 / 4",
     },
     {
       title: "UX/UI Design",
       institution: "Google UX Design",
-      period: "2023",
-      description: "Design de experiência do usuário.",
-      icon: <Award size={24} />,
-      gridArea: "2 / 4 / 3 / 5",
-    },
-    {
-      title: "Curso de JavaScript Avançado",
-      institution: "Alura",
-      period: "2020",
-      description: "Aprofundamento em JavaScript moderno e ES6+.",
-      icon: <BookOpen size={24} />,
-      gridArea: "3 / 1 / 4 / 2",
-    },
-    {
-      title: "Bootcamp Full Stack",
-      institution: "Digital Innovation One",
-      period: "2021",
-      description: "Desenvolvimento full stack com foco em React e Node.js.",
-      icon: <BookOpen size={24} />,
-      gridArea: "3 / 2 / 4 / 4",
+      date: "2023",
+      description: "Design de experiência do usuário e prototipagem.",
+      icon: <Palette size={24} />,
     },
     {
       title: "Certificação AWS",
       institution: "Amazon Web Services",
-      period: "2024",
+      date: "2024",
       description: "Cloud computing e deploy de aplicações.",
       icon: <Award size={24} />,
-      gridArea: "3 / 4 / 4 / 5",
+    },
+  ];
+
+  const skillsData = [
+    {
+      title: "React",
+      category: "Frontend",
+      level: 95,
+      description:
+        "Desenvolvimento de aplicações complexas com hooks e context.",
+      icon: <Code size={24} />,
+    },
+    {
+      title: "TypeScript",
+      category: "Frontend",
+      level: 90,
+      description: "Tipagem estática para código mais seguro e maintível.",
+      icon: <Code size={24} />,
+    },
+    {
+      title: "Next.js",
+      category: "Frontend",
+      level: 85,
+      description: "SSR, SSG e otimização de performance.",
+      icon: <Code size={24} />,
+    },
+    {
+      title: "Node.js",
+      category: "Backend",
+      level: 75,
+      description: "APIs REST e integração com bancos de dados.",
+      icon: <Database size={24} />,
+    },
+    {
+      title: "Figma",
+      category: "Design",
+      level: 80,
+      description: "Prototipagem e design de interfaces.",
+      icon: <Palette size={24} />,
+    },
+    {
+      title: "Git",
+      category: "Tools",
+      level: 90,
+      description: "Controle de versão e colaboração em equipe.",
+      icon: <Settings size={24} />,
     },
   ];
 
   return (
-    <EducationSection id="education" $isDark={isDark}>
+    <EducationSkillsSection id="education-skills" $isDark={isDark}>
       <div className="container">
         <motion.h2
           className="section-title"
@@ -169,35 +249,59 @@ const Education: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Educação & Certificações
+          Educação & Skills
         </motion.h2>
 
-        <BentoGrid>
-          {educationData.map((item, index) => (
-            <BentoCard
-              key={index}
-              $gridArea={item.gridArea}
-              $isDark={isDark}
-              $isLarge={item.isLarge}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <CardIcon>{item.icon}</CardIcon>
-              <CardTitle>{item.title}</CardTitle>
-              <CardSubtitle>{item.institution}</CardSubtitle>
-              <CardPeriod>
-                <Calendar size={14} />
-                {item.period}
-              </CardPeriod>
-              <CardDescription>{item.description}</CardDescription>
-            </BentoCard>
-          ))}
-        </BentoGrid>
+        <TimelineContainer>
+          <TimelineTitle>Educação</TimelineTitle>
+          <TimelineWrapper>
+            <TimelineTrack ref={educationTrackRef}>
+              {educationData.map((item, index) => (
+                <TimelineItem
+                  key={index}
+                  $isDark={isDark}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <ItemIcon>{item.icon}</ItemIcon>
+                  <ItemTitle>{item.title}</ItemTitle>
+                  <ItemSubtitle>{item.institution}</ItemSubtitle>
+                  <ItemDate>{item.date}</ItemDate>
+                  <ItemDescription>{item.description}</ItemDescription>
+                </TimelineItem>
+              ))}
+            </TimelineTrack>
+          </TimelineWrapper>
+        </TimelineContainer>
+
+        <TimelineContainer>
+          <TimelineTitle>Skills</TimelineTitle>
+          <TimelineWrapper>
+            <TimelineTrack ref={skillsTrackRef}>
+              {skillsData.map((item, index) => (
+                <TimelineItem
+                  key={index}
+                  $isDark={isDark}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <ItemIcon>{item.icon}</ItemIcon>
+                  <ItemTitle>{item.title}</ItemTitle>
+                  <ItemSubtitle>{item.category}</ItemSubtitle>
+                  <ItemDescription>{item.description}</ItemDescription>
+                  <SkillLevel $level={item.level} />
+                </TimelineItem>
+              ))}
+            </TimelineTrack>
+          </TimelineWrapper>
+        </TimelineContainer>
       </div>
-    </EducationSection>
+    </EducationSkillsSection>
   );
 };
 
-export default Education;
+export default EducationSkills;

@@ -2,6 +2,8 @@
 
 import type React from "react";
 import { createContext, useContext, useState, useEffect } from "react";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "../styles/theme";
 
 interface ThemeContextType {
   isDark: boolean;
@@ -21,7 +23,7 @@ export const useTheme = () => {
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true); // Dark mode como padrão
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -38,7 +40,9 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
-      {children}
+      <StyledThemeProvider theme={isDark ? darkTheme : lightTheme}>
+        {children}
+      </StyledThemeProvider>
     </ThemeContext.Provider>
   );
 };

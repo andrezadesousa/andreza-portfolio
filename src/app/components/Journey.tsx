@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Briefcase, Calendar } from "lucide-react";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -14,9 +14,9 @@ gsap.registerPlugin(ScrollTrigger);
 const JourneySection = styled.section<{ $isDark: boolean }>`
   padding: 100px 0;
   background: ${(props) =>
-    props.$isDark ? "var(--color-brown)" : "var(--color-cream)"};
+    props.$isDark ? "var(--color-secondary)" : "var(--color-secondary)"};
   color: ${(props) =>
-    props.$isDark ? "var(--color-white)" : "var(--color-black)"};
+    props.$isDark ? "var(--color-white)" : "var(--color-default)"};
 `;
 
 const BentoGrid = styled.div`
@@ -44,17 +44,20 @@ const BentoCard = styled(motion.div)<{
 }>`
   grid-area: ${(props) => props.$gridArea};
   background: ${(props) =>
-    props.$isDark ? "rgba(255, 255, 255, 0.1)" : "var(--color-white)"};
-  border-radius: 20px;
+    props.$isDark ? "rgba(218, 197, 167, 0.1)" : "rgba(218, 197, 167, 0.2)"};
+  border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid
+    ${(props) =>
+      props.$isDark ? "rgba(218, 197, 167, 0.2)" : "rgba(218, 197, 167, 0.3)"};
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px rgba(218, 197, 167, 0.2);
   }
 
   @media (max-width: 1024px) {
@@ -65,25 +68,36 @@ const BentoCard = styled(motion.div)<{
 const CardIcon = styled.div`
   width: 50px;
   height: 50px;
-  background: var(--color-brown);
-  border-radius: 50%;
+  background: var(--color-primary);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-white);
+  color: var(--color-default);
   margin-bottom: 1rem;
 `;
 
 const CardTitle = styled.h3`
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: var(--color-brown);
+  color: var(--color-primary);
+  font-weight: 600;
 `;
 
-const CardSubtitle = styled.h4`
+const CardCompany = styled.h4`
   font-size: 1rem;
-  margin-bottom: 1rem;
-  opacity: 0.8;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  font-weight: 500;
+`;
+
+const CardLocation = styled.p`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
 `;
 
 const CardPeriod = styled.p`
@@ -108,11 +122,12 @@ const TechStack = styled.div`
 `;
 
 const TechTag = styled.span`
-  background: var(--color-brown);
-  color: var(--color-white);
+  background: var(--color-primary);
+  color: var(--color-default);
   padding: 0.25rem 0.5rem;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 0.7rem;
+  font-weight: 500;
 `;
 
 const Journey: React.FC = () => {
@@ -202,7 +217,7 @@ const Journey: React.FC = () => {
     },
     {
       title: "Estudos & Certificações",
-      company: "Diversos",
+      company: "Diversos Cursos",
       period: "2016 - Presente",
       location: "Online",
       description: "Formação contínua em tecnologias front-end e design.",
@@ -238,7 +253,12 @@ const Journey: React.FC = () => {
               </CardIcon>
 
               <CardTitle>{item.title}</CardTitle>
-              <CardSubtitle>{item.company}</CardSubtitle>
+              <CardCompany>{item.company}</CardCompany>
+
+              <CardLocation>
+                <MapPin size={14} />
+                {item.location}
+              </CardLocation>
 
               <CardPeriod>
                 <Calendar size={14} />

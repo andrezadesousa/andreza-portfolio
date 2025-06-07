@@ -9,44 +9,39 @@ import { useTheme } from "../context/ThemeContext";
 
 const ProjectsSection = styled.section<{ $isDark: boolean }>`
   padding: 100px 0;
-  background: ${(props) =>
-    props.$isDark ? "var(--color-light-gray)" : "var(--color-cream)"};
+  background: ${(props) => "var(--color-secondary)"};
   color: ${(props) =>
-    props.$isDark ? "var(--color-black)" : "var(--color-black)"};
+    props.$isDark ? "var(--color-white)" : "var(--color-default)"};
 `;
 
-const ProjectsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+const ProjectsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
   margin-top: 3rem;
 `;
 
-const ProjectItem = styled(motion.div)<{ $reverse: boolean }>`
-  display: grid;
-  grid-template-columns: ${(props) =>
-    props.$reverse ? "1fr 400px" : "400px 1fr"};
-  gap: 3rem;
-  align-items: center;
+const ProjectCard = styled(motion.div)<{ $isDark: boolean }>`
+  background: ${(props) =>
+    props.$isDark ? "rgba(218, 197, 167, 0.1)" : "rgba(218, 197, 167, 0.2)"};
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid
+    ${(props) =>
+      props.$isDark ? "rgba(218, 197, 167, 0.2)" : "rgba(218, 197, 167, 0.3)"};
+  transition: all 0.3s ease;
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  &:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-primary);
+    box-shadow: 0 20px 40px rgba(218, 197, 167, 0.2);
   }
 `;
 
 const ProjectImageContainer = styled.div`
   position: relative;
   cursor: pointer;
-  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-
-  &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
 `;
 
 const ProjectImage = styled.img`
@@ -60,49 +55,8 @@ const ProjectImage = styled.img`
   }
 `;
 
-const ProjectContent = styled.div<{ $reverse: boolean }>`
-  order: ${(props) => (props.$reverse ? -1 : 0)};
-
-  @media (max-width: 768px) {
-    order: 0;
-  }
-`;
-
-const ProjectNumber = styled.span`
-  font-size: 4rem;
-  font-weight: bold;
-  color: var(--color-brown);
-  opacity: 0.3;
-  line-height: 1;
-`;
-
-const ProjectTitle = styled.h3`
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--color-brown);
-`;
-
-const ProjectDescription = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-  color: var(--color-black);
-`;
-
-const ProjectTech = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-`;
-
-const TechTag = styled.span`
-  background: var(--color-brown);
-  color: var(--color-white);
-  padding: 0.5rem 1rem;
-  border-radius: 15px;
-  font-size: 0.9rem;
-  font-weight: 500;
+const ProjectContent = styled.div`
+  padding: 1.5rem;
 `;
 
 const ProjectLinks = styled.div`
@@ -114,27 +68,31 @@ const ProjectLink = styled.a`
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 2rem;
-  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
 
   &.github {
-    background: var(--color-black);
+    background: transparent;
     color: var(--color-white);
+    border: 1px solid var(--color-primary);
 
     &:hover {
-      background: var(--color-brown);
+      background: var(--color-primary);
+      color: var(--color-default);
     }
   }
 
   &.demo {
-    background: var(--color-brown);
-    color: var(--color-white);
+    background: var(--color-primary);
+    color: var(--color-default);
 
     &:hover {
-      background: var(--color-black);
+      background: transparent;
+      color: var(--color-primary);
+      border: 1px solid var(--color-primary);
     }
   }
 `;
@@ -153,20 +111,15 @@ const Modal = styled(motion.div)`
   padding: 2rem;
 `;
 
-const ModalContent = styled(motion.div)`
+const ModalContent = styled(motion.div)<{ $isDark: boolean }>`
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
-  background: var(--color-white);
+  background: ${(props) =>
+    props.$isDark ? "var(--color-default)" : "var(--color-white)"};
   border-radius: 20px;
   overflow: hidden;
-`;
-
-const ModalImage = styled.img`
-  width: 100%;
-  height: auto;
-  max-height: 80vh;
-  object-fit: contain;
+  padding: 2rem;
 `;
 
 const CloseButton = styled.button`
@@ -184,10 +137,62 @@ const CloseButton = styled.button`
   justify-content: center;
   cursor: pointer;
   transition: background 0.3s ease;
+  z-index: 10;
 
   &:hover {
     background: rgba(0, 0, 0, 0.9);
   }
+`;
+
+const ModalBentoGrid = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  height: 400px;
+`;
+
+const ModalImage = styled.img<{ $area: string }>`
+  grid-area: ${(props) => props.$area};
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+`;
+
+const ModalInfo = styled.div<{ $isDark: boolean }>`
+  color: ${(props) =>
+    props.$isDark ? "var(--color-white)" : "var(--color-default)"};
+`;
+
+const ModalTitle = styled.h3`
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+`;
+
+const ModalDescription = styled.p`
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+`;
+
+const ModalTech = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+`;
+
+const TechTag = styled.span`
+  background: var(--color-primary);
+  color: var(--color-default);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
 `;
 
 const Projects: React.FC = () => {
@@ -197,30 +202,56 @@ const Projects: React.FC = () => {
   const projects = [
     {
       title: "Crypto Screener Application",
-      description:
-        "Aplicação completa para análise de criptomoedas com gráficos em tempo real, alertas personalizados e portfolio tracking. Interface moderna e responsiva desenvolvida com React e integração com APIs de mercado.",
+      description: "Aplicação completa para análise de criptomoedas...",
       image: "/placeholder.svg?height=250&width=400",
+      images: [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=200&width=300",
+        "/placeholder.svg?height=200&width=300",
+      ],
       technologies: ["React", "TypeScript", "Chart.js", "WebSocket", "Redux"],
       github: "https://github.com/andreza/crypto-screener",
       demo: "https://crypto-screener-demo.com",
     },
     {
       title: "Euphoria - Ecommerce Website",
-      description:
-        "Plataforma de e-commerce completa para moda com carrinho de compras, sistema de pagamento, filtros avançados e painel administrativo. Desenvolvida com foco na experiência do usuário e performance.",
+      description: "Plataforma de e-commerce completa para moda...",
       image: "/placeholder.svg?height=250&width=400",
+      images: [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=200&width=300",
+        "/placeholder.svg?height=200&width=300",
+      ],
       technologies: ["Next.js", "Stripe", "MongoDB", "Tailwind", "Vercel"],
       github: "https://github.com/andreza/euphoria-ecommerce",
       demo: "https://euphoria-demo.com",
     },
     {
       title: "Blog Website Template",
-      description:
-        "Template moderno para blog com sistema de CMS, comentários, categorias, busca avançada e otimização SEO. Interface clean e responsiva com modo escuro/claro e múltiplos layouts.",
+      description: "Template moderno para blog com sistema de CMS...",
       image: "/placeholder.svg?height=250&width=400",
+      images: [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=200&width=300",
+        "/placeholder.svg?height=200&width=300",
+      ],
       technologies: ["React", "Gatsby", "GraphQL", "Contentful", "SASS"],
       github: "https://github.com/andreza/blog-template",
       demo: null,
+    },
+    {
+      title: "Task Management App",
+      description:
+        "Aplicativo de gerenciamento de tarefas com funcionalidades avançadas...",
+      image: "/placeholder.svg?height=250&width=400",
+      images: [
+        "/placeholder.svg?height=400&width=600",
+        "/placeholder.svg?height=200&width=300",
+        "/placeholder.svg?height=200&width=300",
+      ],
+      technologies: ["React", "Redux", "Socket.io", "Express", "PostgreSQL"],
+      github: "https://github.com/andreza/task-manager",
+      demo: "https://taskmanager-demo.com",
     },
   ];
 
@@ -237,55 +268,45 @@ const Projects: React.FC = () => {
           My Projects
         </motion.h2>
 
-        <ProjectsContainer>
+        <ProjectsGrid>
           {projects.map((project, index) => (
-            <ProjectItem
+            <ProjectCard
               key={index}
-              $reverse={index % 2 !== 0}
+              $isDark={isDark}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
               <ProjectImageContainer onClick={() => setSelectedProject(index)}>
                 <ProjectImage src={project.image} alt={project.title} />
               </ProjectImageContainer>
 
-              <ProjectContent $reverse={index % 2 !== 0}>
-                <ProjectNumber>0{index + 1}</ProjectNumber>
-                <ProjectTitle>{project.title}</ProjectTitle>
-                <ProjectDescription>{project.description}</ProjectDescription>
-
-                <ProjectTech>
-                  {project.technologies.map((tech, techIndex) => (
-                    <TechTag key={techIndex}>{tech}</TechTag>
-                  ))}
-                </ProjectTech>
-
+              <ProjectContent>
                 <ProjectLinks>
                   <ProjectLink
                     href={project.github}
                     target="_blank"
                     className="github"
                   >
-                    <Github size={18} />
+                    <Github size={16} />
                     GitHub
                   </ProjectLink>
                   {project.demo && (
                     <ProjectLink
-                      href={project.demo}
+                      href={project.demo ?? undefined}
                       target="_blank"
                       className="demo"
                     >
-                      <ExternalLink size={18} />
+                      <ExternalLink size={16} />
                       Demo
                     </ProjectLink>
                   )}
                 </ProjectLinks>
               </ProjectContent>
-            </ProjectItem>
+            </ProjectCard>
           ))}
-        </ProjectsContainer>
+        </ProjectsGrid>
 
         <AnimatePresence>
           {selectedProject !== null && (
@@ -296,6 +317,7 @@ const Projects: React.FC = () => {
               onClick={() => setSelectedProject(null)}
             >
               <ModalContent
+                $isDark={isDark}
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
@@ -304,10 +326,57 @@ const Projects: React.FC = () => {
                 <CloseButton onClick={() => setSelectedProject(null)}>
                   <X size={20} />
                 </CloseButton>
-                <ModalImage
-                  src={projects[selectedProject].image}
-                  alt={projects[selectedProject].title}
-                />
+
+                <ModalBentoGrid>
+                  {projects[selectedProject].images.map((src, i) => (
+                    <ModalImage
+                      key={i}
+                      src={src}
+                      alt={`Imagem ${i + 1}`}
+                      $area={
+                        i === 0
+                          ? "1 / 1 / 3 / 2"
+                          : i === 1
+                          ? "1 / 2 / 2 / 3"
+                          : "2 / 2 / 3 / 3"
+                      }
+                    />
+                  ))}
+                </ModalBentoGrid>
+
+                <ModalInfo $isDark={isDark}>
+                  <ModalTitle>{projects[selectedProject].title}</ModalTitle>
+                  <ModalDescription>
+                    {projects[selectedProject].description}
+                  </ModalDescription>
+
+                  <ModalTech>
+                    {projects[selectedProject].technologies.map((tech, idx) => (
+                      <TechTag key={idx}>{tech}</TechTag>
+                    ))}
+                  </ModalTech>
+
+                  <ProjectLinks>
+                    <ProjectLink
+                      href={projects[selectedProject].github}
+                      target="_blank"
+                      className="github"
+                    >
+                      <Github size={16} />
+                      GitHub
+                    </ProjectLink>
+                    {projects[selectedProject].demo && (
+                      <ProjectLink
+                        href={projects[selectedProject].demo ?? undefined}
+                        target="_blank"
+                        className="demo"
+                      >
+                        <ExternalLink size={16} />
+                        Demo
+                      </ProjectLink>
+                    )}
+                  </ProjectLinks>
+                </ModalInfo>
               </ModalContent>
             </Modal>
           )}

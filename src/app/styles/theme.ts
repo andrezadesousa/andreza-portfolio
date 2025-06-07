@@ -1,27 +1,27 @@
-export const lightTheme = {
+import { DefaultTheme } from "styled-components";
+
+export const darkTheme: DefaultTheme = {
   colors: {
-    black: "#000000",
-    brown: "#6F3D24",
+    default: "#0E0E0E",
+    primary: "#DAC5A7",
+    secondary: "#1A1A1A",
     white: "#FFFFFF",
-    cream: "#E1CDA6",
-    lightGray: "#F3F3F3",
+    gray: "#808080",
   },
   fonts: {
-    primary: "Playwrite DE Grund, cursive",
+    primary: "Chillax, sans-serif",
   },
 };
 
-export const darkTheme = {
+export const lightTheme: DefaultTheme = {
   colors: {
-    black: "#000000",
-    brown: "#6F3D24",
-    white: "#FFFFFF",
-    cream: "#E1CDA6",
-    lightGray: "#F3F3F3",
+    default: "#FFFFFF",
+    primary: "#DAC5A7",
+    secondary: "#F5F5F5",
+    white: "#0E0E0E",
+    gray: "#666666",
   },
   fonts: {
-    primary: "Playwrite DE Grund, cursive",
+    primary: "Chillax, sans-serif",
   },
 };
-
-export type Theme = typeof lightTheme;

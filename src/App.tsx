@@ -20,7 +20,6 @@ function App() {
           <Header />
           <Hero />
           <Journey />
-          <Skills />
           <Education />
           <Testimonials />
           <Projects />
